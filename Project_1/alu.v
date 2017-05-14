@@ -1,9 +1,7 @@
 module alu (op, a, b, result);
 	input [2:0] op;
 	input [7:0] a, b;
-	output [7:0] result;
-
-	reg [7:0] result;
+	output reg [7:0] result;
 
 	always @ ( op or a or b ) begin
 		if (op == 3'b000) result = a + b;
