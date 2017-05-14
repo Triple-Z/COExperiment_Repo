@@ -27,8 +27,8 @@
 
 - [ ] [PC (Program Counter)](Project_1/)
 - [ ] [NPC (Next PC)](Project_1/)
-- [x] [RF (Register File)](Project_1/)
-- [x] [ALU (Arithmetic Logic Unit)](Project_1/)
+- [x] [RF (Register File)](Project_1/rf.v)
+- [x] [ALU (Arithmetic Logic Unit)](Project_1/alu.v)
 - [ ] [EXT (Extended Unit)](Project_1/)
 - [ ] [IM (Instruction Memory)](Project_1/) `4KB (32bits*1024)`
 - [ ] [DM (Data Memeory)](Project_1/) `4KB(32bits*1024)`
