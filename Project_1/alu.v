@@ -11,4 +11,5 @@ module alu (op, a, b, result);
 		else if (op == 3'b100) result = ~a;
 		else result = 8'b0;
 	end
+
 endmodule // Arithmetic Logic Unit;

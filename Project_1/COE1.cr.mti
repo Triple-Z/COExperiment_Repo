@@ -1,1 +1,45 @@
+F:/Verilog/Project_1/ext.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/ext.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 
+} {} {}} F:/Verilog/Project_1/npc.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/npc.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+
+} {} {}} F:/Verilog/Project_1/ctrl.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/ctrl.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+
+} {} {}} F:/Verilog/Project_1/dm.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/dm.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module dm_4k
+
+Top level modules:
+	dm_4k
+
+} {} {}} F:/Verilog/Project_1/mips.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/mips.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module mips
+
+Top level modules:
+	mips
+
+} {} {}} F:/Verilog/Project_1/alu.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/alu.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} F:/Verilog/Project_1/im.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/im.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module im_4k
+
+Top level modules:
+	im_4k
+
+} {} {}} F:/Verilog/Project_1/pc.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/pc.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}}
