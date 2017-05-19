@@ -6,7 +6,9 @@
 
 > Last Revised: `5/8/2017`
 
-## [Project 1](Project_1/)
+## Project 1
+
+[Jump to directory](Project_1/)
 
 单周期处理器开发
 
