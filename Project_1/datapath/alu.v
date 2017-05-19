@@ -12,7 +12,7 @@ module alu (ALUop, a, b, result, zero);
 			3'b010: result = a | b;// or;
 			3'b101: result = a - b;// sub;
 			3'b111: result = a < b? 1: 0;// slt;
-			default: ;
+			default: result = 0;
 		endcase
 	end
 
