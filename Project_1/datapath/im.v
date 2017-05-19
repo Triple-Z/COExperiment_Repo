@@ -4,4 +4,4 @@ module im_4k (addr, dout);
 
 	reg [31:0] im[1023:0];
 
-endmodule // im4k
+endmodule // 4k Instruction Memeory;

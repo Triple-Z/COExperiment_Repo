@@ -28,11 +28,11 @@
 
 ### Datapath Module
 
-- [ ] [PC (Program Counter)](Project_1/datapath/pc.v)
+- [x] [PC (Program Counter)](Project_1/datapath/pc.v)
 - [ ] [NPC (Next PC)](Project_1/datapath/npc.v)
 - [x] [RF (Register File)](Project_1/datapath/rf.v)
 - [x] [ALU (Arithmetic Logic Unit)](Project_1/datapath/alu.v)
-- [ ] [EXT (Extended Unit)](Project_1/datapath/ext.v)
+- [x] [EXT (Extended Unit)](Project_1/datapath/ext.v)
 - [ ] [IM (Instruction Memory)](Project_1/datapath/im.v) `4KB (32bits*1024)`
 - [ ] [DM (Data Memeory)](Project_1/datapath/dm.v) `4KB(32bits*1024)`
 
