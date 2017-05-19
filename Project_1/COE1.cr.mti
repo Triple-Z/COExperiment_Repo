@@ -8,11 +8,4 @@ Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 Top level modules:
 	regFile
 
-} {} {}} F:/Verilog/Project_1/datapath/dm.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/dm.v
-Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module dm_4k
-
-Top level modules:
-	dm_4k
-
 } {} {}}

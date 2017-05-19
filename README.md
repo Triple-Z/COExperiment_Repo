@@ -34,7 +34,7 @@
 - [x] [ALU (Arithmetic Logic Unit)](Project_1/datapath/alu.v)
 - [x] [EXT (Extended Unit)](Project_1/datapath/ext.v)
 - [x] [IM (Instruction Memory)](Project_1/datapath/im.v) `4KB (32bits*1024)`
-- [ ] [DM (Data Memeory)](Project_1/datapath/dm.v) `4KB(32bits*1024)`
+- [x] [DM (Data Memeory)](Project_1/datapath/dm.v) `4KB(32bits*1024)`
 
 ### Control Module
 
