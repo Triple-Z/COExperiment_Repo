@@ -3,3 +3,82 @@ K3
 13
 cModel Technology
 dD:\ModelSim\examples
+valu
+I?P_7nRSjUCIEbfJU7La;40
+VjBVj9[P4k8^>[:o0<?o8e0
+Z0 dF:\Verilog\Project_1
+w1495006111
+8F:/Verilog/Project_1/datapath/alu.v
+FF:/Verilog/Project_1/datapath/alu.v
+L0 1
+Z1 OE;L;6.3c;37
+r1
+31
+Z2 o-work work -nocovercells -L mtiAvm
+!s85 0
+vdm_4k
+I<e@7J2_>gZ1l^8PV=VS:00
+VTM^iDM:VR]8VR`lN9O5[H2
+Z3 dF:\Verilog\Project_1
+Z4 w1494761593
+8F:/Verilog/Project_1/datapath/dm.v
+FF:/Verilog/Project_1/datapath/dm.v
+L0 1
+R1
+r1
+31
+R2
+!s85 0
+vim_4k
+Ikfl8E7iL1F2:07_`cAL?J3
+V7NIR5eTHWjMZ=;2IILG`M3
+R3
+R4
+8F:/Verilog/Project_1/datapath/im.v
+FF:/Verilog/Project_1/datapath/im.v
+L0 1
+R1
+r1
+31
+R2
+!s85 0
+vmips
+IFi6Dc=7TggN??6UHfR78Q2
+V^lO[ZOI0I1e8M8GJjI9B:3
+R3
+R4
+8F:/Verilog/Project_1/mips.v
+FF:/Verilog/Project_1/mips.v
+L0 1
+R1
+r1
+!s85 0
+31
+R2
+vpc
+IPFhP[[462K43^gJTjf2k10
+V^aINlPoM8DCfa1P9N<YBV2
+R3
+w1494774613
+8F:/Verilog/Project_1/datapath/pc.v
+FF:/Verilog/Project_1/datapath/pc.v
+L0 1
+R1
+r1
+31
+R2
+!s85 0
+vregFile
+IbL[;nk1Bo<V`amM>T2JO;3
+V_zO8j2IIVMMeA6IH4fWfT0
+R3
+w1494947040
+8F:/Verilog/Project_1/datapath/rf.v
+FF:/Verilog/Project_1/datapath/rf.v
+L0 1
+R1
+r1
+31
+R2
+nreg@file
+!s85 0
