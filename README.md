@@ -4,7 +4,7 @@
 
 [TOC]
 
-> Last Revised: `5/8/2017`
+> Last Revised: `5/20/2017`
 
 ## Project 1
 
@@ -31,7 +31,7 @@
 ### Datapath Module
 
 - [x] [PC (Program Counter)](Project_1/datapath/pc.v)
-- [ ] [NPC (Next PC)](Project_1/datapath/npc.v)
+- [x] [NPC (Next PC)](Project_1/datapath/npc.v)
 - [x] [RF (Register File)](Project_1/datapath/rf.v)
 - [x] [ALU (Arithmetic Logic Unit)](Project_1/datapath/alu.v)
 - [x] [EXT (Extended Unit)](Project_1/datapath/ext.v)

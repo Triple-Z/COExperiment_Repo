@@ -11,7 +11,7 @@ module dm_4k (addr, din, wEn, clk, dout);
 		dout = dm[addr[11:2]][31:0];
 	end
 
-	always @ ( negedge clk ) begin// Write;
+	always @ ( posedge clk ) begin// Write;
 		if (wEn) begin
 			dm[addr[11:2]][31:0] <= din[31:0];
 		end

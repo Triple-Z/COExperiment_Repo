@@ -1,13 +1,13 @@
-module pc (clk, rst, data, dout);
+module pc (clk, rst, niaddr, iaddr);
 	input 	clk;
 	input 	rst;
-	input 	[31:0]	data;
-	output reg	[31:0]	dout;
+	input 	[31:0]	niaddr;// Next Instruction Address;
+	output reg	[31:0]	iaddr;// Instruction Address;
 
 	always @ ( posedge clk ) begin
 		if (rst)
-			dout <= 32'h0000_3000;
+			iaddr <= 32'h0000_3000;
 		else
-			dout <= data;
+			iaddr <= niaddr;
 	end
 endmodule // Program Counter;
