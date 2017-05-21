@@ -1,7 +1,7 @@
 module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, memtoReg);
 	input 	[31:0] 	ins;
 
-	output 	reg 	[2:0]	aluCtr;
+	output 	reg 	[3:0]	aluCtr;
 	output 	reg		branch;
 	output 	reg		jump;
 	output 	reg		regDst;
@@ -52,6 +52,17 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 			end
 
 			LW: begin
+				branch 	= 0;
+				jump 	= 0;
+				regDst	= 0;
+				aluSrc	= 1;
+				memtoReg	= 1;
+				regWr	= 0;
+				memWr	= 0;
+				extOp	= 1;
+			end
+
+			SW: begin
 				branch 	= 0;
 				jump 	= 0;
 				aluSrc	= 1;
