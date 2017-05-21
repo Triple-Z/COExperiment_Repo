@@ -13,7 +13,7 @@ module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 	assign busA = (rA != 0)? register[rA]: 0;
 	assign busB = (rB != 0)? register[rB]: 0;
 
-	always @ ( negedge clk ) begin
+	always @ ( posedge clk ) begin
 		if ((wE == 1) && (rW != 0)) begin
 			register[rW] <= busW;
 		end
