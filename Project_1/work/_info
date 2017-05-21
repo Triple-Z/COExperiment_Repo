@@ -4,10 +4,10 @@ K3
 cModel Technology
 dD:\ModelSim\examples
 valu
-I?P_7nRSjUCIEbfJU7La;40
+I>bV;DX9maS1<^c^^lJTFN3
 VjBVj9[P4k8^>[:o0<?o8e0
 Z0 dF:\Verilog\Project_1
-w1495006111
+w1495354004
 8F:/Verilog/Project_1/datapath/alu.v
 FF:/Verilog/Project_1/datapath/alu.v
 L0 1
@@ -16,11 +16,24 @@ r1
 31
 Z2 o-work work -nocovercells -L mtiAvm
 !s85 0
-vdm_4k
-I<e@7J2_>gZ1l^8PV=VS:00
-VTM^iDM:VR]8VR`lN9O5[H2
+vctrl
+IXWNZj>cVIGX8i_nW21Lcn1
+V<GNaE>i6UYP31I8mBOSPM3
 Z3 dF:\Verilog\Project_1
-Z4 w1494761593
+w1495368465
+8F:/Verilog/Project_1/control/ctrl.v
+FF:/Verilog/Project_1/control/ctrl.v
+L0 1
+R1
+r1
+31
+R2
+!s85 0
+vdm_4k
+IEICIHf32EGNz2Jdgh81an1
+Vl8`oc=OI`NYd9U>nS<Ig@2
+R3
+w1495288310
 8F:/Verilog/Project_1/datapath/dm.v
 FF:/Verilog/Project_1/datapath/dm.v
 L0 1
@@ -29,11 +42,24 @@ r1
 31
 R2
 !s85 0
-vim_4k
-Ikfl8E7iL1F2:07_`cAL?J3
-V7NIR5eTHWjMZ=;2IILG`M3
+vext
+I0OPW;7U5AeSK1Kce2J^OJ0
+VCFKlCz=m<C>Lg;l9gDVbP2
 R3
-R4
+w1495215480
+8F:/Verilog/Project_1/datapath/ext.v
+FF:/Verilog/Project_1/datapath/ext.v
+L0 1
+R1
+r1
+31
+R2
+!s85 0
+vim_4k
+IF;MoPmd`S=d:>ZjYb<OXa3
+V[A;oU]GL566oo`NRR7j?D3
+R3
+w1495346881
 8F:/Verilog/Project_1/datapath/im.v
 FF:/Verilog/Project_1/datapath/im.v
 L0 1
@@ -43,36 +69,49 @@ r1
 R2
 !s85 0
 vmips
-IFi6Dc=7TggN??6UHfR78Q2
+I:LdYV=jKNaDa@k8mmR]aH2
 V^lO[ZOI0I1e8M8GJjI9B:3
 R3
-R4
+w1495377813
 8F:/Verilog/Project_1/mips.v
 FF:/Verilog/Project_1/mips.v
-L0 1
+L0 3
 R1
 r1
 !s85 0
 31
 R2
-vpc
-IPFhP[[462K43^gJTjf2k10
-V^aINlPoM8DCfa1P9N<YBV2
+vnpc
+Il0<XnW@F@RUiNmnf3[[5h3
+Vf?[?79_<zoI8;`nR<2fZF0
 R3
-w1494774613
-8F:/Verilog/Project_1/datapath/pc.v
-FF:/Verilog/Project_1/datapath/pc.v
+w1495292501
+8F:/Verilog/Project_1/datapath/npc.v
+FF:/Verilog/Project_1/datapath/npc.v
 L0 1
 R1
 r1
 31
 R2
 !s85 0
+vpc
+IU6MZCfT_eNG57mmbfVC731
+V6kdZjK7?dcajdn2PAhf5L0
+R3
+w1495377032
+8datapath/pc.v
+Fdatapath/pc.v
+L0 1
+R1
+r1
+!s85 0
+31
+R2
 vregFile
-IbL[;nk1Bo<V`amM>T2JO;3
+I`=OOnBfn_<WKBn3HgIJkB3
 V_zO8j2IIVMMeA6IH4fWfT0
 R3
-w1494947040
+w1495288321
 8F:/Verilog/Project_1/datapath/rf.v
 FF:/Verilog/Project_1/datapath/rf.v
 L0 1

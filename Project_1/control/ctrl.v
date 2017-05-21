@@ -17,20 +17,18 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 	assign op	= ins[31:26];
 	assign func	= ins[5:0];
 
-
+	// Operation code;
 	parameter  	R 	= 6'b000000,
 		LW	= 6'b100011,
 		SW	= 6'b101011,
 		BEQ	= 6'b000100,
 		J	= 6'b000010;
-
+	// Function code;
 	parameter 	ADD 	= 6'b100000,
 		SUB 	= 6'b100010,
 		AND 	= 6'b100100,
 		OR	= 6'b100101,
 		SLT 	= 6'b101010;
-
-
 
 	always @ ( * ) begin
 		case (op)
