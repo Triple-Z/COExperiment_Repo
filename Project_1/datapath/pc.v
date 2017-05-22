@@ -1,6 +1,6 @@
 module pc (clk, rst, niaddr, iaddr);
-	input 			clk;
-	input 			rst;
+	input 		clk;
+	input 		rst;
 	input 	[31:0]	niaddr;// Next Instruction Address;
 
 	output reg	[31:0]	iaddr;// Instruction Address;

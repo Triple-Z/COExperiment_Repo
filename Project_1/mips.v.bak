@@ -45,7 +45,7 @@ module mips (clk, rst);
 	npc npc(
 		.iaddr(pc_cur),
 		.branch(branch),
-		.jump(jump),
+		.jump(jumpz),
 		.zero(zero),
 		.imm16(ins[15:0]),
 		.imm26(ins[25:0]),
