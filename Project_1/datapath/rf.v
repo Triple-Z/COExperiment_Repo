@@ -8,6 +8,7 @@ module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 
 	initial begin
 		register[0] 	= 0;// $zero;
+
 		register[8] 	= 0;// $t0;
 		register[9] 	= 1;// $t1;
 		register[10] 	= 2;// $t2;
@@ -16,6 +17,11 @@ module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 		register[13] 	= 5;// $t5;
 		register[14] 	= 6;// $t6;
 		register[15] 	= 7;// $t7;
+
+		register[16]	= 0;// $s0;
+		register[17]	= 0;// $s0;
+		register[18]	= 0;// $s0;
+		register[19]	= 0;// $s0;
 	end
 
 	assign busA = (rA != 0)? register[rA]: 0;

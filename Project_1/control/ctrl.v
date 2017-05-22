@@ -32,7 +32,7 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 
 	always @ ( * ) begin
 		case (op)
-			R: begin
+			R: begin// R-Type Instructions;
 				branch 	= 0;
 				jump	= 0;
 				regDst	= 1;
@@ -49,19 +49,19 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				endcase
 			end
 
-			LW: begin
-				branch 	= 0;
-				jump 	= 0;
-				regDst	= 0;
-				aluSrc	= 1;
+			LW: begin// Load word;
+				branch 		= 0;
+				jump 		= 0;
+				regDst		= 0;
+				aluSrc		= 1;
 				memtoReg	= 1;
-				regWr	= 0;
-				memWr	= 0;
-				extOp	= 1;
-				aluCtr 	= 4'b0001;// add;
+				regWr		= 1;
+				memWr		= 0;
+				extOp		= 1;
+				aluCtr 		= 4'b0001;// add;
 			end
 
-			SW: begin
+			SW: begin// Store word;
 				branch 	= 0;
 				jump 	= 0;
 				aluSrc	= 1;
@@ -71,7 +71,7 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				aluCtr 	= 4'b0001;// add;
 			end
 
-			BEQ: begin
+			BEQ: begin// Branch on equal;
 				branch 	= 1;
 				jump 	= 0;
 				aluSrc	= 0;
@@ -79,7 +79,7 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				memWr	= 0;
 			end
 
-			J: begin
+			J: begin// J-Type Instructions；
 				branch 	= 0;
 				jump 	= 1;
 				regWr	= 0;
