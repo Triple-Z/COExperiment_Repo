@@ -10,10 +10,10 @@ module npc (iaddr, branch, jump, zero, imm16, imm26, niaddr);
 	assign pc4 = iaddr + 3'b100;
 
 	always @ ( * ) begin
-		if (zero) begin// Branch;
-			niaddr = {{14{imm16[15]}}, imm16, 2'b00} + pc4;
+		if (zero && branch) begin// Branch;
+			niaddr = {{14{imm16[15]}}, imm16[15:0], 2'b00} + pc4;
 		end else if (jump) begin// Jump;
-			niaddr = {iaddr[31:28], imm26, 2'b00};
+			niaddr = {iaddr[31:28], imm26[25:0], 2'b00};
 		end else begin// PC + 4;
 			niaddr = pc4;
 		end
