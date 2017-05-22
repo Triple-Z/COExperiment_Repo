@@ -47,6 +47,10 @@
 
 - [x] [CTRL (Controller)](Project_1/control/ctrl.v)
 
-### Creator
+### Creator Module
 
-- [x] [MIPS (Creater)](Project_1/mips.v)
+- [x] [MIPS (Creator)](Project_1/mips.v)
+
+### Test Bench
+
+- [x] [TB (Test Bench)](Project_1/testbench.v)
