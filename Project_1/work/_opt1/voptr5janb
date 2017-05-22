@@ -1,0 +1,170 @@
+m255
+K3
+13
+Z0 cModel Technology
+Z1 dD:\ModelSim\examples
+T_opt
+Z2 Vkk^2AGNH^E>bM]im0DJMK2
+Z3 04 7 4 work regFile fast 0
+Z4 =1-00ac76c1ffea-592292e2-91-5c88
+Z5 o-quiet -auto_acc_if_foreign -work work
+Z6 tExplicit 1
+Z7 OE;O;6.3c;37
+T_opt1
+Z8 VCH@PWZJge2[iJPjzG`:Be3
+Z9 04 4 4 work ctrl fast 0
+Z10 =1-00ac76c1ffea-592292f5-cd-4bc4
+R5
+R6
+R7
+T_opt2
+Z11 Vdhgl]^RSE>k9H^z8^mCAh1
+Z12 04 5 4 work im_4k fast 0
+Z13 =1-00ac76c1ffea-592292df-68-5e6c
+R5
+R6
+R7
+valu
+Z14 VjBVj9[P4k8^>[:o0<?o8e0
+r1
+31
+Z15 I>bV;DX9maS1<^c^^lJTFN3
+Z16 dF:\Verilog\Project_1
+Z17 w1495354004
+Z18 8F:/Verilog/Project_1/datapath/alu.v
+Z19 FF:/Verilog/Project_1/datapath/alu.v
+L0 1
+Z20 OE;L;6.3c;37
+Z21 o-work work -nocovercells -L mtiAvm
+!s85 0
+vctrl
+Z22 V<GNaE>i6UYP31I8mBOSPM3
+r1
+31
+Z23 IJ98[mm8`48[?A6[RJj6_Y2
+R16
+Z24 w1495432916
+Z25 8F:/Verilog/Project_1/control/ctrl.v
+Z26 FF:/Verilog/Project_1/control/ctrl.v
+L0 1
+R20
+R21
+!s85 0
+vdm_4k
+Z27 Vl8`oc=OI`NYd9U>nS<Ig@2
+r1
+31
+Z28 IEICIHf32EGNz2Jdgh81an1
+R16
+Z29 w1495288310
+Z30 8F:/Verilog/Project_1/datapath/dm.v
+Z31 FF:/Verilog/Project_1/datapath/dm.v
+L0 1
+R20
+R21
+!s85 0
+vext
+Z32 VCFKlCz=m<C>Lg;l9gDVbP2
+r1
+31
+Z33 I0OPW;7U5AeSK1Kce2J^OJ0
+R16
+Z34 w1495215480
+Z35 8F:/Verilog/Project_1/datapath/ext.v
+Z36 FF:/Verilog/Project_1/datapath/ext.v
+L0 1
+R20
+R21
+!s85 0
+vim_4k
+Z37 Va;1X5Q_g>W@YPXX2HLljA1
+r1
+31
+Z38 I:@3BFMl`hjfT4]oC@^@AY2
+R16
+Z39 w1495436126
+Z40 8F:/Verilog/Project_1/datapath/im.v
+Z41 FF:/Verilog/Project_1/datapath/im.v
+L0 1
+R20
+R21
+!s85 0
+vmips
+Z42 V^lO[ZOI0I1e8M8GJjI9B:3
+r1
+31
+Z43 IackZddGma]=0X>c:^Zdeh2
+R16
+Z44 w1495437924
+Z45 8mips.v
+Z46 Fmips.v
+L0 2
+R20
+R21
+!s85 0
+vmux
+Z47 VU8>mXb[U5Hd;d;a65VF]m3
+r1
+31
+Z48 I]OnV2PjC2<E`4e3gT:ZAg2
+R16
+Z49 w1495423703
+Z50 8F:/Verilog/Project_1/datapath/mux.v
+Z51 FF:/Verilog/Project_1/datapath/mux.v
+L0 1
+R20
+R21
+!s85 0
+vnpc
+Z52 Vf?[?79_<zoI8;`nR<2fZF0
+r1
+31
+Z53 Il0<XnW@F@RUiNmnf3[[5h3
+R16
+Z54 w1495431176
+Z55 8F:/Verilog/Project_1/datapath/npc.v
+Z56 FF:/Verilog/Project_1/datapath/npc.v
+L0 1
+R20
+R21
+!s85 0
+vpc
+Z57 V6kdZjK7?dcajdn2PAhf5L0
+r1
+31
+Z58 IU6MZCfT_eNG57mmbfVC731
+R16
+Z59 w1495437730
+Z60 8F:/Verilog/Project_1/datapath/pc.v
+Z61 FF:/Verilog/Project_1/datapath/pc.v
+L0 1
+R20
+R21
+!s85 0
+vregFile
+Z62 V_zO8j2IIVMMeA6IH4fWfT0
+r1
+31
+Z63 I`=OOnBfn_<WKBn3HgIJkB3
+R16
+Z64 w1495437687
+Z65 8F:/Verilog/Project_1/datapath/rf.v
+Z66 FF:/Verilog/Project_1/datapath/rf.v
+L0 1
+R20
+R21
+Z67 nreg@file
+!s85 0
+vtestbench
+Z68 VhGfW:390DM[oDMzegDH9`2
+r1
+31
+Z69 ICOT2AGjBUOL8KNBHHjF<<1
+R16
+Z70 w1495437500
+Z71 8F:/Verilog/Project_1/testbench.v
+Z72 FF:/Verilog/Project_1/testbench.v
+L0 3
+R20
+R21
+!s85 0

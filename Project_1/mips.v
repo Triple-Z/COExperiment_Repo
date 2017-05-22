@@ -24,15 +24,15 @@ module mips (clk, rst);
 	wire 	[31:0]	dm_out;
 	wire 	[4:0]	rWin;
 	wire 	[3:0]	aluCtr;
-	wire 			branch;
-	wire 			jump;
-	wire 			regDst;
-	wire 			aluSrc;
-	wire 			regWr;
-	wire 			memWr;
-	wire 			extOp;
-	wire 			memtoReg;
-	wire 			zero;
+	wire 		branch;
+	wire 		jump;
+	wire 		regDst;
+	wire 		aluSrc;
+	wire 		regWr;
+	wire 		memWr;
+	wire 		extOp;
+	wire 		memtoReg;
+	wire 		zero;
 
 
 	pc pc(
@@ -50,7 +50,7 @@ module mips (clk, rst);
 		.imm16(ins[15:0]),
 		.imm26(ins[25:0]),
 		.niaddr(pc_next)
-		);
+	);
 
 	im_4k im(
 		.iaddr(pc_cur[11:2]),
@@ -125,4 +125,4 @@ module mips (clk, rst);
 		.memtoReg(memtoReg)
 	);
 
-endmodule // mips
+endmodule // MIPS main program;

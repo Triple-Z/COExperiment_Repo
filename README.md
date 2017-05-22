@@ -16,18 +16,18 @@
 
 > Total: 12
 
-| Status 	| Ins Type 	| op 		| func 	| ALUctr 	| Branch	| Jump	| RegDst	| ALUSrc	| MemtoReg	| RegWr	| MemWr	| ExtOp	|
+| Status 	| Ins Type 	| op 	| func 	| ALUctr 	| Branch	| Jump	| RegDst	| ALUSrc	| MemtoReg	| RegWr	| MemWr	| ExtOp	|
 |:-------: 	|:--------:	|:------:	|:------:	|:------:	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|
-|`no tested`	| addu 	| 000000 	| 100000 	| 0000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| add 	| 000000 	| 100000 	| 0001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| subu 	| 000000 	| 100010 	| 1000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| sub 	| 000000 	| 100010 	| 1001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| and 	| 000000 	| 100100 	| 0010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| or 	| 000000 	| 100101 	| 0011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| sltu 	| 000000 	| 101010 	| 1010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| slt 	| 000000 	| 101010 	| 1011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`no tested`	| beq 	| 000100 	| x 	| 1001 	| 1 	| 0 	| x 	| 0 	| x 	| 0 	| 0 	| x 	|
-|`no tested`	| jump 	| 000010 	| x 	| x 	| 0 	| 1 	| x 	| x 	| x 	| 0 	| 0 	| x 	|
+|`failed`	| addu 	| 000000 	| 100000 	| 0000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`supported`	| add 	| 000000 	| 100000 	| 0001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`failed`	| subu 	| 000000 	| 100010 	| 1000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`supported`	| sub 	| 000000 	| 100010 	| 1001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`supported`	| and 	| 000000 	| 100100 	| 0010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`supported`	| or 	| 000000 	| 100101 	| 0011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`failed`	| sltu 	| 000000 	| 101010 	| 1010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`supported`	| slt 	| 000000 	| 101010 	| 1011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
+|`failed`	| beq 	| 000100 	| x 	| 1001 	| 1 	| 0 	| x 	| 0 	| x 	| 0 	| 0 	| x 	|
+|`failed`	| jump 	| 000010 	| x 	| x 	| 0 	| 1 	| x 	| x 	| x 	| 0 	| 0 	| x 	|
 |`no tested`	| lw 	| 100011 	| x 	| 0001 	| 0 	| 0 	| 0 	| 1 	| 1 	| 1 	| 0 	| 1 	|
 |`no tested`	| sw 	| 101011 	| x 	| 0001 	| 0 	| 0 	| x 	| 1 	| x 	| 0 	| 1 	| 1 	|
 

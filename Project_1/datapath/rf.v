@@ -8,6 +8,8 @@ module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 
 	initial begin
 		register[0] = 0;
+		register[8] = 1;
+		register[9] = 3;
 	end
 
 	assign busA = (rA != 0)? register[rA]: 0;
