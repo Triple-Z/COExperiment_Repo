@@ -14,6 +14,15 @@ module mips (clk, rst);
 
 	wire 	[31:0] 	pc_next;
 	wire 	[31:0] 	pc_cur;
+	wire 	[31:0] 	ins;
+	wire 	[31:0]	ext_imm;
+	wire 	[31:0]	routa;
+	wire 	[31:0]	routb;
+	wire 	[31:0]	rin;
+	wire 	[31:0]	aluSrc_mux_out;
+	wire 	[31:0]	alu_out;
+	wire 	[31:0]	dm_out;
+	wire 	[4:0]	rWin;
 	wire 	[3:0]	aluCtr;
 	wire 			branch;
 	wire 			jump;
@@ -23,8 +32,7 @@ module mips (clk, rst);
 	wire 			memWr;
 	wire 			extOp;
 	wire 			memtoReg;
-
-
+	wire 			zero;
 
 
 	pc pc(
@@ -34,18 +42,52 @@ module mips (clk, rst);
 		.iaddr(pc_cur)
 	);
 
-	ext ext_mux(
-		.imm16(),
-		.extOp(),
-		.dout()
+	ext extOp_ext(
+		.imm16(ins[15:0]),
+		.extOp(extOp),
+		.dout(ext_imm)
 	);
 
 
-	mux #(32) mux_alu(
-		.a(),
-		.b(),
-		.ctrl_s(),
-		.dout()
+	mux #(32) aluSrc_mux(
+		.a(routb),
+		.b(ext_imm),
+		.ctrl_s(aluSrc),
+		.dout(aluSrc_mux_out)
+	);
+
+	mux #(5) regDst_mux(
+		.a(ins[20:16]),
+		.b(ins[15:11]),
+		.ctrl_s(regDst),
+		.dout(rWin)
+	);
+
+	regFile rf(
+		.busW(rin),
+		.clk(clk),
+		.wE(regWr),
+		.rW(rWin),
+		.rA(ins[25:21]),
+		.rB(ins[20:16]),
+		.busA(routa),
+		.busB(routb)
+	);
+
+	alu alu(
+		.ALUop(aluCtr),
+		.a(routa),
+		.b(aluSrc_mux_out),
+		.result(alu_out),
+		.zero(zero)
+	);
+
+	dm_4k dm(
+		.addr(alu_out),
+		.din(aluSrc_mux_out),
+		.wEn(memWr),
+		.clk(clk),
+		.dout(dm_out)
 	);
 
 endmodule // mips
