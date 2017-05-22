@@ -1,7 +1,7 @@
 module npc (iaddr, branch, jump, zero, imm16, imm26, niaddr);
 	input 	branch, jump, zero;
 	input [31:0]	iaddr;// Instruction Address;
-	input [15:0] imm16;
+	input [15:0] 	imm16;
 	input [25:0]	imm26;
 
 	output reg [31:0] niaddr;// Next Instruction Address;
@@ -18,5 +18,5 @@ module npc (iaddr, branch, jump, zero, imm16, imm26, niaddr);
 			niaddr = pc4;
 		end
 	end
-	
+
 endmodule // Next Program Counter;

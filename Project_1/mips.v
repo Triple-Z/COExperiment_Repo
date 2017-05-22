@@ -42,6 +42,21 @@ module mips (clk, rst);
 		.iaddr(pc_cur)
 	);
 
+	npc npc(
+		.iaddr(pc_cur),
+		.branch(branch),
+		.jump(jumpz),
+		.zero(zero),
+		.imm16(ins[15:0]),
+		.imm26(ins[25:0]),
+		.niaddr(pc_next)
+		);
+
+	im_4k im(
+		.iaddr(pc_cur[11:2]),
+		.ins(ins)
+	);
+
 	ext extOp_ext(
 		.imm16(ins[15:0]),
 		.extOp(extOp),
@@ -83,11 +98,31 @@ module mips (clk, rst);
 	);
 
 	dm_4k dm(
-		.addr(alu_out),
+		.addr(alu_out[11:2]),
 		.din(aluSrc_mux_out),
 		.wEn(memWr),
 		.clk(clk),
 		.dout(dm_out)
+	);
+
+	mux memtoReg_mux(
+		.a(alu_out),
+		.b(dm_out),
+		.ctrl_s(memtoReg),
+		.dout(rin)
+	);
+
+	ctrl ctrl(
+		.ins(ins),
+		.branch(branch),
+		.jump(jump),
+		.regDst(regDst),
+		.aluSrc(aluSrc),
+		.aluCtr(aluCtr),
+		.regWr(regWr),
+		.memWr(memWr),
+		.extOp(extOp),
+		.memtoReg(memtoReg)
 	);
 
 endmodule // mips

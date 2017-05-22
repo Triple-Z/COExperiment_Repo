@@ -58,6 +58,7 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				regWr	= 0;
 				memWr	= 0;
 				extOp	= 1;
+				aluCtr 	= 4'b0001;// add;
 			end
 
 			SW: begin
@@ -67,6 +68,7 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				regWr	= 0;
 				memWr	= 1;
 				extOp	= 1;
+				aluCtr 	= 4'b0001;// add;
 			end
 
 			BEQ: begin

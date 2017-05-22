@@ -4,7 +4,7 @@
 
 [TOC]
 
-> Last Revised: `5/21/2017`
+> Last Revised: `5/22/2017`
 
 ## Project 1
 
@@ -28,8 +28,8 @@
 |`no tested`	| slt 	| 000000 	| 101010 	| 1011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
 |`no tested`	| beq 	| 000100 	| x 	| 1001 	| 1 	| 0 	| x 	| 0 	| x 	| 0 	| 0 	| x 	|
 |`no tested`	| jump 	| 000010 	| x 	| x 	| 0 	| 1 	| x 	| x 	| x 	| 0 	| 0 	| x 	|
-|`no tested`	| lw 	| 100011 	| x 	| 0000 	| 0 	| 0 	| 0 	| 1 	| 1 	| 1 	| 0 	| 1 	|
-|`no tested`	| sw 	| 101011 	| x 	| 0000 	| 0 	| 0 	| x 	| 1 	| x 	| 0 	| 1 	| 1 	|
+|`no tested`	| lw 	| 100011 	| x 	| 0001 	| 0 	| 0 	| 0 	| 1 	| 1 	| 1 	| 0 	| 1 	|
+|`no tested`	| sw 	| 101011 	| x 	| 0001 	| 0 	| 0 	| x 	| 1 	| x 	| 0 	| 1 	| 1 	|
 
 
 ### Datapath Module
@@ -48,4 +48,4 @@
 
 ### Creator
 
-- [ ] [MIPS (Creater)](Project_1/mips.v)
+- [x] [MIPS (Creater)](Project_1/mips.v)
