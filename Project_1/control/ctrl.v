@@ -25,10 +25,13 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 		J	= 6'b000010;
 	// Function code;
 	parameter 	ADD 	= 6'b100000,
+		ADDU 	= 6'b100001,
 		SUB 	= 6'b100010,
+		SUBU 	= 6'b100011,
 		AND 	= 6'b100100,
 		OR	= 6'b100101,
-		SLT 	= 6'b101010;
+		SLT 	= 6'b101010,
+		SLTU 	= 6'b101011;
 
 	always @ ( * ) begin
 		case (op)
@@ -42,10 +45,13 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				memWr	= 0;
 				case (func)
 					ADD: 	aluCtr = 4'b0001;
+					ADDU: 	aluCtr = 4'b0000;
 					SUB: 	aluCtr = 4'b1001;
+					SUBU: 	aluCtr = 4'b1000;
 					AND: 	aluCtr = 4'b0010;
 					OR:	aluCtr = 4'b0011;
 					SLT:	aluCtr = 4'b1011;
+					SLTU: 	aluCtr = 4'b1010;
 				endcase
 			end
 
