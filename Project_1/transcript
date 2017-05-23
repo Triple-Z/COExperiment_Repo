@@ -1,0 +1,94 @@
+# Reading D:/ModelSim/tcl/vsim/pref.tcl 
+# //  ModelSim SE 6.3c Sep 11 2007 
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# OpenFile F:/Verilog/Project_1/COE1.mpf 
+# Loading project COE1
+vsim -gui -novopt work.testbench
+# vsim -gui -novopt work.testbench 
+# Loading work.testbench
+# Loading work.mips
+# Loading work.pc
+# Loading work.npc
+# Loading work.im_4k
+# Loading work.ext
+# Loading work.mux
+# Loading work.regFile
+# Loading work.alu
+# Loading work.dm_4k
+# Loading work.ctrl
+add wave \
+{sim:/testbench/mips/rf/clk } \
+{sim:/testbench/mips/rf/register } 
+add wave \
+{sim:/testbench/mips/ctrl/aluCtr } \
+{sim:/testbench/mips/ctrl/branch } \
+{sim:/testbench/mips/ctrl/jump } \
+{sim:/testbench/mips/ctrl/regWr } \
+{sim:/testbench/mips/ctrl/memWr } \
+{sim:/testbench/mips/ctrl/op } \
+{sim:/testbench/mips/ctrl/func } 
+add wave \
+{sim:/testbench/mips/dm/dm } 
+run
+run
+run
+run
+run
+add wave \
+{sim:/testbench/mips/dm/din } \
+{sim:/testbench/mips/dm/wEn } 
+restart
+run
+run
+run
+quit -sim
+# Compile of alu.v was successful.
+# Compile of dm.v was successful.
+# Compile of im.v was successful.
+# Compile of npc.v was successful.
+# Compile of pc.v was successful.
+# Compile of rf.v was successful.
+# Compile of ctrl.v was successful.
+# Compile of mips.v was successful.
+# Compile of ext.v was successful.
+# Compile of testbench.v was successful.
+# Compile of mux.v was successful.
+# 11 compiles, 0 failed with no errors. 
+vsim -gui -novopt work.testbench
+# vsim -gui -novopt work.testbench 
+# Refreshing F:\Verilog\Project_1\work.testbench
+# Loading work.testbench
+# Refreshing F:\Verilog\Project_1\work.mips
+# Loading work.mips
+# Refreshing F:\Verilog\Project_1\work.pc
+# Loading work.pc
+# Refreshing F:\Verilog\Project_1\work.npc
+# Loading work.npc
+# Refreshing F:\Verilog\Project_1\work.im_4k
+# Loading work.im_4k
+# Refreshing F:\Verilog\Project_1\work.ext
+# Loading work.ext
+# Refreshing F:\Verilog\Project_1\work.mux
+# Loading work.mux
+# Refreshing F:\Verilog\Project_1\work.regFile
+# Loading work.regFile
+# Refreshing F:\Verilog\Project_1\work.alu
+# Loading work.alu
+# Refreshing F:\Verilog\Project_1\work.dm_4k
+# Loading work.dm_4k
+# Refreshing F:\Verilog\Project_1\work.ctrl
+# Loading work.ctrl
+add wave \
+{sim:/testbench/mips/dm/clk } \
+{sim:/testbench/mips/dm/dm } 
+run
+run
+run

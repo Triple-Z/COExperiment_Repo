@@ -1,0 +1,17 @@
+add $t1, $t1, $t1
+addu $t3, $t3, $t3
+beq $t0, $zero, H
+add $t2, $t2, $t2
+H: sub $t3, $t1, $t2
+subu $t3, $t4, $t2
+and $t5, $t4, $t2
+or $t5, $t4, $t2
+slt $t1, $t2, $t4
+sltu $t1, $t4, $t2
+sw $t5, 100($t2)
+lw $t5, 100($t2)
+j L
+add $t2, $t2, $t2
+add $t2, $t2, $t2
+add $t2, $t2, $t2
+L:sub $t2, $t2, $t4

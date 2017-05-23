@@ -1,4 +1,25 @@
-F:/Verilog/Project_1/testbench.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/testbench.v
+F:/Verilog/Project_1/datapath/alu.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/alu.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} F:/Verilog/Project_1/datapath/im.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/im.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module im_4k
+
+Top level modules:
+	im_4k
+
+} {} {}} F:/Verilog/Project_1/datapath/mux.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/mux.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} F:/Verilog/Project_1/testbench.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/testbench.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 -- Compiling module pc
 -- Compiling module alu
@@ -14,27 +35,6 @@ Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 
 Top level modules:
 	testbench
-
-} {} {}} F:/Verilog/Project_1/datapath/mux.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/mux.v
-Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module mux
-
-Top level modules:
-	mux
-
-} {} {}} F:/Verilog/Project_1/datapath/im.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/im.v
-Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module im_4k
-
-Top level modules:
-	im_4k
-
-} {} {}} F:/Verilog/Project_1/datapath/alu.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/alu.v
-Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module alu
-
-Top level modules:
-	alu
 
 } {} {}} F:/Verilog/Project_1/mips.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/mips.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
@@ -59,6 +59,13 @@ Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 Top level modules:
 	pc
 
+} {} {}} F:/Verilog/Project_1/control/ctrl.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/control/ctrl.v
+Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
 } {} {}} F:/Verilog/Project_1/datapath/rf.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/rf.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 -- Compiling module regFile
@@ -66,12 +73,12 @@ Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 Top level modules:
 	regFile
 
-} {} {}} F:/Verilog/Project_1/datapath/npc.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/npc.v
+} {} {}} F:/Verilog/Project_1/datapath/ext.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/ext.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module npc
+-- Compiling module ext
 
 Top level modules:
-	npc
+	ext
 
 } {} {}} F:/Verilog/Project_1/datapath/dm.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/dm.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
@@ -80,11 +87,11 @@ Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
 Top level modules:
 	dm_4k
 
-} {} {}} F:/Verilog/Project_1/datapath/ext.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/ext.v
+} {} {}} F:/Verilog/Project_1/datapath/npc.v {1 {vlog -work work -vopt -nocovercells F:/Verilog/Project_1/datapath/npc.v
 Model Technology ModelSim SE vlog 6.3c Compiler 2007.09 Sep 11 2007
--- Compiling module ext
+-- Compiling module npc
 
 Top level modules:
-	ext
+	npc
 
 } {} {}}
