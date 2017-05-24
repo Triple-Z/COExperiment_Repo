@@ -22,7 +22,8 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 		LW	= 6'b100011,
 		SW	= 6'b101011,
 		BEQ	= 6'b000100,
-		J	= 6'b000010;
+		J	= 6'b000010,
+		ORI 	= 6'b001101;
 	// Function code;
 	parameter 	ADD 	= 6'b100000,
 		ADDU 	= 6'b100001,
@@ -90,6 +91,18 @@ module ctrl (ins, branch, jump, regDst, aluSrc, aluCtr, regWr, memWr, extOp, mem
 				jump 	= 1;
 				regWr	= 0;
 				memWr	= 0;
+			end
+
+			ORI: begin// Or immediate;
+				branch 	= 0;
+				jump 	= 0;
+				regDst 	= 0;
+				aluSrc 	= 1;
+				memtoReg 	= 0;
+				regWr 	= 1;
+				memWr 	= 0;
+				extOp 	= 0;
+				aluCtr 	= 4'b0011;
 			end
 		endcase
 	end

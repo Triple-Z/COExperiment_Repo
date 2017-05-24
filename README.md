@@ -30,7 +30,7 @@
 |`supported`	| jump 	| 000010 	| x 	| x 	| 0 	| 1 	| x 	| x 	| x 	| 0 	| 0 	| x 	|
 |`supported`	| lw 	| 100011 	| x 	| 0001 	| 0 	| 0 	| 0 	| 1 	| 1 	| 1 	| 0 	| 1 	|
 |`supported`	| sw 	| 101011 	| x 	| 0001 	| 0 	| 0 	| x 	| 1 	| x 	| 0 	| 1 	| 1 	|
-
+|`supported`	| ori 	| 001101 	| x 	| 0011 	| 0 	| 0 	| 0 	| 1 	| 0 	| 1 	| 0 	| 0 	|
 
 ### Datapath Module
 
