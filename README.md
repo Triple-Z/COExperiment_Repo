@@ -2,19 +2,9 @@
 
 计算机组成原理实验
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+[TOC]
 
-- [Computer Organization Experiment](#computer-organization-experiment)
-	- [Project 1](#project-1)
-		- [Instruction Set](#instruction-set)
-		- [Datapath Module](#datapath-module)
-		- [Control Module](#control-module)
-		- [Creator Module](#creator-module)
-		- [Test Bench](#test-bench)
-
-<!-- /TOC -->
-
-> Last Revised: `5/23/2017`
+> Last Revised: `5/24/2017`
 
 ## Project 1
 
