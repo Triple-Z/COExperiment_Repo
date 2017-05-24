@@ -1,1 +1,6 @@
 Project_1/work/
+*.mpf
+*.mti
+*.wlf
+*.bak
+transcript
