@@ -11,45 +11,6 @@
 # //
 # OpenFile F:/Verilog/Project_1/COE1.mpf 
 # Loading project COE1
-vsim -gui -novopt work.testbench
-# vsim -gui -novopt work.testbench 
-# Loading work.testbench
-# Loading work.mips
-# Loading work.pc
-# Loading work.npc
-# Loading work.im_4k
-# Loading work.ext
-# Loading work.mux
-# Loading work.regFile
-# Loading work.alu
-# Loading work.dm_4k
-# Loading work.ctrl
-add wave \
-{sim:/testbench/mips/rf/clk } \
-{sim:/testbench/mips/rf/register } 
-add wave \
-{sim:/testbench/mips/ctrl/aluCtr } \
-{sim:/testbench/mips/ctrl/branch } \
-{sim:/testbench/mips/ctrl/jump } \
-{sim:/testbench/mips/ctrl/regWr } \
-{sim:/testbench/mips/ctrl/memWr } \
-{sim:/testbench/mips/ctrl/op } \
-{sim:/testbench/mips/ctrl/func } 
-add wave \
-{sim:/testbench/mips/dm/dm } 
-run
-run
-run
-run
-run
-add wave \
-{sim:/testbench/mips/dm/din } \
-{sim:/testbench/mips/dm/wEn } 
-restart
-run
-run
-run
-quit -sim
 # Compile of alu.v was successful.
 # Compile of dm.v was successful.
 # Compile of im.v was successful.
@@ -87,8 +48,51 @@ vsim -gui -novopt work.testbench
 # Refreshing F:\Verilog\Project_1\work.ctrl
 # Loading work.ctrl
 add wave \
-{sim:/testbench/mips/dm/clk } \
+{sim:/testbench/mips/clk } 
+add wave \
+{sim:/testbench/mips/ctrl/aluCtr } \
+{sim:/testbench/mips/ctrl/branch } \
+{sim:/testbench/mips/ctrl/jump } \
+{sim:/testbench/mips/ctrl/regDst } \
+{sim:/testbench/mips/ctrl/aluSrc } \
+{sim:/testbench/mips/ctrl/regWr } \
+{sim:/testbench/mips/ctrl/memWr } \
+{sim:/testbench/mips/ctrl/extOp } \
+{sim:/testbench/mips/ctrl/memtoReg } \
+{sim:/testbench/mips/ctrl/op } \
+{sim:/testbench/mips/ctrl/func } 
+add wave \
+{sim:/testbench/mips/rf/register } 
+add wave \
+{sim:/testbench/mips/pc/niaddr } \
+{sim:/testbench/mips/pc/iaddr } 
+add wave \
+{sim:/testbench/mips/npc/imm16 } \
+{sim:/testbench/mips/npc/imm26 } 
+add wave \
+{sim:/testbench/mips/npc/zero } 
+add wave \
 {sim:/testbench/mips/dm/dm } 
+add wave \
+{sim:/testbench/mips/im/im } 
+run
+run
+run
+run
+restarut
+# invalid command name "restarut"
+restart
+run
+run
+run
+run
+restart
+run
+run
+run
+run
+restart
+run
 run
 run
 run

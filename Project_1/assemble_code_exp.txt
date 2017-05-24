@@ -8,10 +8,20 @@ and $t5, $t4, $t2
 or $t5, $t4, $t2
 slt $t1, $t2, $t4
 sltu $t1, $t4, $t2
-sw $t5, 100($t2)
-lw $t5, 100($t2)
+sw $t5, 100($s2)
+lw $t1, 100($s2)
 j L
 add $t2, $t2, $t2
 add $t2, $t2, $t2
 add $t2, $t2, $t2
-L:sub $t2, $t2, $t4
+L:sub $t3, $t2, $t4
+
+
+$zero 	| 	$0
+$t0 	| 	$8
+$t1 	| 	$9
+$t2 	| 	$10
+$t3 	| 	$11
+$t4 	| 	$12
+$t5 	| 	$13
+$s2 	| 	$18
