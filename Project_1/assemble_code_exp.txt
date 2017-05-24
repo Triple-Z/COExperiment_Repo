@@ -1,3 +1,4 @@
+ori $t2, $t5, 10
 add $t1, $t1, $t1
 addu $t3, $t3, $t3
 beq $t0, $zero, H
