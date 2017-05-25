@@ -6,6 +6,10 @@
 
 > Last Revised: `5/24/2017`
 
+## Project 2
+
+[Jump to directory](Project_2/)
+
 ## Project 1
 
 [Jump to directory](Project_1/)
@@ -16,21 +20,22 @@
 
 > Total: 12
 
-| Status 	| Ins Type 	| op 	| func 	| ALUctr 	| Branch	| Jump	| RegDst	| ALUSrc	| MemtoReg	| RegWr	| MemWr	| ExtOp	|
-|:-------: 	|:--------:	|:------:	|:------:	|:------:	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|:----: 	|
-|`supported`	| addu 	| 000000 	| 100001 	| 0000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| add 	| 000000 	| 100000 	| 0001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| subu 	| 000000 	| 100011 	| 1000 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| sub 	| 000000 	| 100010 	| 1001 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| and 	| 000000 	| 100100 	| 0010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| or 	| 000000 	| 100101 	| 0011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| sltu 	| 000000 	| 101011 	| 1010 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| slt 	| 000000 	| 101010 	| 1011 	| 0 	| 0 	| 1 	| 0 	| 0 	| 1 	| 0 	| x 	|
-|`supported`	| beq 	| 000100 	| x 	| 1001 	| 1 	| 0 	| x 	| 0 	| x 	| 0 	| 0 	| x 	|
-|`supported`	| jump 	| 000010 	| x 	| x 	| 0 	| 1 	| x 	| x 	| x 	| 0 	| 0 	| x 	|
-|`supported`	| lw 	| 100011 	| x 	| 0001 	| 0 	| 0 	| 0 	| 1 	| 1 	| 1 	| 0 	| 1 	|
-|`supported`	| sw 	| 101011 	| x 	| 0001 	| 0 	| 0 	| x 	| 1 	| x 	| 0 	| 1 	| 1 	|
-|`supported`	| ori 	| 001101 	| x 	| 0011 	| 0 	| 0 	| 0 	| 1 	| 0 	| 1 	| 0 	| 0 	|
+| Status 		| Ins Type 	| op 		| func 		| ALUctr 	|Branch	| Jump	|RegDst	|ALUSrc	| MemtoReg	| RegWr	| MemWr	| ExtOp	|
+|:-------: 		|:--------:	|:------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----: |:----:		|:----:	|:----:	|:----:	|
+|`supported`	| addu 		| 000000 	| 100001 	| 0000 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| add 		| 000000 	| 100000 	| 0001 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| subu 		| 000000 	| 100011 	| 1000 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| sub 		| 000000 	| 100010 	| 1001 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| and 		| 000000 	| 100100 	| 0010 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| or 		| 000000 	| 100101 	| 0011 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| sltu 		| 000000 	| 101011 	| 1010 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| slt 		| 000000 	| 101010 	| 1011 		| 0 	| 0 	| 1 	| 0 	| 0 		| 1 	| 0 	| x 	|
+|`supported`	| beq 		| 000100 	| x 		| 1001 		| 1 	| 0 	| x 	| 0 	| x 		| 0 	| 0 	| x 	|
+|`supported`	| jump 		| 000010 	| x 		| x 		| 0 	| 1 	| x 	| x 	| x 		| 0 	| 0 	| x 	|
+|`supported`	| lw 		| 100011 	| x 		| 0001 		| 0 	| 0 	| 0 	| 1 	| 1 		| 1 	| 0 	| 1 	|
+|`supported`	| sw 		| 101011 	| x 		| 0001 		| 0 	| 0 	| x 	| 1 	| x 		| 0 	| 1 	| 1 	|
+|`supported`	| ori 		| 001101 	| x 		| 0011 		| 0 	| 0 	| 0 	| 1 	| 0 		| 1 	| 0 	| 0 	|
+
 
 ### Datapath Module
 
