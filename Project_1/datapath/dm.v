@@ -7,10 +7,6 @@ module dm_4k (addr, din, wEn, clk, dout);
 
 	reg [31:0] dm [1023:0];// 32-bit*1024;
 
-	// always @ ( addr or din ) begin// Read;
-	// 	dout = dm[addr[11:2]][31:0];
-	// end
-
 	assign dout = dm[addr[11:2]][31:0];
 
 	always @ ( posedge clk ) begin// Write;
