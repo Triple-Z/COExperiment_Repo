@@ -59,3 +59,7 @@
 ### Test Bench
 
 - [x] [TB (Test Bench)](Project_1/testbench.v)
+
+### Appendix
+
+[Module Explanation](Project_1/Appendix.md)
