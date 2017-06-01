@@ -1,4 +1,4 @@
-module rf ();
+module rf (busW, rA, rB, rW, clk, wE, busA, busB);
 	input 	[31:0] 	busW;
 	input 	[4:0] 	rA;
 	input 	[4:0] 	rB;
