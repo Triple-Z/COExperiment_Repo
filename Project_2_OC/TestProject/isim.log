@@ -1,0 +1,22 @@
+ISim log file
+Running: F:\Verilog\Project_2_OC\TestProject\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/Verilog/Project_2_OC/TestProject/testbench_isim_beh.wdb 
+ISim O.61xd (signature 0x1cce1bb2)
+----------------------------------------------------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to 'F:\ISE\ISE_DS\license.lic'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to 'D:\ModelSim\win32\LICENSE.TXT'.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

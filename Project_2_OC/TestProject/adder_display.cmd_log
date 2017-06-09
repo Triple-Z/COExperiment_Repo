@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/TestProject/adder_display.xst" -ofn "F:/Verilog/Project_2_OC/TestProject/adder_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc adder.ucf -p xc6slx150-fgg484-3 adder_display.ngc adder_display.ngd  
+map -intstyle ise -p xc6slx150-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o adder_display_map.ncd adder_display.ngd adder_display.pcf 
+par -w -intstyle ise -ol high -mt off adder_display_map.ncd adder_display.ncd adder_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml adder_display.twx adder_display.ncd -o adder_display.twr adder_display.pcf -ucf adder.ucf 
+bitgen -intstyle ise -f adder_display.ut adder_display.ncd 

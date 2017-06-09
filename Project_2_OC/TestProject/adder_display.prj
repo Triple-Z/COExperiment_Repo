@@ -1,0 +1,3 @@
+verilog work "lcd_module.v"
+verilog work "adder.v"
+verilog work "adder_display.v"
