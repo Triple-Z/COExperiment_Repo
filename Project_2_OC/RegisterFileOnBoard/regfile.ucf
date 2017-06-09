@@ -1,0 +1,53 @@
+############################################################################
+# VCC AUX VOLTAGE 
+############################################################################
+CONFIG VCCAUX=2.5; # Valid values are 2.5 and 3.3
+
+#时钟信号连接
+NET "clk" LOC = J1 | IOSTANDARD = "LVTTL";
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 100 ns HIGH 50%;
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#脉冲开关，用于输入作为复位信号,低电平有效
+NET "resetn" LOC = U3 | IOSTANDARD = "LVTTL";
+
+#led灯连接，用于输出
+NET "led_wen"    LOC = F8  | IOSTANDARD = "LVCMOS33"; 
+NET "led_raddr1" LOC = C10 | IOSTANDARD = "LVCMOS33"; 
+NET "led_raddr2" LOC = F9  | IOSTANDARD = "LVCMOS33"; 
+NET "led_waddr"  LOC = B8  | IOSTANDARD = "LVCMOS33"; 
+NET "led_wdata"  LOC = A8 | IOSTANDARD = "LVCMOS33"; 
+
+#拨码开关连接，用于输入
+NET "wen"          LOC = M2 | IOSTANDARD = "LVCMOS33";  #sw6 
+NET "input_sel[1]" LOC = T1 | IOSTANDARD = "LVCMOS33";  #sw1 
+NET "input_sel[0]" LOC = T2 | IOSTANDARD = "LVCMOS33";  #sw0 
+
+#触摸屏引脚连接，不需要更改
+NET "lcd_rst" LOC = D14 | IOSTANDARD = "LVTTL";
+NET "lcd_cs"  LOC = D12 | IOSTANDARD = "LVTTL";
+NET "lcd_rs"  LOC = E12 | IOSTANDARD = "LVTTL";
+NET "lcd_wr"  LOC = D13 | IOSTANDARD = "LVTTL";
+NET "lcd_rd"  LOC = F13 | IOSTANDARD = "LVTTL";
+NET "lcd_bl_ctr" LOC = A15 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[0]"   LOC = C13 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[1]"   LOC = E14 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[2]"   LOC = C14 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[3]"   LOC = D15 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[4]"   LOC = C15 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[5]"   LOC = F14 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[6]"   LOC = C16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[7]"   LOC = D17 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[8]"   LOC = E16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[9]"   LOC = B12 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[10]"  LOC = F15 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[11]"  LOC = C12 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[12]"  LOC = A12 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[13]"  LOC = A14 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[14]"  LOC = A13 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[15]"  LOC = B14 | IOSTANDARD = "LVTTL";
+NET "ct_int" LOC = A18 | IOSTANDARD = "LVTTL";
+NET "ct_sda" LOC = A16 | IOSTANDARD = "LVTTL";
+NET "ct_scl" LOC = B18 | IOSTANDARD = "LVTTL";
+NET "ct_rstn"LOC = C17 | IOSTANDARD = "LVTTL";

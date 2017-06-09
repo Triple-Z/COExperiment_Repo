@@ -1,0 +1,614 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: regfile_display.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "regfile_display.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "regfile_display"
+Output Format                      : NGC
+Target Device                      : xc6slx150-3-fgg484
+
+---- Source Options
+Top Module Name                    : regfile_display
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"F:\Verilog\Project_2_OC\RegisterFileOnBoard\regfile.v\" into library work
+Parsing module <regfile>.
+Analyzing Verilog file \"F:\Verilog\Project_2_OC\RegisterFileOnBoard\lcd_module.v\" into library work
+Parsing module <lcd_module>.
+Analyzing Verilog file \"F:\Verilog\Project_2_OC\RegisterFileOnBoard\regfile_display.v\" into library work
+Parsing module <regfile_display>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <regfile_display>.
+
+Elaborating module <regfile>.
+
+Elaborating module <lcd_module>.
+WARNING:HDLCompiler:413 - "F:\Verilog\Project_2_OC\RegisterFileOnBoard\regfile_display.v" Line 110: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <regfile_display>.
+    Related source file is "f:/verilog/project_2_oc/registerfileonboard/regfile_display.v".
+    Found 5-bit register for signal <raddr2>.
+    Found 5-bit register for signal <waddr>.
+    Found 32-bit register for signal <wdata>.
+    Found 1-bit register for signal <display_valid>.
+    Found 40-bit register for signal <display_name>.
+    Found 32-bit register for signal <display_value>.
+    Found 5-bit register for signal <raddr1>.
+    Found 5-bit subtractor for signal <test_addr> created at line 47.
+    Found 8x40-bit Read Only RAM for signal <_n0086>
+    Found 32-bit 8-to-1 multiplexer for signal <_n0100> created at line 180.
+    Found 6-bit comparator greater for signal <GND_1_o_display_number[5]_LessThan_27_o> created at line 170
+    Found 6-bit comparator greater for signal <display_number[5]_PWR_1_o_LessThan_28_o> created at line 170
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 120 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <regfile_display> synthesized.
+
+Synthesizing Unit <regfile>.
+    Related source file is "f:/verilog/project_2_oc/registerfileonboard/regfile.v".
+    Found 1024-bit register for signal <n0046[1023:0]>.
+    Found 32-bit 32-to-1 multiplexer for signal <rdata1> created at line 38.
+    Found 32-bit 32-to-1 multiplexer for signal <rdata2> created at line 76.
+    Found 32-bit 32-to-1 multiplexer for signal <test_data> created at line 114.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  35 Multiplexer(s).
+Unit <regfile> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x40-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 8
+ 1-bit register                                        : 1
+ 1024-bit register                                     : 1
+ 32-bit register                                       : 2
+ 40-bit register                                       : 1
+ 5-bit register                                        : 3
+# Comparators                                          : 2
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 38
+ 32-bit 2-to-1 multiplexer                             : 33
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 40-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <lcd_module.ngc>.
+Reading core <lcd_rom.ngc>.
+Loading core <lcd_rom> for timing and area information for instance <lcd_rom_module>.
+Loading core <lcd_module> for timing and area information for instance <lcd_module>.
+
+Synthesizing (advanced) Unit <regfile_display>.
+INFO:Xst:3231 - The small RAM <Mram__n0086> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 40-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <display_number<2:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <regfile_display> synthesized (advanced).
+WARNING:Xst:2677 - Node <rf_0_0> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_1> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_2> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_3> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_4> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_5> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_6> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_7> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_8> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_9> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_10> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_11> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_12> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_13> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_14> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_15> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_16> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_17> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_18> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_19> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_20> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_21> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_22> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_23> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_24> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_25> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_26> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_27> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_28> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_29> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_30> of sequential type is unconnected in block <regfile>.
+WARNING:Xst:2677 - Node <rf_0_31> of sequential type is unconnected in block <regfile>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x40-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 1112
+ Flip-Flops                                            : 1112
+# Comparators                                          : 2
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 37
+ 32-bit 2-to-1 multiplexer                             : 32
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 40-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <display_name_7> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_9> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_11> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_15> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_19> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_20> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_21> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_23> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_25> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_27> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_28> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_29> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_31> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_35> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_37> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_name_39> (without init value) has a constant value of 0 in block <regfile_display>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <display_name_6> in Unit <regfile_display> is equivalent to the following 2 FFs/Latches, which will be removed : <display_name_32> <display_name_34> 
+INFO:Xst:2261 - The FF/Latch <display_name_12> in Unit <regfile_display> is equivalent to the following 2 FFs/Latches, which will be removed : <display_name_16> <display_name_26> 
+INFO:Xst:2261 - The FF/Latch <display_name_18> in Unit <regfile_display> is equivalent to the following FF/Latch, which will be removed : <display_name_24> 
+INFO:Xst:2261 - The FF/Latch <display_name_22> in Unit <regfile_display> is equivalent to the following 4 FFs/Latches, which will be removed : <display_name_30> <display_name_33> <display_name_36> <display_name_38> 
+INFO:Xst:2261 - The FF/Latch <display_name_10> in Unit <regfile_display> is equivalent to the following FF/Latch, which will be removed : <display_name_14> 
+INFO:Xst:2261 - The FF/Latch <display_name_13> in Unit <regfile_display> is equivalent to the following FF/Latch, which will be removed : <display_name_17> 
+
+Optimizing unit <regfile_display> ...
+
+Optimizing unit <regfile> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block regfile_display, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_x_l_2> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_x_l_2_1> 
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_y_1> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_y_1_1> 
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_y_3> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_y_3_1> 
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_x_l_2> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_x_l_2_1> 
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_y_1> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_y_1_1> 
+INFO:Xst:2260 - The FF/Latch <lcd_init_module/display_y_3> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_init_module/display_y_3_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1085
+ Flip-Flops                                            : 1085
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : regfile_display.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3078
+#      GND                         : 3
+#      INV                         : 25
+#      LUT1                        : 63
+#      LUT2                        : 42
+#      LUT3                        : 1081
+#      LUT4                        : 101
+#      LUT5                        : 283
+#      LUT6                        : 1218
+#      MUXCY                       : 63
+#      MUXF7                       : 128
+#      VCC                         : 2
+#      XORCY                       : 69
+# FlipFlops/Latches                : 1348
+#      FD                          : 24
+#      FDE                         : 1056
+#      FDR                         : 119
+#      FDRE                        : 142
+#      FDS                         : 7
+# RAMS                             : 2
+#      RAMB16BWER                  : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 4
+#      IOBUF                       : 2
+#      OBUF                        : 29
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1348  out of  184304     0%  
+ Number of Slice LUTs:                 2813  out of  92152     3%  
+    Number used as Logic:              2813  out of  92152     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2896
+   Number with an unused Flip Flop:    1548  out of   2896    53%  
+   Number with an unused LUT:            83  out of   2896     2%  
+   Number of fully used LUT-FF pairs:  1265  out of   2896    43%  
+   Number of unique control sets:        53
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    338    10%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    268     0%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                              | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                              | 1241  |
+lcd_module/double_clk              | BUFG                                                                                                                                               | 109   |
+lcd_module/lcd_rom_module/N1       | NONE(lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.536ns (Maximum Frequency: 104.866MHz)
+   Minimum input arrival time before clock: 4.045ns
+   Maximum output required time after clock: 8.866ns
+   Maximum combinational path delay: 5.998ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.536ns (frequency: 104.866MHz)
+  Total number of paths / destination ports: 18486 / 1468
+-------------------------------------------------------------------------
+Delay:               9.536ns (Levels of Logic = 10)
+  Source:            display_value_7 (FF)
+  Destination:       lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: display_value_7 to lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.827  display_value_7 (display_value_7)
+     begin scope: 'lcd_module:display_value<7>'
+     LUT6:I2->O            2   0.203   0.981  lcd_draw_module/Mmux_draw_char161 (lcd_draw_module/Mmux_draw_char16)
+     LUT6:I0->O            1   0.203   0.000  lcd_draw_module/Mmux_draw_char164_G (N248)
+     MUXF7:I1->O           2   0.140   0.617  lcd_draw_module/Mmux_draw_char164 (lcd_draw_module/Mmux_draw_char163)
+     LUT5:I4->O            6   0.205   0.992  lcd_draw_module/Mmux_draw_char168 (lcd_draw_module/Madd_GND_3_o_PWR_3_o_add_128_OUT_lut<3>)
+     LUT5:I1->O            1   0.203   0.684  lcd_draw_module/GND_3_o_draw_char[7]_AND_36_o_SW0 (N10)
+     LUT4:I2->O            3   0.203   0.755  lcd_draw_module/GND_3_o_draw_char[7]_AND_36_o (lcd_draw_module/GND_3_o_draw_char[7]_AND_36_o)
+     LUT5:I3->O            3   0.203   0.651  lcd_draw_module/Mmux_draw_rom_pc1621 (lcd_draw_module/Mmux_draw_rom_pc162)
+     LUT6:I5->O            2   0.205   0.845  lcd_draw_module/Mmux_draw_rom_pc2021 (lcd_draw_module/Mmux_draw_rom_pc202)
+     LUT6:I3->O            2   0.205   0.616  Mmux_rom_addr99 (rom_addr<8>)
+     begin scope: 'lcd_module/lcd_rom_module:addra<8>'
+     RAMB16BWER:ADDRA12        0.350          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram
+    ----------------------------------------
+    Total                      9.536ns (2.567ns logic, 6.969ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'lcd_module/double_clk'
+  Clock period: 6.938ns (frequency: 144.129MHz)
+  Total number of paths / destination ports: 5808 / 238
+-------------------------------------------------------------------------
+Delay:               6.938ns (Levels of Logic = 5)
+  Source:            lcd_module/lcd_draw_module/draw_block_number_0 (FF)
+  Destination:       lcd_module/lcd_draw_module/draw_data_1 (FF)
+  Source Clock:      lcd_module/double_clk rising
+  Destination Clock: lcd_module/double_clk rising
+
+  Data Path: lcd_module/lcd_draw_module/draw_block_number_0 to lcd_module/lcd_draw_module/draw_data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             330   0.447   2.074  lcd_draw_module/draw_block_number_0 (display_number<0>)
+     LUT6:I5->O           43   0.205   1.449  lcd_draw_module/out1 (lcd_draw_module/draw_block_number[5]_reduce_or_38_o)
+     LUT6:I5->O            1   0.205   0.580  lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT81 (lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT8)
+     LUT6:I5->O            1   0.205   0.580  lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT82 (lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT81)
+     LUT4:I3->O            1   0.205   0.684  lcd_draw_module/draw_data_1_glue_set_SW0 (N168)
+     LUT6:I4->O            1   0.203   0.000  lcd_draw_module/draw_data_1_rstpot (lcd_draw_module/draw_data_1_rstpot)
+     FD:D                      0.102          lcd_draw_module/draw_data_1
+    ----------------------------------------
+    Total                      6.938ns (1.572ns logic, 5.366ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1170 / 1123
+-------------------------------------------------------------------------
+Offset:              4.045ns (Levels of Logic = 2)
+  Source:            resetn (PAD)
+  Destination:       raddr2_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: resetn to raddr2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  resetn_IBUF (resetn_IBUF)
+     INV:I->O             47   0.206   1.504  resetn_inv1_INV_0 (resetn_inv)
+     FDRE:R                    0.430          raddr2_0
+    ----------------------------------------
+    Total                      4.045ns (1.858ns logic, 2.187ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'lcd_module/double_clk'
+  Total number of paths / destination ports: 332 / 18
+-------------------------------------------------------------------------
+Offset:              8.866ns (Levels of Logic = 7)
+  Source:            lcd_module/lcd_init_module/init_rom_pc_8 (FF)
+  Destination:       lcd_data_io<15> (PAD)
+  Source Clock:      lcd_module/double_clk rising
+
+  Data Path: lcd_module/lcd_init_module/init_rom_pc_8 to lcd_data_io<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.995  lcd_init_module/init_rom_pc_8 (lcd_init_module/init_rom_pc<8>)
+     LUT5:I0->O            2   0.203   0.617  lcd_init_module/init_rom_pc[10]_init_rs_part_AND_24_o11 (lcd_init_module/init_rom_pc[10]_init_rs_part_AND_24_o1)
+     LUT5:I4->O           12   0.205   0.909  lcd_init_module/init_rom_pc[10]_init_rs_part_AND_25_o11 (lcd_init_module/init_rom_pc[10]_init_rs_part_AND_25_o1)
+     LUT3:I2->O            8   0.205   1.147  lcd_init_module/init_rom_pc[10]_PWR_2_o_equal_3_o<10>1 (lcd_init_module/init_rom_pc[10]_PWR_2_o_equal_3_o)
+     LUT6:I1->O            1   0.203   0.580  Mmux_lcd_data_io161 (Mmux_lcd_data_io16)
+     LUT3:I2->O            1   0.205   0.579  Mmux_lcd_data_io162 (lcd_data_io<9>)
+     end scope: 'lcd_module:lcd_data_io<9>'
+     OBUF:I->O                 2.571          lcd_data_io_9_OBUF (lcd_data_io<9>)
+    ----------------------------------------
+    Total                      8.866ns (4.039ns logic, 4.827ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 50 / 23
+-------------------------------------------------------------------------
+Offset:              7.528ns (Levels of Logic = 5)
+  Source:            lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (RAM)
+  Destination:       lcd_data_io<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram to lcd_data_io<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA14    3   1.850   0.755  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram (douta<15>)
+     end scope: 'lcd_module/lcd_rom_module:douta<15>'
+     LUT3:I1->O            1   0.203   0.580  Mmux_lcd_data_io141 (Mmux_lcd_data_io14)
+     LUT6:I5->O            1   0.205   0.580  Mmux_lcd_data_io142 (Mmux_lcd_data_io141)
+     LUT3:I2->O            1   0.205   0.579  Mmux_lcd_data_io143 (lcd_data_io<7>)
+     end scope: 'lcd_module:lcd_data_io<7>'
+     OBUF:I->O                 2.571          lcd_data_io_7_OBUF (lcd_data_io<7>)
+    ----------------------------------------
+    Total                      7.528ns (5.034ns logic, 2.494ns route)
+                                       (66.9% logic, 33.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 5
+-------------------------------------------------------------------------
+Delay:               5.998ns (Levels of Logic = 2)
+  Source:            wen (PAD)
+  Destination:       led_wen (PAD)
+
+  Data Path: wen to led_wen
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           993   1.222   2.205  wen_IBUF (led_wen_OBUF)
+     OBUF:I->O                 2.571          led_wen_OBUF (led_wen)
+    ----------------------------------------
+    Total                      5.998ns (3.793ns logic, 2.205ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    9.536|         |         |         |
+lcd_module/double_clk|   12.667|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock lcd_module/double_clk
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+clk                  |    7.409|         |         |         |
+lcd_module/double_clk|    6.938|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.99 secs
+ 
+--> 
+
+Total memory usage is 259564 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+
