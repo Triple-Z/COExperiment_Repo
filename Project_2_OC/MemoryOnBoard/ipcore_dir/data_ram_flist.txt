@@ -1,0 +1,15 @@
+# Output products list for <data_ram>
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+data_ram.asy
+data_ram.gise
+data_ram.ngc
+data_ram.sym
+data_ram.v
+data_ram.veo
+data_ram.xco
+data_ram.xise
+data_ram\doc\blk_mem_gen_ds512.pdf
+data_ram\doc\blk_mem_gen_v6_1_vinfo.html
+data_ram_flist.txt
+data_ram_xmdf.tcl

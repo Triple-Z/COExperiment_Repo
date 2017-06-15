@@ -5,3 +5,7 @@ INFO:sim - Generating component instance 'data_ram' of
    'xilinx.com:ip:blk_mem_gen:6.1' from
    'F:\ISE\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\blk_mem_gen_v6_1\c
    omponent.xml'.
+Applying current project options...
+Finished applying current project options.
+Cancelled executing Tcl generator.
+Wrote CGP file for project 'data_ram'.

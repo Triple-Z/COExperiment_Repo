@@ -8,5 +8,14 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;F:/Verilog/Project_2_OC/MemoryOnBoard/data_ram.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;F:/Verilog/Project_2_OC/MemoryOnBoard/data_ram_display.v\&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;F:/Verilog/Project_2_OC/MemoryOnBoard/lcd_module.v\&quot; into library work</arg>
+</msg>
+
 </messages>
 
