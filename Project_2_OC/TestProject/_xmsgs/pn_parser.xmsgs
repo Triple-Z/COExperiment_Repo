@@ -17,8 +17,5 @@
 <msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;F:/Verilog/Project_2_OC/TestProject/lcd_module.v\&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1769" ><arg fmt="%s" index="1">Analyzing Verilog file \&quot;F:/Verilog/Project_2_OC/TestProject/testbench.v\&quot; into library work</arg>
-</msg>
-
 </messages>
 

@@ -1,0 +1,40 @@
+Release 13.2 ngdbuild O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: F:\ISE\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -intstyle ise
+-dd _ngo -nt timestamp -uc alu.ucf -p xc6slx150-fgg484-3 alu_display.ngc
+alu_display.ngd
+
+Reading NGO file "F:/Verilog/Project_2_OC/ALUOnBoard/alu_display.ngc" ...
+Loading design module "F:\Verilog\Project_2_OC\ALUOnBoard/lcd_module.ngc"...
+Loading design module "F:\Verilog\Project_2_OC\ALUOnBoard/lcd_rom.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "alu.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N210' has no driver
+WARNING:NgdBuild:452 - logical net 'N211' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   2
+
+Total memory usage is 154920 kilobytes
+
+Writing NGD file "alu_display.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "alu_display.bld"...
