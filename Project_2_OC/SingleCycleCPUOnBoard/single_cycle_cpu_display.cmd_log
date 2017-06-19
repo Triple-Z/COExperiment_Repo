@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.xst" -ofn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.syr" 
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.xst" -ofn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc single_cycle_cpu.ucf -p xc6slx150-fgg676-3 single_cycle_cpu_display.ngc single_cycle_cpu_display.ngd  
+map -intstyle ise -p xc6slx150-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ngd single_cycle_cpu_display.pcf 
+par -w -intstyle ise -ol high -mt off single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ncd single_cycle_cpu_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml single_cycle_cpu_display.twx single_cycle_cpu_display.ncd -o single_cycle_cpu_display.twr single_cycle_cpu_display.pcf -ucf single_cycle_cpu.ucf 
+bitgen -intstyle ise -f single_cycle_cpu_display.ut single_cycle_cpu_display.ncd 
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.xst" -ofn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc single_cycle_cpu.ucf -p xc6slx150-fgg676-3 single_cycle_cpu_display.ngc single_cycle_cpu_display.ngd  
+map -intstyle ise -p xc6slx150-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ngd single_cycle_cpu_display.pcf 
+par -w -intstyle ise -ol high -mt off single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ncd single_cycle_cpu_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml single_cycle_cpu_display.twx single_cycle_cpu_display.ncd -o single_cycle_cpu_display.twr single_cycle_cpu_display.pcf -ucf single_cycle_cpu.ucf 
+bitgen -intstyle ise -f single_cycle_cpu_display.ut single_cycle_cpu_display.ncd 
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.xst" -ofn "F:/Verilog/Project_2_OC/SingleCycleCPUOnBoard/single_cycle_cpu_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc single_cycle_cpu.ucf -p xc6slx150-fgg676-3 single_cycle_cpu_display.ngc single_cycle_cpu_display.ngd  
+map -intstyle ise -p xc6slx150-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ngd single_cycle_cpu_display.pcf 
+par -w -intstyle ise -ol high -mt off single_cycle_cpu_display_map.ncd single_cycle_cpu_display.ncd single_cycle_cpu_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml single_cycle_cpu_display.twx single_cycle_cpu_display.ncd -o single_cycle_cpu_display.twr single_cycle_cpu_display.pcf -ucf single_cycle_cpu.ucf 
+bitgen -intstyle ise -f single_cycle_cpu_display.ut single_cycle_cpu_display.ncd 

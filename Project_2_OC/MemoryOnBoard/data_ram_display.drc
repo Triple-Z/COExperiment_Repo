@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Jun 15 20:32:36 2017
+
+drc -z data_ram_display.ncd data_ram_display.pcf
+
+DRC detected 0 errors and 0 warnings.

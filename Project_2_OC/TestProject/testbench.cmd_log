@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj TestProject -o F:/Verilog/Project_2_OC/TestProject/testbench.tfi -lib work F:/Verilog/Project_2_OC/TestProject//testbench.v -module testbench -template F:/ISE/ISE_DS/ISE//data/tfi.tft -deleteonerror 

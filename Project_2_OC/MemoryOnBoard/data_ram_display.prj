@@ -1,0 +1,3 @@
+verilog work "lcd_module.v"
+verilog work "data_ram.v"
+verilog work "data_ram_display.v"

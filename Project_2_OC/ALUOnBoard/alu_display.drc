@@ -1,0 +1,8 @@
+Release 13.2 Drc O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Jun 15 19:21:39 2017
+
+drc -z alu_display.ncd alu_display.pcf
+
+DRC detected 0 errors and 0 warnings.

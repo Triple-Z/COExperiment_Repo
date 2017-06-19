@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/ALUOnBoard/alu_display.xst" -ofn "F:/Verilog/Project_2_OC/ALUOnBoard/alu_display.syr" 
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/ALUOnBoard/alu_display.xst" -ofn "F:/Verilog/Project_2_OC/ALUOnBoard/alu_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc alu.ucf -p xc6slx150-fgg484-3 alu_display.ngc alu_display.ngd  
+map -intstyle ise -p xc6slx150-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_display_map.ncd alu_display.ngd alu_display.pcf 
+par -w -intstyle ise -ol high -mt off alu_display_map.ncd alu_display.ncd alu_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_display.twx alu_display.ncd -o alu_display.twr alu_display.pcf -ucf alu.ucf 
+bitgen -intstyle ise -f alu_display.ut alu_display.ncd 

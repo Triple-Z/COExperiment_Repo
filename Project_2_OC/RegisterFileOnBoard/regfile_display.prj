@@ -1,0 +1,3 @@
+verilog work "regfile.v"
+verilog work "lcd_module.v"
+verilog work "regfile_display.v"

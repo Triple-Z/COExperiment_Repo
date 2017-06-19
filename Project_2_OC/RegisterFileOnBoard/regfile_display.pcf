@@ -1,0 +1,636 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Fri Jun 09 20:42:07 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "2.5";
+COMP "clk" LOCATE = SITE "J1" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "wen" LOCATE = SITE "M2" LEVEL 1;
+COMP "input_sel<0>" LOCATE = SITE "T2" LEVEL 1;
+COMP "input_sel<1>" LOCATE = SITE "T1" LEVEL 1;
+COMP "lcd_rst" LOCATE = SITE "D14" LEVEL 1;
+COMP "ct_rstn" LOCATE = SITE "C17" LEVEL 1;
+COMP "led_wen" LOCATE = SITE "F8" LEVEL 1;
+COMP "led_waddr" LOCATE = SITE "B8" LEVEL 1;
+COMP "led_wdata" LOCATE = SITE "A8" LEVEL 1;
+COMP "lcd_data_io<0>" LOCATE = SITE "C13" LEVEL 1;
+COMP "lcd_data_io<1>" LOCATE = SITE "E14" LEVEL 1;
+COMP "lcd_data_io<2>" LOCATE = SITE "C14" LEVEL 1;
+COMP "lcd_data_io<3>" LOCATE = SITE "D15" LEVEL 1;
+COMP "lcd_data_io<4>" LOCATE = SITE "C15" LEVEL 1;
+COMP "lcd_data_io<5>" LOCATE = SITE "F14" LEVEL 1;
+COMP "lcd_data_io<6>" LOCATE = SITE "C16" LEVEL 1;
+COMP "lcd_data_io<7>" LOCATE = SITE "D17" LEVEL 1;
+COMP "lcd_data_io<8>" LOCATE = SITE "E16" LEVEL 1;
+COMP "lcd_data_io<9>" LOCATE = SITE "B12" LEVEL 1;
+COMP "lcd_bl_ctr" LOCATE = SITE "A15" LEVEL 1;
+COMP "lcd_cs" LOCATE = SITE "D12" LEVEL 1;
+COMP "ct_int" LOCATE = SITE "A18" LEVEL 1;
+COMP "ct_sda" LOCATE = SITE "A16" LEVEL 1;
+COMP "lcd_rd" LOCATE = SITE "F13" LEVEL 1;
+COMP "ct_scl" LOCATE = SITE "B18" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "E12" LEVEL 1;
+COMP "lcd_wr" LOCATE = SITE "D13" LEVEL 1;
+COMP "led_raddr1" LOCATE = SITE "C10" LEVEL 1;
+COMP "led_raddr2" LOCATE = SITE "F9" LEVEL 1;
+COMP "resetn" LOCATE = SITE "U3" LEVEL 1;
+COMP "lcd_data_io<10>" LOCATE = SITE "F15" LEVEL 1;
+COMP "lcd_data_io<11>" LOCATE = SITE "C12" LEVEL 1;
+COMP "lcd_data_io<12>" LOCATE = SITE "A12" LEVEL 1;
+COMP "lcd_data_io<13>" LOCATE = SITE "A14" LEVEL 1;
+COMP "lcd_data_io<14>" LOCATE = SITE "A13" LEVEL 1;
+COMP "lcd_data_io<15>" LOCATE = SITE "B14" LEVEL 1;
+PIN
+        lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+TIMEGRP clk = BEL "display_valid" BEL "raddr2_0" BEL "raddr2_1" BEL "raddr2_2"
+        BEL "raddr2_3" BEL "raddr2_4" BEL "waddr_0" BEL "waddr_1" BEL
+        "waddr_2" BEL "waddr_3" BEL "waddr_4" BEL "wdata_0" BEL "wdata_1" BEL
+        "wdata_2" BEL "wdata_3" BEL "wdata_4" BEL "wdata_5" BEL "wdata_6" BEL
+        "wdata_7" BEL "wdata_8" BEL "wdata_9" BEL "wdata_10" BEL "wdata_11"
+        BEL "wdata_12" BEL "wdata_13" BEL "wdata_14" BEL "wdata_15" BEL
+        "wdata_16" BEL "wdata_17" BEL "wdata_18" BEL "wdata_19" BEL "wdata_20"
+        BEL "wdata_21" BEL "wdata_22" BEL "wdata_23" BEL "wdata_24" BEL
+        "wdata_25" BEL "wdata_26" BEL "wdata_27" BEL "wdata_28" BEL "wdata_29"
+        BEL "wdata_30" BEL "wdata_31" BEL "display_name_0" BEL
+        "display_name_1" BEL "display_name_2" BEL "display_name_3" BEL
+        "display_name_4" BEL "display_name_5" BEL "display_name_6" BEL
+        "display_name_8" BEL "display_name_10" BEL "display_name_12" BEL
+        "display_name_13" BEL "display_name_18" BEL "display_name_22" BEL
+        "display_value_0" BEL "display_value_1" BEL "display_value_2" BEL
+        "display_value_3" BEL "display_value_4" BEL "display_value_5" BEL
+        "display_value_6" BEL "display_value_7" BEL "display_value_8" BEL
+        "display_value_9" BEL "display_value_10" BEL "display_value_11" BEL
+        "display_value_12" BEL "display_value_13" BEL "display_value_14" BEL
+        "display_value_15" BEL "display_value_16" BEL "display_value_17" BEL
+        "display_value_18" BEL "display_value_19" BEL "display_value_20" BEL
+        "display_value_21" BEL "display_value_22" BEL "display_value_23" BEL
+        "display_value_24" BEL "display_value_25" BEL "display_value_26" BEL
+        "display_value_27" BEL "display_value_28" BEL "display_value_29" BEL
+        "display_value_30" BEL "display_value_31" BEL "raddr1_0" BEL
+        "raddr1_1" BEL "raddr1_2" BEL "raddr1_3" BEL "raddr1_4" BEL
+        "rf_module/rf_0_1023" BEL "rf_module/rf_0_1022" BEL
+        "rf_module/rf_0_1021" BEL "rf_module/rf_0_1020" BEL
+        "rf_module/rf_0_1019" BEL "rf_module/rf_0_1018" BEL
+        "rf_module/rf_0_1017" BEL "rf_module/rf_0_1016" BEL
+        "rf_module/rf_0_1015" BEL "rf_module/rf_0_1014" BEL
+        "rf_module/rf_0_1013" BEL "rf_module/rf_0_1012" BEL
+        "rf_module/rf_0_1011" BEL "rf_module/rf_0_1010" BEL
+        "rf_module/rf_0_1009" BEL "rf_module/rf_0_1008" BEL
+        "rf_module/rf_0_1007" BEL "rf_module/rf_0_1006" BEL
+        "rf_module/rf_0_1005" BEL "rf_module/rf_0_1004" BEL
+        "rf_module/rf_0_1003" BEL "rf_module/rf_0_1002" BEL
+        "rf_module/rf_0_1001" BEL "rf_module/rf_0_1000" BEL
+        "rf_module/rf_0_999" BEL "rf_module/rf_0_998" BEL "rf_module/rf_0_997"
+        BEL "rf_module/rf_0_996" BEL "rf_module/rf_0_995" BEL
+        "rf_module/rf_0_994" BEL "rf_module/rf_0_993" BEL "rf_module/rf_0_992"
+        BEL "rf_module/rf_0_991" BEL "rf_module/rf_0_990" BEL
+        "rf_module/rf_0_989" BEL "rf_module/rf_0_988" BEL "rf_module/rf_0_987"
+        BEL "rf_module/rf_0_986" BEL "rf_module/rf_0_985" BEL
+        "rf_module/rf_0_984" BEL "rf_module/rf_0_983" BEL "rf_module/rf_0_982"
+        BEL "rf_module/rf_0_981" BEL "rf_module/rf_0_980" BEL
+        "rf_module/rf_0_979" BEL "rf_module/rf_0_978" BEL "rf_module/rf_0_977"
+        BEL "rf_module/rf_0_976" BEL "rf_module/rf_0_975" BEL
+        "rf_module/rf_0_974" BEL "rf_module/rf_0_973" BEL "rf_module/rf_0_972"
+        BEL "rf_module/rf_0_971" BEL "rf_module/rf_0_970" BEL
+        "rf_module/rf_0_969" BEL "rf_module/rf_0_968" BEL "rf_module/rf_0_967"
+        BEL "rf_module/rf_0_966" BEL "rf_module/rf_0_965" BEL
+        "rf_module/rf_0_964" BEL "rf_module/rf_0_963" BEL "rf_module/rf_0_962"
+        BEL "rf_module/rf_0_961" BEL "rf_module/rf_0_960" BEL
+        "rf_module/rf_0_959" BEL "rf_module/rf_0_958" BEL "rf_module/rf_0_957"
+        BEL "rf_module/rf_0_956" BEL "rf_module/rf_0_955" BEL
+        "rf_module/rf_0_954" BEL "rf_module/rf_0_953" BEL "rf_module/rf_0_952"
+        BEL "rf_module/rf_0_951" BEL "rf_module/rf_0_950" BEL
+        "rf_module/rf_0_949" BEL "rf_module/rf_0_948" BEL "rf_module/rf_0_947"
+        BEL "rf_module/rf_0_946" BEL "rf_module/rf_0_945" BEL
+        "rf_module/rf_0_944" BEL "rf_module/rf_0_943" BEL "rf_module/rf_0_942"
+        BEL "rf_module/rf_0_941" BEL "rf_module/rf_0_940" BEL
+        "rf_module/rf_0_939" BEL "rf_module/rf_0_938" BEL "rf_module/rf_0_937"
+        BEL "rf_module/rf_0_936" BEL "rf_module/rf_0_935" BEL
+        "rf_module/rf_0_934" BEL "rf_module/rf_0_933" BEL "rf_module/rf_0_932"
+        BEL "rf_module/rf_0_931" BEL "rf_module/rf_0_930" BEL
+        "rf_module/rf_0_929" BEL "rf_module/rf_0_928" BEL "rf_module/rf_0_927"
+        BEL "rf_module/rf_0_926" BEL "rf_module/rf_0_925" BEL
+        "rf_module/rf_0_924" BEL "rf_module/rf_0_923" BEL "rf_module/rf_0_922"
+        BEL "rf_module/rf_0_921" BEL "rf_module/rf_0_920" BEL
+        "rf_module/rf_0_919" BEL "rf_module/rf_0_918" BEL "rf_module/rf_0_917"
+        BEL "rf_module/rf_0_916" BEL "rf_module/rf_0_915" BEL
+        "rf_module/rf_0_914" BEL "rf_module/rf_0_913" BEL "rf_module/rf_0_912"
+        BEL "rf_module/rf_0_911" BEL "rf_module/rf_0_910" BEL
+        "rf_module/rf_0_909" BEL "rf_module/rf_0_908" BEL "rf_module/rf_0_907"
+        BEL "rf_module/rf_0_906" BEL "rf_module/rf_0_905" BEL
+        "rf_module/rf_0_904" BEL "rf_module/rf_0_903" BEL "rf_module/rf_0_902"
+        BEL "rf_module/rf_0_901" BEL "rf_module/rf_0_900" BEL
+        "rf_module/rf_0_899" BEL "rf_module/rf_0_898" BEL "rf_module/rf_0_897"
+        BEL "rf_module/rf_0_896" BEL "rf_module/rf_0_895" BEL
+        "rf_module/rf_0_894" BEL "rf_module/rf_0_893" BEL "rf_module/rf_0_892"
+        BEL "rf_module/rf_0_891" BEL "rf_module/rf_0_890" BEL
+        "rf_module/rf_0_889" BEL "rf_module/rf_0_888" BEL "rf_module/rf_0_887"
+        BEL "rf_module/rf_0_886" BEL "rf_module/rf_0_885" BEL
+        "rf_module/rf_0_884" BEL "rf_module/rf_0_883" BEL "rf_module/rf_0_882"
+        BEL "rf_module/rf_0_881" BEL "rf_module/rf_0_880" BEL
+        "rf_module/rf_0_879" BEL "rf_module/rf_0_878" BEL "rf_module/rf_0_877"
+        BEL "rf_module/rf_0_876" BEL "rf_module/rf_0_875" BEL
+        "rf_module/rf_0_874" BEL "rf_module/rf_0_873" BEL "rf_module/rf_0_872"
+        BEL "rf_module/rf_0_871" BEL "rf_module/rf_0_870" BEL
+        "rf_module/rf_0_869" BEL "rf_module/rf_0_868" BEL "rf_module/rf_0_867"
+        BEL "rf_module/rf_0_866" BEL "rf_module/rf_0_865" BEL
+        "rf_module/rf_0_864" BEL "rf_module/rf_0_863" BEL "rf_module/rf_0_862"
+        BEL "rf_module/rf_0_861" BEL "rf_module/rf_0_860" BEL
+        "rf_module/rf_0_859" BEL "rf_module/rf_0_858" BEL "rf_module/rf_0_857"
+        BEL "rf_module/rf_0_856" BEL "rf_module/rf_0_855" BEL
+        "rf_module/rf_0_854" BEL "rf_module/rf_0_853" BEL "rf_module/rf_0_852"
+        BEL "rf_module/rf_0_851" BEL "rf_module/rf_0_850" BEL
+        "rf_module/rf_0_849" BEL "rf_module/rf_0_848" BEL "rf_module/rf_0_847"
+        BEL "rf_module/rf_0_846" BEL "rf_module/rf_0_845" BEL
+        "rf_module/rf_0_844" BEL "rf_module/rf_0_843" BEL "rf_module/rf_0_842"
+        BEL "rf_module/rf_0_841" BEL "rf_module/rf_0_840" BEL
+        "rf_module/rf_0_839" BEL "rf_module/rf_0_838" BEL "rf_module/rf_0_837"
+        BEL "rf_module/rf_0_836" BEL "rf_module/rf_0_835" BEL
+        "rf_module/rf_0_834" BEL "rf_module/rf_0_833" BEL "rf_module/rf_0_832"
+        BEL "rf_module/rf_0_831" BEL "rf_module/rf_0_830" BEL
+        "rf_module/rf_0_829" BEL "rf_module/rf_0_828" BEL "rf_module/rf_0_827"
+        BEL "rf_module/rf_0_826" BEL "rf_module/rf_0_825" BEL
+        "rf_module/rf_0_824" BEL "rf_module/rf_0_823" BEL "rf_module/rf_0_822"
+        BEL "rf_module/rf_0_821" BEL "rf_module/rf_0_820" BEL
+        "rf_module/rf_0_819" BEL "rf_module/rf_0_818" BEL "rf_module/rf_0_817"
+        BEL "rf_module/rf_0_816" BEL "rf_module/rf_0_815" BEL
+        "rf_module/rf_0_814" BEL "rf_module/rf_0_813" BEL "rf_module/rf_0_812"
+        BEL "rf_module/rf_0_811" BEL "rf_module/rf_0_810" BEL
+        "rf_module/rf_0_809" BEL "rf_module/rf_0_808" BEL "rf_module/rf_0_807"
+        BEL "rf_module/rf_0_806" BEL "rf_module/rf_0_805" BEL
+        "rf_module/rf_0_804" BEL "rf_module/rf_0_803" BEL "rf_module/rf_0_802"
+        BEL "rf_module/rf_0_801" BEL "rf_module/rf_0_800" BEL
+        "rf_module/rf_0_799" BEL "rf_module/rf_0_798" BEL "rf_module/rf_0_797"
+        BEL "rf_module/rf_0_796" BEL "rf_module/rf_0_795" BEL
+        "rf_module/rf_0_794" BEL "rf_module/rf_0_793" BEL "rf_module/rf_0_792"
+        BEL "rf_module/rf_0_791" BEL "rf_module/rf_0_790" BEL
+        "rf_module/rf_0_789" BEL "rf_module/rf_0_788" BEL "rf_module/rf_0_787"
+        BEL "rf_module/rf_0_786" BEL "rf_module/rf_0_785" BEL
+        "rf_module/rf_0_784" BEL "rf_module/rf_0_783" BEL "rf_module/rf_0_782"
+        BEL "rf_module/rf_0_781" BEL "rf_module/rf_0_780" BEL
+        "rf_module/rf_0_779" BEL "rf_module/rf_0_778" BEL "rf_module/rf_0_777"
+        BEL "rf_module/rf_0_776" BEL "rf_module/rf_0_775" BEL
+        "rf_module/rf_0_774" BEL "rf_module/rf_0_773" BEL "rf_module/rf_0_772"
+        BEL "rf_module/rf_0_771" BEL "rf_module/rf_0_770" BEL
+        "rf_module/rf_0_769" BEL "rf_module/rf_0_768" BEL "rf_module/rf_0_767"
+        BEL "rf_module/rf_0_766" BEL "rf_module/rf_0_765" BEL
+        "rf_module/rf_0_764" BEL "rf_module/rf_0_763" BEL "rf_module/rf_0_762"
+        BEL "rf_module/rf_0_761" BEL "rf_module/rf_0_760" BEL
+        "rf_module/rf_0_759" BEL "rf_module/rf_0_758" BEL "rf_module/rf_0_757"
+        BEL "rf_module/rf_0_756" BEL "rf_module/rf_0_755" BEL
+        "rf_module/rf_0_754" BEL "rf_module/rf_0_753" BEL "rf_module/rf_0_752"
+        BEL "rf_module/rf_0_751" BEL "rf_module/rf_0_750" BEL
+        "rf_module/rf_0_749" BEL "rf_module/rf_0_748" BEL "rf_module/rf_0_747"
+        BEL "rf_module/rf_0_746" BEL "rf_module/rf_0_745" BEL
+        "rf_module/rf_0_744" BEL "rf_module/rf_0_743" BEL "rf_module/rf_0_742"
+        BEL "rf_module/rf_0_741" BEL "rf_module/rf_0_740" BEL
+        "rf_module/rf_0_739" BEL "rf_module/rf_0_738" BEL "rf_module/rf_0_737"
+        BEL "rf_module/rf_0_736" BEL "rf_module/rf_0_735" BEL
+        "rf_module/rf_0_734" BEL "rf_module/rf_0_733" BEL "rf_module/rf_0_732"
+        BEL "rf_module/rf_0_731" BEL "rf_module/rf_0_730" BEL
+        "rf_module/rf_0_729" BEL "rf_module/rf_0_728" BEL "rf_module/rf_0_727"
+        BEL "rf_module/rf_0_726" BEL "rf_module/rf_0_725" BEL
+        "rf_module/rf_0_724" BEL "rf_module/rf_0_723" BEL "rf_module/rf_0_722"
+        BEL "rf_module/rf_0_721" BEL "rf_module/rf_0_720" BEL
+        "rf_module/rf_0_719" BEL "rf_module/rf_0_718" BEL "rf_module/rf_0_717"
+        BEL "rf_module/rf_0_716" BEL "rf_module/rf_0_715" BEL
+        "rf_module/rf_0_714" BEL "rf_module/rf_0_713" BEL "rf_module/rf_0_712"
+        BEL "rf_module/rf_0_711" BEL "rf_module/rf_0_710" BEL
+        "rf_module/rf_0_709" BEL "rf_module/rf_0_708" BEL "rf_module/rf_0_707"
+        BEL "rf_module/rf_0_706" BEL "rf_module/rf_0_705" BEL
+        "rf_module/rf_0_704" BEL "rf_module/rf_0_703" BEL "rf_module/rf_0_702"
+        BEL "rf_module/rf_0_701" BEL "rf_module/rf_0_700" BEL
+        "rf_module/rf_0_699" BEL "rf_module/rf_0_698" BEL "rf_module/rf_0_697"
+        BEL "rf_module/rf_0_696" BEL "rf_module/rf_0_695" BEL
+        "rf_module/rf_0_694" BEL "rf_module/rf_0_693" BEL "rf_module/rf_0_692"
+        BEL "rf_module/rf_0_691" BEL "rf_module/rf_0_690" BEL
+        "rf_module/rf_0_689" BEL "rf_module/rf_0_688" BEL "rf_module/rf_0_687"
+        BEL "rf_module/rf_0_686" BEL "rf_module/rf_0_685" BEL
+        "rf_module/rf_0_684" BEL "rf_module/rf_0_683" BEL "rf_module/rf_0_682"
+        BEL "rf_module/rf_0_681" BEL "rf_module/rf_0_680" BEL
+        "rf_module/rf_0_679" BEL "rf_module/rf_0_678" BEL "rf_module/rf_0_677"
+        BEL "rf_module/rf_0_676" BEL "rf_module/rf_0_675" BEL
+        "rf_module/rf_0_674" BEL "rf_module/rf_0_673" BEL "rf_module/rf_0_672"
+        BEL "rf_module/rf_0_671" BEL "rf_module/rf_0_670" BEL
+        "rf_module/rf_0_669" BEL "rf_module/rf_0_668" BEL "rf_module/rf_0_667"
+        BEL "rf_module/rf_0_666" BEL "rf_module/rf_0_665" BEL
+        "rf_module/rf_0_664" BEL "rf_module/rf_0_663" BEL "rf_module/rf_0_662"
+        BEL "rf_module/rf_0_661" BEL "rf_module/rf_0_660" BEL
+        "rf_module/rf_0_659" BEL "rf_module/rf_0_658" BEL "rf_module/rf_0_657"
+        BEL "rf_module/rf_0_656" BEL "rf_module/rf_0_655" BEL
+        "rf_module/rf_0_654" BEL "rf_module/rf_0_653" BEL "rf_module/rf_0_652"
+        BEL "rf_module/rf_0_651" BEL "rf_module/rf_0_650" BEL
+        "rf_module/rf_0_649" BEL "rf_module/rf_0_648" BEL "rf_module/rf_0_647"
+        BEL "rf_module/rf_0_646" BEL "rf_module/rf_0_645" BEL
+        "rf_module/rf_0_644" BEL "rf_module/rf_0_643" BEL "rf_module/rf_0_642"
+        BEL "rf_module/rf_0_641" BEL "rf_module/rf_0_640" BEL
+        "rf_module/rf_0_639" BEL "rf_module/rf_0_638" BEL "rf_module/rf_0_637"
+        BEL "rf_module/rf_0_636" BEL "rf_module/rf_0_635" BEL
+        "rf_module/rf_0_634" BEL "rf_module/rf_0_633" BEL "rf_module/rf_0_632"
+        BEL "rf_module/rf_0_631" BEL "rf_module/rf_0_630" BEL
+        "rf_module/rf_0_629" BEL "rf_module/rf_0_628" BEL "rf_module/rf_0_627"
+        BEL "rf_module/rf_0_626" BEL "rf_module/rf_0_625" BEL
+        "rf_module/rf_0_624" BEL "rf_module/rf_0_623" BEL "rf_module/rf_0_622"
+        BEL "rf_module/rf_0_621" BEL "rf_module/rf_0_620" BEL
+        "rf_module/rf_0_619" BEL "rf_module/rf_0_618" BEL "rf_module/rf_0_617"
+        BEL "rf_module/rf_0_616" BEL "rf_module/rf_0_615" BEL
+        "rf_module/rf_0_614" BEL "rf_module/rf_0_613" BEL "rf_module/rf_0_612"
+        BEL "rf_module/rf_0_611" BEL "rf_module/rf_0_610" BEL
+        "rf_module/rf_0_609" BEL "rf_module/rf_0_608" BEL "rf_module/rf_0_607"
+        BEL "rf_module/rf_0_606" BEL "rf_module/rf_0_605" BEL
+        "rf_module/rf_0_604" BEL "rf_module/rf_0_603" BEL "rf_module/rf_0_602"
+        BEL "rf_module/rf_0_601" BEL "rf_module/rf_0_600" BEL
+        "rf_module/rf_0_599" BEL "rf_module/rf_0_598" BEL "rf_module/rf_0_597"
+        BEL "rf_module/rf_0_596" BEL "rf_module/rf_0_595" BEL
+        "rf_module/rf_0_594" BEL "rf_module/rf_0_593" BEL "rf_module/rf_0_592"
+        BEL "rf_module/rf_0_591" BEL "rf_module/rf_0_590" BEL
+        "rf_module/rf_0_589" BEL "rf_module/rf_0_588" BEL "rf_module/rf_0_587"
+        BEL "rf_module/rf_0_586" BEL "rf_module/rf_0_585" BEL
+        "rf_module/rf_0_584" BEL "rf_module/rf_0_583" BEL "rf_module/rf_0_582"
+        BEL "rf_module/rf_0_581" BEL "rf_module/rf_0_580" BEL
+        "rf_module/rf_0_579" BEL "rf_module/rf_0_578" BEL "rf_module/rf_0_577"
+        BEL "rf_module/rf_0_576" BEL "rf_module/rf_0_575" BEL
+        "rf_module/rf_0_574" BEL "rf_module/rf_0_573" BEL "rf_module/rf_0_572"
+        BEL "rf_module/rf_0_571" BEL "rf_module/rf_0_570" BEL
+        "rf_module/rf_0_569" BEL "rf_module/rf_0_568" BEL "rf_module/rf_0_567"
+        BEL "rf_module/rf_0_566" BEL "rf_module/rf_0_565" BEL
+        "rf_module/rf_0_564" BEL "rf_module/rf_0_563" BEL "rf_module/rf_0_562"
+        BEL "rf_module/rf_0_561" BEL "rf_module/rf_0_560" BEL
+        "rf_module/rf_0_559" BEL "rf_module/rf_0_558" BEL "rf_module/rf_0_557"
+        BEL "rf_module/rf_0_556" BEL "rf_module/rf_0_555" BEL
+        "rf_module/rf_0_554" BEL "rf_module/rf_0_553" BEL "rf_module/rf_0_552"
+        BEL "rf_module/rf_0_551" BEL "rf_module/rf_0_550" BEL
+        "rf_module/rf_0_549" BEL "rf_module/rf_0_548" BEL "rf_module/rf_0_547"
+        BEL "rf_module/rf_0_546" BEL "rf_module/rf_0_545" BEL
+        "rf_module/rf_0_544" BEL "rf_module/rf_0_543" BEL "rf_module/rf_0_542"
+        BEL "rf_module/rf_0_541" BEL "rf_module/rf_0_540" BEL
+        "rf_module/rf_0_539" BEL "rf_module/rf_0_538" BEL "rf_module/rf_0_537"
+        BEL "rf_module/rf_0_536" BEL "rf_module/rf_0_535" BEL
+        "rf_module/rf_0_534" BEL "rf_module/rf_0_533" BEL "rf_module/rf_0_532"
+        BEL "rf_module/rf_0_531" BEL "rf_module/rf_0_530" BEL
+        "rf_module/rf_0_529" BEL "rf_module/rf_0_528" BEL "rf_module/rf_0_527"
+        BEL "rf_module/rf_0_526" BEL "rf_module/rf_0_525" BEL
+        "rf_module/rf_0_524" BEL "rf_module/rf_0_523" BEL "rf_module/rf_0_522"
+        BEL "rf_module/rf_0_521" BEL "rf_module/rf_0_520" BEL
+        "rf_module/rf_0_519" BEL "rf_module/rf_0_518" BEL "rf_module/rf_0_517"
+        BEL "rf_module/rf_0_516" BEL "rf_module/rf_0_515" BEL
+        "rf_module/rf_0_514" BEL "rf_module/rf_0_513" BEL "rf_module/rf_0_512"
+        BEL "rf_module/rf_0_511" BEL "rf_module/rf_0_510" BEL
+        "rf_module/rf_0_509" BEL "rf_module/rf_0_508" BEL "rf_module/rf_0_507"
+        BEL "rf_module/rf_0_506" BEL "rf_module/rf_0_505" BEL
+        "rf_module/rf_0_504" BEL "rf_module/rf_0_503" BEL "rf_module/rf_0_502"
+        BEL "rf_module/rf_0_501" BEL "rf_module/rf_0_500" BEL
+        "rf_module/rf_0_499" BEL "rf_module/rf_0_498" BEL "rf_module/rf_0_497"
+        BEL "rf_module/rf_0_496" BEL "rf_module/rf_0_495" BEL
+        "rf_module/rf_0_494" BEL "rf_module/rf_0_493" BEL "rf_module/rf_0_492"
+        BEL "rf_module/rf_0_491" BEL "rf_module/rf_0_490" BEL
+        "rf_module/rf_0_489" BEL "rf_module/rf_0_488" BEL "rf_module/rf_0_487"
+        BEL "rf_module/rf_0_486" BEL "rf_module/rf_0_485" BEL
+        "rf_module/rf_0_484" BEL "rf_module/rf_0_483" BEL "rf_module/rf_0_482"
+        BEL "rf_module/rf_0_481" BEL "rf_module/rf_0_480" BEL
+        "rf_module/rf_0_479" BEL "rf_module/rf_0_478" BEL "rf_module/rf_0_477"
+        BEL "rf_module/rf_0_476" BEL "rf_module/rf_0_475" BEL
+        "rf_module/rf_0_474" BEL "rf_module/rf_0_473" BEL "rf_module/rf_0_472"
+        BEL "rf_module/rf_0_471" BEL "rf_module/rf_0_470" BEL
+        "rf_module/rf_0_469" BEL "rf_module/rf_0_468" BEL "rf_module/rf_0_467"
+        BEL "rf_module/rf_0_466" BEL "rf_module/rf_0_465" BEL
+        "rf_module/rf_0_464" BEL "rf_module/rf_0_463" BEL "rf_module/rf_0_462"
+        BEL "rf_module/rf_0_461" BEL "rf_module/rf_0_460" BEL
+        "rf_module/rf_0_459" BEL "rf_module/rf_0_458" BEL "rf_module/rf_0_457"
+        BEL "rf_module/rf_0_456" BEL "rf_module/rf_0_455" BEL
+        "rf_module/rf_0_454" BEL "rf_module/rf_0_453" BEL "rf_module/rf_0_452"
+        BEL "rf_module/rf_0_451" BEL "rf_module/rf_0_450" BEL
+        "rf_module/rf_0_449" BEL "rf_module/rf_0_448" BEL "rf_module/rf_0_447"
+        BEL "rf_module/rf_0_446" BEL "rf_module/rf_0_445" BEL
+        "rf_module/rf_0_444" BEL "rf_module/rf_0_443" BEL "rf_module/rf_0_442"
+        BEL "rf_module/rf_0_441" BEL "rf_module/rf_0_440" BEL
+        "rf_module/rf_0_439" BEL "rf_module/rf_0_438" BEL "rf_module/rf_0_437"
+        BEL "rf_module/rf_0_436" BEL "rf_module/rf_0_435" BEL
+        "rf_module/rf_0_434" BEL "rf_module/rf_0_433" BEL "rf_module/rf_0_432"
+        BEL "rf_module/rf_0_431" BEL "rf_module/rf_0_430" BEL
+        "rf_module/rf_0_429" BEL "rf_module/rf_0_428" BEL "rf_module/rf_0_427"
+        BEL "rf_module/rf_0_426" BEL "rf_module/rf_0_425" BEL
+        "rf_module/rf_0_424" BEL "rf_module/rf_0_423" BEL "rf_module/rf_0_422"
+        BEL "rf_module/rf_0_421" BEL "rf_module/rf_0_420" BEL
+        "rf_module/rf_0_419" BEL "rf_module/rf_0_418" BEL "rf_module/rf_0_417"
+        BEL "rf_module/rf_0_416" BEL "rf_module/rf_0_415" BEL
+        "rf_module/rf_0_414" BEL "rf_module/rf_0_413" BEL "rf_module/rf_0_412"
+        BEL "rf_module/rf_0_411" BEL "rf_module/rf_0_410" BEL
+        "rf_module/rf_0_409" BEL "rf_module/rf_0_408" BEL "rf_module/rf_0_407"
+        BEL "rf_module/rf_0_406" BEL "rf_module/rf_0_405" BEL
+        "rf_module/rf_0_404" BEL "rf_module/rf_0_403" BEL "rf_module/rf_0_402"
+        BEL "rf_module/rf_0_401" BEL "rf_module/rf_0_400" BEL
+        "rf_module/rf_0_399" BEL "rf_module/rf_0_398" BEL "rf_module/rf_0_397"
+        BEL "rf_module/rf_0_396" BEL "rf_module/rf_0_395" BEL
+        "rf_module/rf_0_394" BEL "rf_module/rf_0_393" BEL "rf_module/rf_0_392"
+        BEL "rf_module/rf_0_391" BEL "rf_module/rf_0_390" BEL
+        "rf_module/rf_0_389" BEL "rf_module/rf_0_388" BEL "rf_module/rf_0_387"
+        BEL "rf_module/rf_0_386" BEL "rf_module/rf_0_385" BEL
+        "rf_module/rf_0_384" BEL "rf_module/rf_0_383" BEL "rf_module/rf_0_382"
+        BEL "rf_module/rf_0_381" BEL "rf_module/rf_0_380" BEL
+        "rf_module/rf_0_379" BEL "rf_module/rf_0_378" BEL "rf_module/rf_0_377"
+        BEL "rf_module/rf_0_376" BEL "rf_module/rf_0_375" BEL
+        "rf_module/rf_0_374" BEL "rf_module/rf_0_373" BEL "rf_module/rf_0_372"
+        BEL "rf_module/rf_0_371" BEL "rf_module/rf_0_370" BEL
+        "rf_module/rf_0_369" BEL "rf_module/rf_0_368" BEL "rf_module/rf_0_367"
+        BEL "rf_module/rf_0_366" BEL "rf_module/rf_0_365" BEL
+        "rf_module/rf_0_364" BEL "rf_module/rf_0_363" BEL "rf_module/rf_0_362"
+        BEL "rf_module/rf_0_361" BEL "rf_module/rf_0_360" BEL
+        "rf_module/rf_0_359" BEL "rf_module/rf_0_358" BEL "rf_module/rf_0_357"
+        BEL "rf_module/rf_0_356" BEL "rf_module/rf_0_355" BEL
+        "rf_module/rf_0_354" BEL "rf_module/rf_0_353" BEL "rf_module/rf_0_352"
+        BEL "rf_module/rf_0_351" BEL "rf_module/rf_0_350" BEL
+        "rf_module/rf_0_349" BEL "rf_module/rf_0_348" BEL "rf_module/rf_0_347"
+        BEL "rf_module/rf_0_346" BEL "rf_module/rf_0_345" BEL
+        "rf_module/rf_0_344" BEL "rf_module/rf_0_343" BEL "rf_module/rf_0_342"
+        BEL "rf_module/rf_0_341" BEL "rf_module/rf_0_340" BEL
+        "rf_module/rf_0_339" BEL "rf_module/rf_0_338" BEL "rf_module/rf_0_337"
+        BEL "rf_module/rf_0_336" BEL "rf_module/rf_0_335" BEL
+        "rf_module/rf_0_334" BEL "rf_module/rf_0_333" BEL "rf_module/rf_0_332"
+        BEL "rf_module/rf_0_331" BEL "rf_module/rf_0_330" BEL
+        "rf_module/rf_0_329" BEL "rf_module/rf_0_328" BEL "rf_module/rf_0_327"
+        BEL "rf_module/rf_0_326" BEL "rf_module/rf_0_325" BEL
+        "rf_module/rf_0_324" BEL "rf_module/rf_0_323" BEL "rf_module/rf_0_322"
+        BEL "rf_module/rf_0_321" BEL "rf_module/rf_0_320" BEL
+        "rf_module/rf_0_319" BEL "rf_module/rf_0_318" BEL "rf_module/rf_0_317"
+        BEL "rf_module/rf_0_316" BEL "rf_module/rf_0_315" BEL
+        "rf_module/rf_0_314" BEL "rf_module/rf_0_313" BEL "rf_module/rf_0_312"
+        BEL "rf_module/rf_0_311" BEL "rf_module/rf_0_310" BEL
+        "rf_module/rf_0_309" BEL "rf_module/rf_0_308" BEL "rf_module/rf_0_307"
+        BEL "rf_module/rf_0_306" BEL "rf_module/rf_0_305" BEL
+        "rf_module/rf_0_304" BEL "rf_module/rf_0_303" BEL "rf_module/rf_0_302"
+        BEL "rf_module/rf_0_301" BEL "rf_module/rf_0_300" BEL
+        "rf_module/rf_0_299" BEL "rf_module/rf_0_298" BEL "rf_module/rf_0_297"
+        BEL "rf_module/rf_0_296" BEL "rf_module/rf_0_295" BEL
+        "rf_module/rf_0_294" BEL "rf_module/rf_0_293" BEL "rf_module/rf_0_292"
+        BEL "rf_module/rf_0_291" BEL "rf_module/rf_0_290" BEL
+        "rf_module/rf_0_289" BEL "rf_module/rf_0_288" BEL "rf_module/rf_0_287"
+        BEL "rf_module/rf_0_286" BEL "rf_module/rf_0_285" BEL
+        "rf_module/rf_0_284" BEL "rf_module/rf_0_283" BEL "rf_module/rf_0_282"
+        BEL "rf_module/rf_0_281" BEL "rf_module/rf_0_280" BEL
+        "rf_module/rf_0_279" BEL "rf_module/rf_0_278" BEL "rf_module/rf_0_277"
+        BEL "rf_module/rf_0_276" BEL "rf_module/rf_0_275" BEL
+        "rf_module/rf_0_274" BEL "rf_module/rf_0_273" BEL "rf_module/rf_0_272"
+        BEL "rf_module/rf_0_271" BEL "rf_module/rf_0_270" BEL
+        "rf_module/rf_0_269" BEL "rf_module/rf_0_268" BEL "rf_module/rf_0_267"
+        BEL "rf_module/rf_0_266" BEL "rf_module/rf_0_265" BEL
+        "rf_module/rf_0_264" BEL "rf_module/rf_0_263" BEL "rf_module/rf_0_262"
+        BEL "rf_module/rf_0_261" BEL "rf_module/rf_0_260" BEL
+        "rf_module/rf_0_259" BEL "rf_module/rf_0_258" BEL "rf_module/rf_0_257"
+        BEL "rf_module/rf_0_256" BEL "rf_module/rf_0_255" BEL
+        "rf_module/rf_0_254" BEL "rf_module/rf_0_253" BEL "rf_module/rf_0_252"
+        BEL "rf_module/rf_0_251" BEL "rf_module/rf_0_250" BEL
+        "rf_module/rf_0_249" BEL "rf_module/rf_0_248" BEL "rf_module/rf_0_247"
+        BEL "rf_module/rf_0_246" BEL "rf_module/rf_0_245" BEL
+        "rf_module/rf_0_244" BEL "rf_module/rf_0_243" BEL "rf_module/rf_0_242"
+        BEL "rf_module/rf_0_241" BEL "rf_module/rf_0_240" BEL
+        "rf_module/rf_0_239" BEL "rf_module/rf_0_238" BEL "rf_module/rf_0_237"
+        BEL "rf_module/rf_0_236" BEL "rf_module/rf_0_235" BEL
+        "rf_module/rf_0_234" BEL "rf_module/rf_0_233" BEL "rf_module/rf_0_232"
+        BEL "rf_module/rf_0_231" BEL "rf_module/rf_0_230" BEL
+        "rf_module/rf_0_229" BEL "rf_module/rf_0_228" BEL "rf_module/rf_0_227"
+        BEL "rf_module/rf_0_226" BEL "rf_module/rf_0_225" BEL
+        "rf_module/rf_0_224" BEL "rf_module/rf_0_223" BEL "rf_module/rf_0_222"
+        BEL "rf_module/rf_0_221" BEL "rf_module/rf_0_220" BEL
+        "rf_module/rf_0_219" BEL "rf_module/rf_0_218" BEL "rf_module/rf_0_217"
+        BEL "rf_module/rf_0_216" BEL "rf_module/rf_0_215" BEL
+        "rf_module/rf_0_214" BEL "rf_module/rf_0_213" BEL "rf_module/rf_0_212"
+        BEL "rf_module/rf_0_211" BEL "rf_module/rf_0_210" BEL
+        "rf_module/rf_0_209" BEL "rf_module/rf_0_208" BEL "rf_module/rf_0_207"
+        BEL "rf_module/rf_0_206" BEL "rf_module/rf_0_205" BEL
+        "rf_module/rf_0_204" BEL "rf_module/rf_0_203" BEL "rf_module/rf_0_202"
+        BEL "rf_module/rf_0_201" BEL "rf_module/rf_0_200" BEL
+        "rf_module/rf_0_199" BEL "rf_module/rf_0_198" BEL "rf_module/rf_0_197"
+        BEL "rf_module/rf_0_196" BEL "rf_module/rf_0_195" BEL
+        "rf_module/rf_0_194" BEL "rf_module/rf_0_193" BEL "rf_module/rf_0_192"
+        BEL "rf_module/rf_0_191" BEL "rf_module/rf_0_190" BEL
+        "rf_module/rf_0_189" BEL "rf_module/rf_0_188" BEL "rf_module/rf_0_187"
+        BEL "rf_module/rf_0_186" BEL "rf_module/rf_0_185" BEL
+        "rf_module/rf_0_184" BEL "rf_module/rf_0_183" BEL "rf_module/rf_0_182"
+        BEL "rf_module/rf_0_181" BEL "rf_module/rf_0_180" BEL
+        "rf_module/rf_0_179" BEL "rf_module/rf_0_178" BEL "rf_module/rf_0_177"
+        BEL "rf_module/rf_0_176" BEL "rf_module/rf_0_175" BEL
+        "rf_module/rf_0_174" BEL "rf_module/rf_0_173" BEL "rf_module/rf_0_172"
+        BEL "rf_module/rf_0_171" BEL "rf_module/rf_0_170" BEL
+        "rf_module/rf_0_169" BEL "rf_module/rf_0_168" BEL "rf_module/rf_0_167"
+        BEL "rf_module/rf_0_166" BEL "rf_module/rf_0_165" BEL
+        "rf_module/rf_0_164" BEL "rf_module/rf_0_163" BEL "rf_module/rf_0_162"
+        BEL "rf_module/rf_0_161" BEL "rf_module/rf_0_160" BEL
+        "rf_module/rf_0_159" BEL "rf_module/rf_0_158" BEL "rf_module/rf_0_157"
+        BEL "rf_module/rf_0_156" BEL "rf_module/rf_0_155" BEL
+        "rf_module/rf_0_154" BEL "rf_module/rf_0_153" BEL "rf_module/rf_0_152"
+        BEL "rf_module/rf_0_151" BEL "rf_module/rf_0_150" BEL
+        "rf_module/rf_0_149" BEL "rf_module/rf_0_148" BEL "rf_module/rf_0_147"
+        BEL "rf_module/rf_0_146" BEL "rf_module/rf_0_145" BEL
+        "rf_module/rf_0_144" BEL "rf_module/rf_0_143" BEL "rf_module/rf_0_142"
+        BEL "rf_module/rf_0_141" BEL "rf_module/rf_0_140" BEL
+        "rf_module/rf_0_139" BEL "rf_module/rf_0_138" BEL "rf_module/rf_0_137"
+        BEL "rf_module/rf_0_136" BEL "rf_module/rf_0_135" BEL
+        "rf_module/rf_0_134" BEL "rf_module/rf_0_133" BEL "rf_module/rf_0_132"
+        BEL "rf_module/rf_0_131" BEL "rf_module/rf_0_130" BEL
+        "rf_module/rf_0_129" BEL "rf_module/rf_0_128" BEL "rf_module/rf_0_127"
+        BEL "rf_module/rf_0_126" BEL "rf_module/rf_0_125" BEL
+        "rf_module/rf_0_124" BEL "rf_module/rf_0_123" BEL "rf_module/rf_0_122"
+        BEL "rf_module/rf_0_121" BEL "rf_module/rf_0_120" BEL
+        "rf_module/rf_0_119" BEL "rf_module/rf_0_118" BEL "rf_module/rf_0_117"
+        BEL "rf_module/rf_0_116" BEL "rf_module/rf_0_115" BEL
+        "rf_module/rf_0_114" BEL "rf_module/rf_0_113" BEL "rf_module/rf_0_112"
+        BEL "rf_module/rf_0_111" BEL "rf_module/rf_0_110" BEL
+        "rf_module/rf_0_109" BEL "rf_module/rf_0_108" BEL "rf_module/rf_0_107"
+        BEL "rf_module/rf_0_106" BEL "rf_module/rf_0_105" BEL
+        "rf_module/rf_0_104" BEL "rf_module/rf_0_103" BEL "rf_module/rf_0_102"
+        BEL "rf_module/rf_0_101" BEL "rf_module/rf_0_100" BEL
+        "rf_module/rf_0_99" BEL "rf_module/rf_0_98" BEL "rf_module/rf_0_97"
+        BEL "rf_module/rf_0_96" BEL "rf_module/rf_0_95" BEL
+        "rf_module/rf_0_94" BEL "rf_module/rf_0_93" BEL "rf_module/rf_0_92"
+        BEL "rf_module/rf_0_91" BEL "rf_module/rf_0_90" BEL
+        "rf_module/rf_0_89" BEL "rf_module/rf_0_88" BEL "rf_module/rf_0_87"
+        BEL "rf_module/rf_0_86" BEL "rf_module/rf_0_85" BEL
+        "rf_module/rf_0_84" BEL "rf_module/rf_0_83" BEL "rf_module/rf_0_82"
+        BEL "rf_module/rf_0_81" BEL "rf_module/rf_0_80" BEL
+        "rf_module/rf_0_79" BEL "rf_module/rf_0_78" BEL "rf_module/rf_0_77"
+        BEL "rf_module/rf_0_76" BEL "rf_module/rf_0_75" BEL
+        "rf_module/rf_0_74" BEL "rf_module/rf_0_73" BEL "rf_module/rf_0_72"
+        BEL "rf_module/rf_0_71" BEL "rf_module/rf_0_70" BEL
+        "rf_module/rf_0_69" BEL "rf_module/rf_0_68" BEL "rf_module/rf_0_67"
+        BEL "rf_module/rf_0_66" BEL "rf_module/rf_0_65" BEL
+        "rf_module/rf_0_64" BEL "rf_module/rf_0_63" BEL "rf_module/rf_0_62"
+        BEL "rf_module/rf_0_61" BEL "rf_module/rf_0_60" BEL
+        "rf_module/rf_0_59" BEL "rf_module/rf_0_58" BEL "rf_module/rf_0_57"
+        BEL "rf_module/rf_0_56" BEL "rf_module/rf_0_55" BEL
+        "rf_module/rf_0_54" BEL "rf_module/rf_0_53" BEL "rf_module/rf_0_52"
+        BEL "rf_module/rf_0_51" BEL "rf_module/rf_0_50" BEL
+        "rf_module/rf_0_49" BEL "rf_module/rf_0_48" BEL "rf_module/rf_0_47"
+        BEL "rf_module/rf_0_46" BEL "rf_module/rf_0_45" BEL
+        "rf_module/rf_0_44" BEL "rf_module/rf_0_43" BEL "rf_module/rf_0_42"
+        BEL "rf_module/rf_0_41" BEL "rf_module/rf_0_40" BEL
+        "rf_module/rf_0_39" BEL "rf_module/rf_0_38" BEL "rf_module/rf_0_37"
+        BEL "rf_module/rf_0_36" BEL "rf_module/rf_0_35" BEL
+        "rf_module/rf_0_34" BEL "rf_module/rf_0_33" BEL "rf_module/rf_0_32"
+        BEL "clk_BUFGP/BUFG" BEL "lcd_module/double_clk" BEL
+        "lcd_module/touch_module/bit_count_2" BEL
+        "lcd_module/touch_module/bit_count_1" BEL
+        "lcd_module/touch_module/bit_count_0" BEL
+        "lcd_module/touch_module/byte_count_3" BEL
+        "lcd_module/touch_module/byte_count_2" BEL
+        "lcd_module/touch_module/byte_count_1" BEL
+        "lcd_module/touch_module/byte_count_0" BEL
+        "lcd_module/touch_module/input_count_2" BEL
+        "lcd_module/touch_module/input_count_1" BEL
+        "lcd_module/touch_module/input_count_0" BEL
+        "lcd_module/touch_module/rst_count_21" BEL
+        "lcd_module/touch_module/rst_count_20" BEL
+        "lcd_module/touch_module/rst_count_19" BEL
+        "lcd_module/touch_module/rst_count_18" BEL
+        "lcd_module/touch_module/rst_count_17" BEL
+        "lcd_module/touch_module/rst_count_16" BEL
+        "lcd_module/touch_module/rst_count_15" BEL
+        "lcd_module/touch_module/rst_count_14" BEL
+        "lcd_module/touch_module/rst_count_13" BEL
+        "lcd_module/touch_module/rst_count_12" BEL
+        "lcd_module/touch_module/rst_count_11" BEL
+        "lcd_module/touch_module/rst_count_10" BEL
+        "lcd_module/touch_module/rst_count_9" BEL
+        "lcd_module/touch_module/rst_count_8" BEL
+        "lcd_module/touch_module/rst_count_7" BEL
+        "lcd_module/touch_module/rst_count_6" BEL
+        "lcd_module/touch_module/rst_count_5" BEL
+        "lcd_module/touch_module/rst_count_4" BEL
+        "lcd_module/touch_module/rst_count_3" BEL
+        "lcd_module/touch_module/rst_count_2" BEL
+        "lcd_module/touch_module/rst_count_1" BEL
+        "lcd_module/touch_module/rst_count_0" BEL
+        "lcd_module/touch_module/clk_count_5" BEL
+        "lcd_module/touch_module/clk_count_4" BEL
+        "lcd_module/touch_module/clk_count_3" BEL
+        "lcd_module/touch_module/clk_count_2" BEL
+        "lcd_module/touch_module/clk_count_1" BEL
+        "lcd_module/touch_module/clk_count_0" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd1" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd2" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd3" BEL
+        "lcd_module/touch_module/input_value_28" BEL
+        "lcd_module/touch_module/input_value_29" BEL
+        "lcd_module/touch_module/input_value_30" BEL
+        "lcd_module/touch_module/input_value_31" BEL
+        "lcd_module/touch_module/input_value_24" BEL
+        "lcd_module/touch_module/input_value_25" BEL
+        "lcd_module/touch_module/input_value_26" BEL
+        "lcd_module/touch_module/input_value_27" BEL
+        "lcd_module/touch_module/input_value_20" BEL
+        "lcd_module/touch_module/input_value_21" BEL
+        "lcd_module/touch_module/input_value_22" BEL
+        "lcd_module/touch_module/input_value_23" BEL
+        "lcd_module/touch_module/input_value_16" BEL
+        "lcd_module/touch_module/input_value_17" BEL
+        "lcd_module/touch_module/input_value_18" BEL
+        "lcd_module/touch_module/input_value_19" BEL
+        "lcd_module/touch_module/input_value_12" BEL
+        "lcd_module/touch_module/input_value_13" BEL
+        "lcd_module/touch_module/input_value_15" BEL
+        "lcd_module/touch_module/input_value_14" BEL
+        "lcd_module/touch_module/input_value_8" BEL
+        "lcd_module/touch_module/input_value_9" BEL
+        "lcd_module/touch_module/input_value_10" BEL
+        "lcd_module/touch_module/input_value_11" BEL
+        "lcd_module/touch_module/touch_array_7_47" BEL
+        "lcd_module/touch_module/touch_array_7_46" BEL
+        "lcd_module/touch_module/touch_array_7_44" BEL
+        "lcd_module/touch_module/touch_array_7_43" BEL
+        "lcd_module/touch_module/touch_array_7_42" BEL
+        "lcd_module/touch_module/touch_array_7_41" BEL
+        "lcd_module/touch_module/touch_array_7_40" BEL
+        "lcd_module/touch_module/touch_array_7_38" BEL
+        "lcd_module/touch_module/touch_array_7_37" BEL
+        "lcd_module/touch_module/touch_array_7_36" BEL
+        "lcd_module/touch_module/touch_array_7_35" BEL
+        "lcd_module/touch_module/touch_array_7_34" BEL
+        "lcd_module/touch_module/touch_array_7_32" BEL
+        "lcd_module/touch_module/touch_array_7_31" BEL
+        "lcd_module/touch_module/touch_array_7_30" BEL
+        "lcd_module/touch_module/touch_array_7_29" BEL
+        "lcd_module/touch_module/touch_array_7_28" BEL
+        "lcd_module/touch_module/touch_array_7_26" BEL
+        "lcd_module/touch_module/touch_array_7_25" BEL
+        "lcd_module/touch_module/touch_array_7_24" BEL
+        "lcd_module/touch_module/touch_array_7_23" BEL
+        "lcd_module/touch_module/touch_array_7_22" BEL
+        "lcd_module/touch_module/touch_array_7_20" BEL
+        "lcd_module/touch_module/touch_array_7_19" BEL
+        "lcd_module/touch_module/touch_array_7_18" BEL
+        "lcd_module/touch_module/touch_array_7_17" BEL
+        "lcd_module/touch_module/touch_array_7_16" BEL
+        "lcd_module/touch_module/touch_array_7_14" BEL
+        "lcd_module/touch_module/touch_array_7_13" BEL
+        "lcd_module/touch_module/touch_array_7_12" BEL
+        "lcd_module/touch_module/touch_array_7_11" BEL
+        "lcd_module/touch_module/touch_array_7_10" BEL
+        "lcd_module/touch_module/touch_array_7_8" BEL
+        "lcd_module/touch_module/touch_array_7_7" BEL
+        "lcd_module/touch_module/touch_array_7_6" BEL
+        "lcd_module/touch_module/touch_array_7_5" BEL
+        "lcd_module/touch_module/touch_array_7_4" BEL
+        "lcd_module/touch_module/touch_array_7_2" BEL
+        "lcd_module/touch_module/touch_array_7_1" BEL
+        "lcd_module/touch_module/touch_array_7_0" BEL
+        "lcd_module/touch_module/send_byte_0" BEL
+        "lcd_module/touch_module/send_byte_1" BEL
+        "lcd_module/touch_module/send_byte_2" BEL
+        "lcd_module/touch_module/send_byte_3" BEL
+        "lcd_module/touch_module/send_byte_4" BEL
+        "lcd_module/touch_module/send_byte_5" BEL
+        "lcd_module/touch_module/send_byte_6" BEL
+        "lcd_module/touch_module/send_byte_7" BEL
+        "lcd_module/touch_module/input_value_4" BEL
+        "lcd_module/touch_module/input_value_6" BEL
+        "lcd_module/touch_module/input_value_7" BEL
+        "lcd_module/touch_module/input_value_5" BEL
+        "lcd_module/touch_module/touch_y_0" BEL
+        "lcd_module/touch_module/touch_y_1" BEL
+        "lcd_module/touch_module/touch_y_2" BEL
+        "lcd_module/touch_module/touch_y_3" BEL
+        "lcd_module/touch_module/touch_y_4" BEL
+        "lcd_module/touch_module/touch_x_0" BEL
+        "lcd_module/touch_module/touch_x_1" BEL
+        "lcd_module/touch_module/touch_x_3" BEL
+        "lcd_module/touch_module/touch_x_2" BEL
+        "lcd_module/touch_module/read_byte_3_0_0" BEL
+        "lcd_module/touch_module/read_byte_3_0_1" BEL
+        "lcd_module/touch_module/read_byte_3_0_2" BEL
+        "lcd_module/touch_module/read_byte_3_0_3" BEL
+        "lcd_module/touch_module/read_byte_7_5_0" BEL
+        "lcd_module/touch_module/read_byte_7_5_1" BEL
+        "lcd_module/touch_module/read_byte_7_5_2" BEL
+        "lcd_module/touch_module/input_value_0" BEL
+        "lcd_module/touch_module/input_value_1" BEL
+        "lcd_module/touch_module/input_value_2" BEL
+        "lcd_module/touch_module/input_value_3" BEL
+        "lcd_module/touch_module/touch_clk" BEL
+        "lcd_module/touch_module/sda_o_en" BEL "lcd_module/touch_module/sda_o"
+        BEL "lcd_module/init_begin" BEL "lcd_module/lcd_rst" BEL
+        "lcd_module/draw_begin" BEL "lcd_module/touch_module/input_over" BEL
+        "lcd_module/touch_module/soft_rst_end" BEL
+        "lcd_module/touch_module/ct_rstn" BEL
+        "lcd_module/touch_module/input_mode" BEL
+        "lcd_module/touch_module/cancel_touch" BEL
+        "lcd_module/touch_module/read_touch" BEL
+        "lcd_module/touch_module/touch_begin" BEL
+        "lcd_module/touch_module/btn_released" BEL
+        "lcd_module/touch_module/int_o_en" BEL "lcd_module/touch_module/int_o"
+        PIN
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>";
+TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH 50%;
+SCHEMATIC END;
+

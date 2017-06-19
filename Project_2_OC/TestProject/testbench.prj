@@ -1,0 +1,2 @@
+verilog work "adder.v"
+verilog work "testbench.v"

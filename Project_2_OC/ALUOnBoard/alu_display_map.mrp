@@ -1,0 +1,266 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Mapping Report File for Design 'alu_display'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx150-fgg484-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o alu_display_map.ncd alu_display.ngd
+alu_display.pcf 
+Target Device  : xc6slx150
+Target Package : fgg484
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Jun 15 19:20:41 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                   381 out of 184,304    1%
+    Number used as Flip Flops:                 380
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      1,104 out of  92,152    1%
+    Number used as logic:                    1,098 out of  92,152    1%
+      Number using O6 output only:             886
+      Number using O5 output only:              57
+      Number using O5 and O6:                  155
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   376 out of  23,038    1%
+  Number of LUT Flip Flop pairs used:        1,120
+    Number with an unused Flip Flop:           753 out of   1,120   67%
+    Number with an unused LUT:                  16 out of   1,120    1%
+    Number of fully used LUT-FF pairs:         351 out of   1,120   31%
+    Number of unique control sets:              49
+    Number of slice register sites lost
+      to control set restrictions:             228 out of 184,304    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        30 out of     338    8%
+    Number of LOCed IOBs:                       30 out of      30  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     268    1%
+  Number of RAMB8BWERs:                          0 out of     536    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of      12    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     586    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     586    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     586    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of     180    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       6    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.60
+
+Peak Memory Usage:  594 MB
+Total REAL time to MAP completion:  25 secs 
+Total CPU time to MAP completion:   22 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - No license file was found.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'F:\ISE\ISE_DS\license.lic'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'D:\ModelSim\win32\LICENSE.TXT'.
+INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
+INFO:LIT:243 - Logical network N210 has no load.
+INFO:LIT:395 - The above info message is repeated 2 more times for the following
+   (max. 5 shown):
+   N211,
+   lcd_module/touch_module/int_io/O
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+   7 block(s) optimized away
+   2 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "lcd_module/lcd_draw_module/Mmux_draw_char24" is sourceless and has
+been removed.
+The signal "lcd_module/touch_module/int_io/O" is sourceless and has been
+removed.
+Unused block "lcd_module/lcd_draw_module/Mmux_draw_char241" (ROM) removed.
+Unused block "lcd_module/touch_module/int_io/IBUF" (BUF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+GND 		lcd_module/XST_GND
+VCC 		lcd_module/XST_VCC
+LUT6 		lcd_module/lcd_draw_module/Mmux_draw_char242
+LUT6 		lcd_module/lcd_draw_module/Mmux_draw_char243
+GND 		lcd_module/lcd_rom_module/XST_GND
+VCC 		lcd_module/lcd_rom_module/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| ct_int                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_rstn                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_scl                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_sda                             | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW |              |          |          |
+| input_sel<0>                       | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| input_sel<1>                       | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| lcd_bl_ctr                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_cs                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<0>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<1>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<2>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<3>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<4>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<5>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<6>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<7>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<8>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<9>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<10>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<11>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<12>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<13>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<14>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<15>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rd                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rs                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rst                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_wr                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| resetn                             | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

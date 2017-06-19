@@ -1,0 +1,229 @@
+Release 13.2 par O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+ZZZ::  Mon Jun 19 11:40:21 2017
+
+par -w -intstyle ise -ol high -mt off single_cycle_cpu_display_map.ncd
+single_cycle_cpu_display.ncd single_cycle_cpu_display.pcf 
+
+
+Constraints file: single_cycle_cpu_display.pcf.
+Loading device for application Rf_Device from file '6slx150.nph' in environment F:\ISE\ISE_DS\ISE\.
+   "single_cycle_cpu_display" is an NCD, version 3.2, device xc6slx150, package fgg676, speed -3
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to 'F:\ISE\ISE_DS\license.lic'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to 'D:\ModelSim\win32\LICENSE.TXT'.
+INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.19 2011-06-20".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   999 out of 184,304    1%
+    Number used as Flip Flops:                 998
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      2,894 out of  92,152    3%
+    Number used as logic:                    2,746 out of  92,152    2%
+      Number using O6 output only:           2,581
+      Number using O5 output only:               0
+      Number using O5 and O6:                  165
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:    148
+      Number with same-slice register load:      8
+      Number with same-slice carry load:       109
+      Number with other load:                   31
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   968 out of  23,038    4%
+  Number of LUT Flip Flop pairs used:        2,945
+    Number with an unused Flip Flop:         1,977 out of   2,945   67%
+    Number with an unused LUT:                  51 out of   2,945    1%
+    Number of fully used LUT-FF pairs:         917 out of   2,945   31%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of 184,304    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        29 out of     498    5%
+    Number of LOCed IOBs:                       29 out of      29  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     268    1%
+  Number of RAMB8BWERs:                          0 out of     536    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of      12    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     586    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     586    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     586    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of     180    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       6    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+WARNING:Par:288 - The signal lcd_module/touch_module/int_io/O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 16072 unrouted;      REAL time: 7 secs 
+
+Phase  2  : 15334 unrouted;      REAL time: 10 secs 
+
+Phase  3  : 7677 unrouted;      REAL time: 15 secs 
+
+Phase  4  : 7677 unrouted; (Setup:0, Hold:93013, Component Switching Limit:0)     REAL time: 19 secs 
+
+Updating file: single_cycle_cpu_display.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:84742, Component Switching Limit:0)     REAL time: 27 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:84742, Component Switching Limit:0)     REAL time: 27 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:84742, Component Switching Limit:0)     REAL time: 27 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:84742, Component Switching Limit:0)     REAL time: 27 secs 
+WARNING:Route:466 - Unusually high hold time violation detected among 49 connections. The top 20 such instances are printed below. The
+   router will continue and try to fix it
+	cpu/pc<22>:BQ -> display_value<21>:D1 -2691
+	display_value<21>:D -> display_value<21>:C5 -2691
+	cpu/pc<31>:DQ -> display_value<31>:D1 -2679
+	display_value<31>:D -> display_value<31>:C5 -2679
+	cpu/pc<10>:AQ -> display_value<9>:D2 -2607
+	display_value<9>:D -> display_value<9>:C5 -2607
+	cpu/pc<26>:AQ -> display_value<25>:D2 -2570
+	display_value<25>:D -> display_value<25>:C5 -2570
+	cpu/pc<31>:CQ -> display_value<31>:B2 -2503
+	display_value<31>:B -> display_value<31>:A5 -2503
+	cpu/pc<15>:DQ -> display_value<15>:D2 -2471
+	display_value<15>:D -> display_value<15>:C5 -2471
+	cpu/pc<15>:BQ -> display_value<15>:B6 -2446
+	display_value<15>:B -> display_value<15>:A5 -2446
+	cpu/pc<24>:AQ -> display_value<23>:D1 -2406
+	display_value<23>:D -> display_value<23>:C5 -2406
+	cpu/pc<31>:BQ -> display_value<29>:D1 -2374
+	display_value<29>:D -> display_value<29>:C5 -2374
+	cpu/pc<10>:CQ -> display_value<11>:B2 -2368
+	display_value<11>:B -> display_value<11>:A5 -2368
+
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 29 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Total REAL time to Router completion: 30 secs 
+Total CPU time to Router completion: 31 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|      clk_IBUFG_BUFG |  BUFGMUX_X3Y8| No   |  107 |  0.256     |  1.346      |
++---------------------+--------------+------+------+------------+-------------+
+|lcd_module/clk_2_BUF |              |      |      |            |             |
+|                   G | BUFGMUX_X3Y14| No   |   50 |  0.074     |  1.249      |
++---------------------+--------------+------+------+------------+-------------+
+|             cpu_clk | BUFGMUX_X2Y10| No   |  199 |  0.341     |  1.434      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH | SETUP       |    79.790ns|    20.210ns|       0|           0
+   50%                                      | HOLD        |     0.011ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 34 secs 
+Total CPU time to PAR completion: 34 secs 
+
+Peak Memory Usage:  636 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 0
+
+Writing design to file single_cycle_cpu_display.ncd
+
+
+
+PAR done!

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/RegisterFileOnBoard/regfile_display.xst" -ofn "F:/Verilog/Project_2_OC/RegisterFileOnBoard/regfile_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc regfile.ucf -p xc6slx150-fgg484-3 regfile_display.ngc regfile_display.ngd  
+map -intstyle ise -p xc6slx150-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o regfile_display_map.ncd regfile_display.ngd regfile_display.pcf 
+par -w -intstyle ise -ol high -mt off regfile_display_map.ncd regfile_display.ncd regfile_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml regfile_display.twx regfile_display.ncd -o regfile_display.twr regfile_display.pcf -ucf regfile.ucf 
+bitgen -intstyle ise -f regfile_display.ut regfile_display.ncd 
+xst -intstyle ise -ifn "F:/Verilog/Project_2_OC/RegisterFileOnBoard/regfile_display.xst" -ofn "F:/Verilog/Project_2_OC/RegisterFileOnBoard/regfile_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc regfile.ucf -p xc6slx150-fgg484-3 regfile_display.ngc regfile_display.ngd  
+map -intstyle ise -p xc6slx150-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o regfile_display_map.ncd regfile_display.ngd regfile_display.pcf 
+par -w -intstyle ise -ol high -mt off regfile_display_map.ncd regfile_display.ncd regfile_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml regfile_display.twx regfile_display.ncd -o regfile_display.twr regfile_display.pcf -ucf regfile.ucf 
+bitgen -intstyle ise -f regfile_display.ut regfile_display.ncd 
