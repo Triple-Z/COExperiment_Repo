@@ -1,0 +1,3 @@
+module comp();
+
+endmodule // Compare; 
