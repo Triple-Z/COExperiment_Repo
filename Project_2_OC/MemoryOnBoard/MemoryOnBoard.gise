@@ -78,6 +78,7 @@
     </transform>
     <transform xil_pn:end_ts="1497529842" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1497529842">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1497529842" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7284901825186018365" xil_pn:start_ts="1497529842">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -139,6 +140,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="data_ram_display.pcf"/>
       <outfile xil_pn:name="data_ram_display_map.map"/>
@@ -174,7 +177,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1497529973" xil_pn:in_ck="7265421850074163899" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-2454196051518175680" xil_pn:start_ts="1497529973">
+    <transform xil_pn:end_ts="1497532632" xil_pn:in_ck="7265421850074163899" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-2454196051518175680" xil_pn:start_ts="1497532632">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>

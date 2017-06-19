@@ -75,6 +75,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1497525570" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1497525570">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1497525570" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2296831881396280972" xil_pn:start_ts="1497525570">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -173,7 +174,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1497525965" xil_pn:in_ck="1015710902259196548" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-4891705979061478551" xil_pn:start_ts="1497525965">
+    <transform xil_pn:end_ts="1497533648" xil_pn:in_ck="1015710902259196548" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-4891705979061478551" xil_pn:start_ts="1497533647">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
