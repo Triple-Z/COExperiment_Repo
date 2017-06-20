@@ -78,7 +78,7 @@
 - [x] [IM (Instruction Memory)](Project_Assignment/datapath/im.v) `4KB (32bits*1024)`
 - [x] [DM (Data Memeory)](Project_Assignment/datapath/dm.v) `4KB(32bits*1024)`
 - [x] [MUX (Multiplexer)](Project_Assignment/datapath/mux.v)
-- [ ] [CMP (Compare)](Project_Assignment/datapath/comp.v)
+- [x] [CMP (Compare)](Project_Assignment/datapath/comp.v)
 - [x] [CoP0 (CoProcessor0)](Project_Assignment/datapath/CoProcessor0RF.v)
 
 ### Control Module
