@@ -13,14 +13,14 @@ module comp(dinA, dinB, ins, compare, branch);
 
 	// Operation code.
 	parameter 	BEQ 	= 6'b000100,
-		BNE 	= 6'b000101,
-		BGTZ 	= 6'b000111,
-		BLEZ 	= 6'b000110,
-		BGEZ_BLTZ	= 6'b000001;
+				BNE 	= 6'b000101,
+				BGTZ 	= 6'b000111,
+				BLEZ 	= 6'b000110,
+				BGEZ_BLTZ	= 6'b000001;
 
 	// Sel code.
 	parameter 	SEL0 	= 5'b00000,
-		SEL1 	= 5'b00001;
+				SEL1 	= 5'b00001;
 
 	always @ ( compare or dinA or dinB ) begin
 		if (compare) begin

@@ -24,15 +24,15 @@ module mips (clk, rst);
 	wire 	[31:0]	dm_out;
 	wire 	[4:0]	rWin;
 	wire 	[3:0]	aluCtr;
-	wire 		branch;
-	wire 		jump;
-	wire 		regDst;
-	wire 		aluSrc;
-	wire 		regWr;
-	wire 		memWr;
-	wire 		extOp;
-	wire 		memtoReg;
-	wire 		zero;
+	wire 			branch;
+	wire 			jump;
+	wire 			regDst;
+	wire 			aluSrc;
+	wire 			regWr;
+	wire 			memWr;
+	wire 			extOp;
+	wire 			memtoReg;
+	wire 			zero;
 
 
 	pc pc(

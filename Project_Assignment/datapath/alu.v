@@ -1,7 +1,7 @@
 module alu (ALUop, a, b, result);
 	input 	[3:0] 	ALUop;
 	input 	[31:0] 	a, b;
-	output 		zero;
+	
 	output reg 	[31:0] 	result;
 
 	reg [31:0]	HI, LO;
