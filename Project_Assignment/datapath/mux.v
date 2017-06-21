@@ -5,7 +5,7 @@ module mux #(parameter WIDTH = 32) (a, b, ctrl_s, dout);
 	input 	[WIDTH - 1:0] 	d;
 	input 	[1:0]	ctrl_s;
 
-	output 	reg 	[WIDTH - 1:0]	dout;
+	output 	reg [WIDTH - 1:0]	dout;
 
 	always @ ( * ) begin
 		case (ctrl_s)

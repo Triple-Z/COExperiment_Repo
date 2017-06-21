@@ -1,12 +1,13 @@
-module ext (imm16, extOp, dout);
-    input                extOp;
-    input       [15:0]   imm16;
-    output reg  [31:0]   dout;
+module ext #(parameter WIDTH = 16)(din, extOp, dout);
+    input       [1:0]			extOp;
+    input       [WIDTH - 1:0]	din;
+	output reg  [31:0]			dout;
 
     always @ ( * ) begin
         case (extOp)
-            0: dout = {16'h0000, imm16};// Logical Cal;
-            1: dout = {{16{imm16[15]}}, imm16};// Arithmetic Cal;;
+			2'b00: dout = {{(32 - WIDTH){1'b0}}, din};// Logical Cal;
+            2'b01: dout = {{(32 - WIDTH){din[WIDTH - 1]}}, din};// Arithmetic Cal;
+			default: dout = din;
         endcase
     end
 endmodule // Extender;

@@ -1,4 +1,4 @@
-module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, extOp, memtoReg, CopWr);
+module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt);
 	input 	[31:0] 	ins;
 
 	output 	reg 	[3:0]	aluCtr;
@@ -9,9 +9,11 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 	output 	reg		[1:0]	aluSrcB;
 	output 	reg		[1:0]	regWr;
 	output 	reg		[1:0]	memWr;
-	output 	reg		[1:0]	extOp;
+	output 	reg		[1:0]	immExt;
 	output 	reg		[1:0]	memtoReg;
-	output  reg 	[1:0]	CopWr;
+	output  reg 	[1:0]	copWr;
+	output 	reg 	[1:0]	byteExt;
+
 
 
 	wire [5:0] op;
@@ -77,7 +79,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				aluSrcB		<= 2'b00;
 				memtoReg 	<= 2'b00;
 				memWr		<= 2'b00;
-				CopWr		<= 2'b00;
+				copWr		<= 2'b00;
 				case (func)
 					// Arithmetic operations.
 					ADD: begin
@@ -203,25 +205,194 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 					SYSCALL:begin
 						jump 	<= 1'b0;
 						regWr	<= 2'b00;
-						CopWr	<= 2'b01;
+						copWr	<= 2'b01;
 					end
 				endcase
 			end
 
+			ADDIU: begin
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			SLTI: begin
+				aluCtr 		<= 4'b1011;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+			end
+
+			SLTIU: begin
+				aluCtr 		<= 4'b1010;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			ANDI: begin
+				aluCtr 		<= 4'b0010;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			ORI: begin
+				aluCtr 		<= 4'b0011;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			XORI: begin
+				aluCtr 		<= 4'b0101;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			LUI: begin
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
 			LW: begin// Load word;
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b00;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b01;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+				byteExt		<= 2'b11;
 			end
 
 			SW: begin// Store word;
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				regWr		<= 2'b00;
+				memWr		<= 2'b01;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+			end
+
+			LB: begin// Load byte.
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b01;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+				byteExt 	<= 2'b01;
+			end
+
+			LBU: begin// Load byte unsigned.
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b01;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+				byteExt 	<= 2'b00;
+			end
+
+			SB: begin
+				aluCtr 		<= 4'b0000;
+				compare		<= 1'b0;
+				jump		<= 1'b0;
+				regDst		<= 2'b01;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b01;
+				memtoReg	<= 2'b00;
+				regWr		<= 2'b01;
+				memWr		<= 2'b00;
+				immExt		<= 2'b00;
+				copWr		<= 2'b00;
 			end
 
 			BEQ: begin// Branch on equal;
 			end
 
+			BNE:
+			BGTZ:
+			BLEZ:
+			BGEZ_BLTZ:
+
 			J: begin// J-Type Instructions;
 			end
 
-			ORI: begin// Or immediate;
-			end
+			JAL:
+			MTC0_MFC0_ERET:
+
 		endcase
 	end
 

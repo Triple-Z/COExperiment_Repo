@@ -57,8 +57,8 @@ module mips (clk, rst);
 		.ins(ins)
 	);
 
-	ext extOp_ext(
-		.imm16(ins[15:0]),
+	ext immExt_ext(
+		.din(ins[15:0]),
 		.extOp(extOp),
 		.dout(ext_imm)
 	);
