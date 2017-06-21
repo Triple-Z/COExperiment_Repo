@@ -1,4 +1,4 @@
-module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt);
+module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt, manInput);
 	input 	[31:0] 	ins;
 
 	output 	reg 	[3:0]	aluCtr;
@@ -13,6 +13,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 	output 	reg		[1:0]	memtoReg;
 	output  reg 	[1:0]	copWr;
 	output 	reg 	[1:0]	byteExt;
+	output 	reg 	[4:0] 	manInput;
 
 
 
@@ -177,10 +178,13 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 					JR: begin
 						jump 	<= 1'b1;
 						regWr	<= 2'b00;
+						aluSrcA	<= 2'b00;
 					end
 					JALR: begin
-						jump 	<= 1'b1;
-						regWr	<= 2'b01;
+						jump 		<= 1'b1;
+						regWr		<= 2'b01;
+						aluSrcA		<= 2'b00;
+						memtoReg	<= 2'b11;
 					end
 					MULT: begin
 						jump 	<= 1'b0;
@@ -410,7 +414,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				copWr		<= 2'b00;
 			end
 
-			BGTZ: begin// Branch bigger than zero;
+			BGTZ: begin// Branch greater than zero;
 				compare		<= 1'b1;
 				jump		<= 1'b0;
 				aluSrcA		<= 2'b00;
@@ -432,7 +436,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 
 			BGEZ_BLTZ: begin
 				case (begz_bltz)
-					BGEZ: begin// Branch bigger or equal than zero.
+					BGEZ: begin// Branch greater or equal than zero.
 						compare		<= 1'b1;
 						jump		<= 1'b0;
 						aluSrcA		<= 2'b00;
@@ -465,11 +469,12 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				compare		<= 1'b0;
 				jump		<= 1'b1;
 				regDst 		<= 2'b10;
-				memtoReg	<= 2'b00;
+				memtoReg	<= 2'b11;
 				regWr		<= 2'b01;
 				memWr		<= 2'b00;
 				immExt		<= 2'b00;
 				copWr		<= 2'b00;
+				manInput 	<= 5'b11111;
 			end
 
 			MTC0_MFC0_ERET: begin

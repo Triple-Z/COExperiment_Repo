@@ -14,8 +14,8 @@
 
 > Total: 36 + 9
 
-|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|
-|:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:-------:	|
+|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|ManInput	|
+|:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:-------:	|
 |`untested`	| addu 		|000000	|100001	|0000	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
 |`untested`	| subu 		|000000	|100011	|0001	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
 |`untested`	| and 		|000000	|100100	|0010	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
@@ -49,9 +49,9 @@
 |`untested`	| blez 		|000110	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| bltz 		|000001	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| j 		|000010	|x		|x		|0		|1		|x		|x			|x			|x			|00		|00		|x		|00		|x			|
-|`untested`	| jr 		|000000	|001000	|x		|0		|1		|01		|x			|x			|00			|00		|00		|x		|00		|x			|
-|`untested`	| jalr 		|000000	|001001	|x		|0		|1		|01		|x			|x			|00			|01		|00		|x		|00		|x			|
-|`untested`	| jal 		|000011	|x		|x		|0		|1		|10		|x			|x			|00			|01		|00		|00		|00		|x			|
+|`untested`	| jr 		|000000	|001000	|x		|0		|1		|x		|x			|00			|00			|00		|00		|x		|00		|x			|
+|`untested`	| jalr 		|000000	|001001	|x		|0		|1		|01		|x			|00			|11			|01		|00		|x		|00		|x			|
+|`untested`	| jal 		|000011	|x		|x		|0		|1		|10		|x			|x			|11			|01		|00		|00		|00		|x			|11111	|
 
 |Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|
 |:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:------:	|
@@ -69,7 +69,7 @@
 ### Datapath Module
 
 - [x] [PC (Program Counter)](Project_Assignment/datapath/pc.v)
-- [ ] [NPC (Next PC)](Project_Assignment/datapath/npc.v)
+- [x] [NPC (Next PC)](Project_Assignment/datapath/npc.v)
 - [x] [RF (Register File)](Project_Assignment/datapath/rf.v)
 - [x] [ALU (Arithmetic Logic Unit)](Project_Assignment/datapath/alu.v)
 - [x] [EXT (Extender)](Project_Assignment/datapath/ext.v)
