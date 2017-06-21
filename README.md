@@ -42,8 +42,8 @@
 |`untested`	| lb 		|100000	|x		|0000	|0		|0		|01		|01			|00			|01			|01		|00		|01		|00		|01			|
 |`untested`	| lbu 		|100100	|x		|0000	|0		|0		|01		|01			|00			|01			|01		|00		|01		|00		|00			|
 |`untested`	| sb 		|101000	|x		|0000	|0		|0		|00		|01			|00			|x			|00		|01		|01		|00		|10			|
-|`untested`	| beq 		|000100	|x		|0001	|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
-|`untested`	| bne 		|000101	|x		|0001	|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`untested`	| beq 		|000100	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`untested`	| bne 		|000101	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| bgez 		|000001	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| bgtz 		|000111	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| blez 		|000110	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
@@ -53,9 +53,7 @@
 |`untested`	| jalr 		|000000	|001001	|x		|0		|1		|01		|x			|x			|00			|01		|00		|x		|00		|x			|
 |`untested`	| jal 		|000011	|x		|x		|0		|1		|10		|x			|x			|00			|01		|00		|00		|00		|x			|
 
-
-
-|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ExtOp	|CopWr	|ByteExt	|
+|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|
 |:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:------:	|
 |`untested`	| mult 		|000000	|011000	|1001	|0		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
 |`untested`	| mfhi 		|000000	|010000	|1101	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
@@ -83,7 +81,7 @@
 
 ### Control Module
 
-- [ ] [CTRL (Controller)](Project_Assignment/control/ctrl.v)
+- [x] [CTRL (Controller)](Project_Assignment/control/ctrl.v)
 
 ### Creator Module
 

@@ -19,8 +19,10 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 	wire [5:0] op;
 	wire [5:0] func;
 
-	assign op	= ins[31:26];
-	assign func	= ins[5:0];
+	assign op			= ins[31:26];
+	assign func			= ins[5:0];
+	assign begz_bltz	= ins[20:16];
+	assign mf_tc0_eret	= ins[25:21];
 
 	// Operation code;
 	parameter  	R 				= 6'b000000,
@@ -69,6 +71,14 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				MFLO	= 6'b010010,
 				MTLO	= 6'b010011,
 				SYSCALL	= 6'b001100;
+	// BGEZ_BLTZ
+	parameter 	BGEZ 	= 5'b00001,
+				BLTZ 	= 5'b00000;
+	// MTC0_MFC0_ERET
+	parameter 	MTC0 	= 5'b00100,
+				MFC0 	= 5'b00000,
+				ERET 	= 5'b10000;
+
 
 	always @ ( * ) begin
 		case (op)
@@ -333,6 +343,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				memWr		<= 2'b01;
 				immExt		<= 2'b01;
 				copWr		<= 2'b00;
+				byteExt 	<= 2'b11;
 			end
 
 			LB: begin// Load byte.
@@ -365,13 +376,95 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				byteExt 	<= 2'b00;
 			end
 
-			SB: begin
+			SB: begin// Store byte.
 				aluCtr 		<= 4'b0000;
 				compare		<= 1'b0;
 				jump		<= 1'b0;
-				regDst		<= 2'b01;
+				regDst		<= 2'b00;
 				aluSrcA		<= 2'b00;
 				aluSrcB		<= 2'b01;
+				regWr		<= 2'b00;
+				memWr		<= 2'b01;
+				immExt		<= 2'b01;
+				copWr		<= 2'b00;
+				byteExt 	<= 2'b10;
+			end
+
+			BEQ: begin// Branch on equal;
+				compare		<= 1'b1;
+				jump		<= 1'b0;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b00;
+				regWr		<= 2'b00;
+				memWr		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			BNE: begin// Branch not on equal;
+				compare		<= 1'b1;
+				jump		<= 1'b0;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b00;
+				regWr		<= 2'b00;
+				memWr		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			BGTZ: begin// Branch bigger than zero;
+				compare		<= 1'b1;
+				jump		<= 1'b0;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b00;
+				regWr		<= 2'b00;
+				memWr		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			BLEZ: begin// Branch less or equal than zero;
+				compare		<= 1'b1;
+				jump		<= 1'b0;
+				aluSrcA		<= 2'b00;
+				aluSrcB		<= 2'b00;
+				regWr		<= 2'b00;
+				memWr		<= 2'b00;
+				copWr		<= 2'b00;
+			end
+
+			BGEZ_BLTZ: begin
+				case (begz_bltz)
+					BGEZ: begin// Branch bigger or equal than zero.
+						compare		<= 1'b1;
+						jump		<= 1'b0;
+						aluSrcA		<= 2'b00;
+						aluSrcB		<= 2'b00;
+						regWr		<= 2'b00;
+						memWr		<= 2'b00;
+						copWr		<= 2'b00;
+					end
+					BLTZ: begin// Branch less than zero.
+						compare		<= 1'b1;
+						jump		<= 1'b0;
+						aluSrcA		<= 2'b00;
+						aluSrcB		<= 2'b00;
+						regWr		<= 2'b00;
+						memWr		<= 2'b00;
+						copWr		<= 2'b00;
+					end
+				endcase
+			end
+
+			J: begin// Jump.
+				compare	<= 1'b0;
+				jump	<= 1'b1;
+				regWr	<= 2'b00;
+				memWr	<= 2'b00;
+				copWr	<= 2'b00;
+			end
+
+			JAL: begin// Jump and link.
+				compare		<= 1'b0;
+				jump		<= 1'b1;
+				regDst 		<= 2'b10;
 				memtoReg	<= 2'b00;
 				regWr		<= 2'b01;
 				memWr		<= 2'b00;
@@ -379,19 +472,39 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				copWr		<= 2'b00;
 			end
 
-			BEQ: begin// Branch on equal;
+			MTC0_MFC0_ERET: begin
+				case (mf_tc0_eret)
+					MTC0: begin// Move to Coprocessor 0.
+						compare 	<= 1'b0;
+						jump		<= 1'b0;
+						regDst 		<= 2'b00;
+						aluSrcB 	<= 2'b00;
+						memtoReg 	<= 2'b00;
+						regWr 		<= 2'b00;
+						memWr		<= 2'b00;
+						copWr		<= 2'b01;
+					end
+
+					MFC0: begin// Move from Coprocessor 0.
+						compare 	<= 1'b0;
+						jump		<= 1'b0;
+						regDst 		<= 2'b00;
+						memtoReg 	<= 2'b10;
+						regWr 		<= 2'b01;
+						memWr		<= 2'b00;
+						copWr		<= 2'b00;
+					end
+
+					ERET:begin// Exception return.
+						compare 	<= 1'b0;
+						jump 		<= 1'b0;
+						memtoReg 	<= 2'b00;
+						regWr 		<= 2'b00;
+						memWr 		<= 2'b00;
+						copWr 		<= 2'b01;
+					end
+				endcase
 			end
-
-			BNE:
-			BGTZ:
-			BLEZ:
-			BGEZ_BLTZ:
-
-			J: begin// J-Type Instructions;
-			end
-
-			JAL:
-			MTC0_MFC0_ERET:
 
 		endcase
 	end
