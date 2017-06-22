@@ -43,14 +43,18 @@ module dm_4k (addr, din, byteExt, wEn, clk, dout);
 		);
 
 	always @ ( posedge clk ) begin// Write;
-		if (wEn) begin
+		if (wEn == 2'b01) begin
 			if (byteExt == 2'b10) begin// Store byte.
 				tmpReg = dm[gpAddr][31:0];
 				case (byteSel)
-					2'b11: tmpReg[7:0] 		= din[7:0];
-					2'b10: tmpReg[15:8] 	= din[7:0];
-					2'b01: tmpReg[23:16] 	= din[7:0];
-					2'b00: tmpReg[31:24] 	= din[7:0];
+					2'b00: tmpReg[7:0] 		= din[7:0];
+					2'b01: tmpReg[15:8] 	= din[7:0];
+					2'b10: tmpReg[23:16] 	= din[7:0];
+					2'b11: tmpReg[31:24] 	= din[7:0];
+					// 2'b00: dm[gpAddr][7:0] 		<= din[7:0];
+					// 2'b01: dm[gpAddr][15:8] 	<= din[7:0];
+					// 2'b10: dm[gpAddr][23:16] 	<= din[7:0];
+					// 2'b11: dm[gpAddr][31:24] 	<= din[7:0];
 				endcase
 				dm[gpAddr][31:0] = tmpReg[31:0];
 			end else begin// Store word.

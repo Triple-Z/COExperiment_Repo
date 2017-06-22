@@ -123,6 +123,7 @@ module mips (clk, rst);
 	dm_4k dm(
 		.addr(alu_out[11:0]),
 		.din(routb),
+		.byteExt(byteExt),
 		.wEn(memWr),
 		.clk(clk),
 		.dout(dm_out)
