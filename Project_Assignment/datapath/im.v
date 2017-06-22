@@ -2,7 +2,7 @@ module im_4k (iaddr, ins);
 	input 	[11:2] iaddr;
 	output 	[31:0] ins;
 
-	reg	[31:0]	im[1023:0];// 32-bit*1024;
+	reg	[31:0]	im	[1023:0];// 32-bit*1024;
 
 	initial begin
 		$readmemh("code.txt", im);

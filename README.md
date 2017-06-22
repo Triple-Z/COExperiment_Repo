@@ -4,7 +4,7 @@
 
 [TOC]
 
-> Last Revised: `6/20/2017`
+> Last Revised: `6/22/2017`
 
 ## Project Assignment
 
@@ -14,80 +14,78 @@
 
 > Total: 36 + 9
 
-|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ExtOp	|CopWr	|
-|:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|
-|`untested`	| addu 		|000000	|100001	|0000	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| subu 		|000000	|100011	|0001	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| slt 		|000000	|101010	|1011	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| and 		|000000	|100100	|0010	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| nor 		|000000	|100111	|0100	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| or 		|000000	|100101	|0011	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| xor 		|000000	|100110	|0101	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| sll 		|000000	|000000	|0110	|0		|0		|1		|0			|1			|0			|1		|0		|x		|0		|
-|`untested`	| srl 		|000000	|000010	|0111	|0		|0		|1		|0			|1			|0			|1		|0		|x		|0		|
-|`untested`	| addiu		|001001	|x		|0000	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| beq 		|000100	|x		|0001	|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| bne 		|000101	|x		|0001	|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| lw 		|100011	|x		|0000	|0		|0		|0		|1			|0			|1			|1		|0		|1		|0		|
-|`untested`	| sw 		|101011	|x		|0000	|0		|0		|x		|1			|0			|x			|0		|1		|1		|0		|
-|`untested`	| lui 		|001111	|x		|1000	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| j 		|000010	|x		|x		|0		|1		|x		|x			|x			|x			|0		|0		|x		|0		|
-|`untested`	| sltu 		|000000	|101011	|1010	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| jalr 		|000000	|001001	|x		|0		|1		|1		|x			|x			|0			|1		|0		|x		|0		|
-|`untested`	| jr 		|000000	|001000	|x		|0		|1		|1		|x			|x			|0			|0		|0		|x		|0		|
-|`untested`	| sllv 		|000000	|000100	|0110	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| sra 		|000000	|000011	|1000	|0		|0		|1		|0			|1			|0			|1		|0		|x		|0		|
-|`untested`	| srav 		|000000	|000111	|1000	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| srlv 		|000000	|000110	|0111	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| slti 		|001010	|x		|1011	|0		|0		|1		|1			|0			|0			|1		|0		|1		|0		|
-|`untested`	| sltiu 	|001011	|x		|1010	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| bgez 		|000001	|x		|x		|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| bgtz 		|000111	|x		|x		|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| blez 		|000110	|x		|x		|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| bltz 		|000001	|x		|x		|1		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| lb 		|100000	|x		|0000	|0		|0		|1		|1			|0			|1			|1		|0		|1		|0		|
-|`untested`	| lbu 		|100100	|x		|0000	|0		|0		|1		|1			|0			|1			|1		|0		|1		|0		|
-|`untested`	| sb 		|101000	|x		|0000	|0		|0		|0		|1			|0			|0			|0		|1		|1		|0		|
-|`untested`	| andi 		|001100	|x		|0010	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| ori 		|001101	|x		|0011	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| xori 		|001110	|x		|0101	|0		|0		|1		|1			|0			|0			|1		|0		|0		|0		|
-|`untested`	| jal 		|000011	|x		|x		|0		|1		|1		|x			|x			|0			|1		|0		|0		|0		|
+|Status			|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|ManInput_raddr	|ManInput_shf	|
+|:----:			|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:-------:		|:--------:		|
+|`supported`	| addu 		|000000	|100001	|0000	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| subu 		|000000	|100011	|0001	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| and 		|000000	|100100	|0010	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| or 		|000000	|100101	|0011	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| xor 		|000000	|100110	|0101	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| nor 		|000000	|100111	|0100	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| slt 		|000000	|101010	|1011	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| sltu 		|000000	|101011	|1010	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| addiu		|001001	|x		|0000	|0		|0		|00		|01			|00			|00			|01		|00		|00		|00		|x			|
+|`supported`	| slti 		|001010	|x		|1011	|0		|0		|00		|01			|00			|00			|01		|00		|01		|00		|x			|
+|`supported`	| sltiu 	|001011	|x		|1010	|0		|0		|00		|01			|00			|00			|01		|00		|00		|00		|x			|
+|`supported`	| andi 		|001100	|x		|0010	|0		|0		|00		|01			|00			|00			|01		|00		|00		|00		|x			|
+|`supported`	| ori 		|001101	|x		|0011	|0		|0		|00		|01			|00			|00			|01		|00		|00		|00		|x			|
+|`supported`	| xori 		|001110	|x		|0101	|0		|0		|00		|01			|00			|00			|01		|00		|00		|00		|x			|
+|`supported`	| sll 		|000000	|000000	|0110	|0		|0		|01		|00			|01			|00			|01		|00		|x		|00		|x			|
+|`supported`	| srl 		|000000	|000010	|0111	|0		|0		|01		|00			|01			|00			|01		|00		|x		|00		|x			|
+|`supported`	| sra 		|000000	|000011	|1000	|0		|0		|01		|00			|01			|00			|01		|00		|x		|00		|x			|
+|`supported`	| sllv 		|000000	|000100	|0110	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| srlv 		|000000	|000110	|0111	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| srav 		|000000	|000111	|1000	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`supported`	| lui 		|001111	|x		|0110	|0		|0		|00		|01			|10			|00			|01		|00		|00		|00		|x			|x		|0x00000010	|
+|`supported`	| lw 		|100011	|x		|0000	|0		|0		|00		|01			|00			|01			|01		|00		|01		|00		|11			|
+|`supported`	| sw 		|101011	|x		|0000	|0		|0		|x		|01			|00			|x			|00		|01		|01		|00		|11			|
+|`supported`	| lb 		|100000	|x		|0000	|0		|0		|00		|01			|00			|01			|01		|00		|01		|00		|01			|
+|`supported`	| lbu 		|100100	|x		|0000	|0		|0		|00		|01			|00			|01			|01		|00		|01		|00		|00			|
+|`supported`	| sb 		|101000	|x		|0000	|0		|0		|00		|01			|00			|x			|00		|01		|01		|00		|10			|
+|`supported`	| beq 		|000100	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| bne 		|000101	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| bgez 		|000001	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| bgtz 		|000111	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| blez 		|000110	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| bltz 		|000001	|x		|x		|1		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`supported`	| j 		|000010	|x		|x		|0		|1		|x		|x			|x			|x			|00		|00		|x		|00		|x			|
+|`supported`	| jr 		|000000	|001000	|x		|0		|1		|x		|x			|00			|00			|00		|00		|x		|00		|x			|
+|`supported`	| jalr 		|000000	|001001	|x		|0		|1		|01		|x			|00			|11			|01		|00		|x		|00		|x			|
+|`supported`	| jal 		|000011	|x		|x		|0		|1		|10		|x			|x			|11			|01		|00		|00		|00		|x			|11111	|
 
-----------------------------------------
-
-|Status		|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ExtOp	|CopWr	|
-|:----:		|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|
-|`untested`	| mult 		|000000	|011000	|1001	|0		|0		|x		|0			|0			|x			|0		|0		|x		|0		|
-|`untested`	| mflo 		|000000	|010010	|1100	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| mfhi 		|000000	|010011	|1101	|0		|0		|1		|0			|0			|0			|1		|0		|x		|0		|
-|`untested`	| mtlo 		|000000	|010011	|1111	|0		|0		|x		|x			|0			|x			|0		|0		|x		|0		|
-|`untested`	| mthi 		|000000	|010001	|1110	|0		|0		|x		|x			|0			|x			|0		|0		|x		|0		|
-|`untested`	| mfc0 		|010000	|x		|x		|0		|0		|0		|x			|x			|0			|1		|0		|x		|0		|
-|`untested`	| mtc0 		|010000	|x		|x		|0		|0		|0		|0			|x			|0			|0		|0		|x		|1		|
-|`untested`	| syscall	|000000	|001100	|x		|0		|0		|x		|x			|x			|0			|0		|0		|x		|1		|
-|`untested`	| eret 		|010000	|011000	|x		|0		|0		|x		|x			|x			|0			|0		|0		|x		|1		|
+|Status			|Ins Type	|op 	|func	|ALUctr	|Compare|Jump	|RegDst	|ALUSrcB	|ALUSrcA	|MemtoReg	|RegWr	|MemWr	|ImmExt	|CopWr	|ByteExt	|
+|:----:			|:-------:	|:----:	|:----:	|:----:	|:----:	|:----:	|:----:	|:-------:	|:------:	|:------:	|:----:	|:----:	|:----:	|:----:	|:------:	|
+|`untested`		| mult 		|000000	|011000	|1001	|0		|0		|x		|00			|00			|x			|00		|00		|x		|00		|x			|
+|`untested`		| mfhi 		|000000	|010000	|1101	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`untested`		| mthi 		|000000	|010001	|1110	|0		|0		|x		|x			|00			|x			|00		|00		|x		|00		|x			|
+|`untested`		| mflo 		|000000	|010010	|1100	|0		|0		|01		|00			|00			|00			|01		|00		|x		|00		|x			|
+|`untested`		| mtlo 		|000000	|010011	|1111	|0		|0		|x		|x			|00			|x			|00		|00		|x		|00		|x			|
+|`untested`		| mfc0 		|010000	|x		|x		|0		|0		|00		|x			|x			|10			|01		|00		|x		|00		|x			|
+|`untested`		| mtc0 		|010000	|x		|x		|0		|0		|00		|00			|x			|00			|00		|00		|x		|01		|x			|
+|`untested`		| syscall	|000000	|001100	|x		|0		|0		|x		|x			|x			|00			|00		|00		|x		|01		|x			|
+|`untested`		| eret 		|010000	|011000	|x		|0		|0		|x		|x			|x			|00			|00		|00		|x		|01		|x			|
 
 
 ### Datapath Module
 
 - [x] [PC (Program Counter)](Project_Assignment/datapath/pc.v)
-- [ ] [NPC (Next PC)](Project_Assignment/datapath/npc.v)
+- [x] [NPC (Next PC)](Project_Assignment/datapath/npc.v)
 - [x] [RF (Register File)](Project_Assignment/datapath/rf.v)
 - [x] [ALU (Arithmetic Logic Unit)](Project_Assignment/datapath/alu.v)
 - [x] [EXT (Extender)](Project_Assignment/datapath/ext.v)
 - [x] [IM (Instruction Memory)](Project_Assignment/datapath/im.v) `4KB (32bits*1024)`
 - [x] [DM (Data Memeory)](Project_Assignment/datapath/dm.v) `4KB(32bits*1024)`
 - [x] [MUX (Multiplexer)](Project_Assignment/datapath/mux.v)
-- [ ] [CMP (Compare)](Project_Assignment/datapath/comp.v)
+- [x] [CMP (Compare)](Project_Assignment/datapath/comp.v)
 - [x] [CoP0 (CoProcessor0)](Project_Assignment/datapath/CoProcessor0RF.v)
 
 ### Control Module
 
-- [ ] [CTRL (Controller)](Project_Assignment/control/ctrl.v)
+- [x] [CTRL (Controller)](Project_Assignment/control/ctrl.v)
 
 ### Creator Module
 
-- [ ] [MIPS (Creator)](Project_Assignment/mips.v)
+- [x] [MIPS (Creator)](Project_Assignment/mips.v)
 
 ### Test Bench
 
@@ -97,13 +95,13 @@
 
 - [ ] [Module Explanation](Project_Assignment/Appendix.md)
 
-=================================
+-------------------------------------------------------------
 
 ## Project 2 Onboard Experiment
 
 [Jump to directory](Project_2_OC/)
 
-=================================
+-------------------------------------------------------------
 
 ## Project 1
 
