@@ -16,7 +16,7 @@ module alu (ALUop, a, b, result);
 			4'b0101: result <= a ^ b;// xor|xori;
 			4'b0110: result <= b << a[4:0];// sll;
 			4'b0111: result <= b >> a[4:0];// srl|srlv;
-			4'b1000: result <= $signed(b) >> a[4:0];// sra|srav;
+			4'b1000: result <= $signed(b) >>> a[4:0];// sra|srav;
 			4'b1001: begin// mult;
 					{HI, LO} = a * b;
 				end
