@@ -85,7 +85,7 @@
 
 ### Creator Module
 
-- [ ] [MIPS (Creator)](Project_Assignment/mips.v)
+- [x] [MIPS (Creator)](Project_Assignment/mips.v)
 
 ### Test Bench
 
