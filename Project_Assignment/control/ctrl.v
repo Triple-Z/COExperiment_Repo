@@ -1,4 +1,4 @@
-module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt, manInput);
+module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt, manInput_raddr, manInput_shf);
 	input 	[31:0] 	ins;
 
 	output 	reg 	[3:0]	aluCtr;
@@ -13,7 +13,8 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 	output 	reg		[1:0]	memtoReg;
 	output  reg 	[1:0]	copWr;
 	output 	reg 	[1:0]	byteExt;
-	output 	reg 	[4:0] 	manInput;
+	output 	reg 	[4:0] 	manInput_raddr;
+	output 	reg 	[31:0]	manInput_shf;
 
 
 
@@ -309,17 +310,18 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 			end
 
 			LUI: begin
-				aluCtr 		<= 4'b0000;
-				compare		<= 1'b0;
-				jump		<= 1'b0;
-				regDst		<= 2'b00;
-				aluSrcA		<= 2'b00;
-				aluSrcB		<= 2'b01;
-				memtoReg	<= 2'b00;
-				regWr		<= 2'b01;
-				memWr		<= 2'b00;
-				immExt		<= 2'b00;
-				copWr		<= 2'b00;
+				aluCtr 			<= 4'b0110;
+				compare			<= 1'b0;
+				jump			<= 1'b0;
+				regDst			<= 2'b00;
+				aluSrcA			<= 2'b10;
+				aluSrcB			<= 2'b01;
+				memtoReg		<= 2'b00;
+				regWr			<= 2'b01;
+				memWr			<= 2'b00;
+				immExt			<= 2'b00;
+				copWr			<= 2'b00;
+				manInput_shf	<= 32'h0000_0010;
 			end
 
 			LW: begin// Load word;
@@ -466,15 +468,15 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 			end
 
 			JAL: begin// Jump and link.
-				compare		<= 1'b0;
-				jump		<= 1'b1;
-				regDst 		<= 2'b10;
-				memtoReg	<= 2'b11;
-				regWr		<= 2'b01;
-				memWr		<= 2'b00;
-				immExt		<= 2'b00;
-				copWr		<= 2'b00;
-				manInput 	<= 5'b11111;
+				compare			<= 1'b0;
+				jump			<= 1'b1;
+				regDst 			<= 2'b10;
+				memtoReg		<= 2'b11;
+				regWr			<= 2'b01;
+				memWr			<= 2'b00;
+				immExt			<= 2'b00;
+				copWr			<= 2'b00;
+				manInput_raddr 	<= 5'b11111;
 			end
 
 			MTC0_MFC0_ERET: begin

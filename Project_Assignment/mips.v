@@ -45,7 +45,8 @@ module mips (clk, rst);
 	wire 	[1:0]	memtoReg;
 	wire 	[1:0] 	copWr;
 	wire 	[1:0]	byteExt;
-	wire 	[4:0] 	manInput;
+	wire 	[4:0] 	manInput_raddr;
+	wire 	[31:0] 	manInput_shf;
 
 
 	pc pc(
@@ -81,6 +82,7 @@ module mips (clk, rst);
 	mux #(32) aluSrcA_mux(
 		.a(routa),
 		.b({{27{1'b0}}, ins[10:6]}),// Shift.
+		.c(manInput_shf),
 		.ctrl_s(aluSrcA),
 		.dout(aluSrcA_mux_out)
 	);
@@ -95,7 +97,7 @@ module mips (clk, rst);
 	mux #(5) regDst_mux(
 		.a(ins[20:16]),// rt.
 		.b(ins[15:11]),// rd.
-		.c(manInput),
+		.c(manInput_raddr),
 		.ctrl_s(regDst),
 		.dout(rWin)
 	);
@@ -149,7 +151,8 @@ module mips (clk, rst);
 		.memtoReg(memtoReg),
 		.copWr(copWr),
 		.byteExt(byteExt),
-		.manInput(manInput)
+		.manInput_raddr(manInput_raddr),
+		.manInput_shf(manInput_shf)
 	);
 
 	comp comp(
