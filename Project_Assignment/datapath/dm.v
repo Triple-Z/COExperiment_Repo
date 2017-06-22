@@ -22,7 +22,7 @@ module dm_4k (addr, din, byteExt, wEn, clk, dout);
 	assign gpAddr 	= addr[11:2];
 
 
-	always @ ( addr ) begin
+	always @ ( * ) begin
 		if (byteExt == 2'b01) begin// Load byte.
 			case (byteSel)
 				2'b00: byteIn = dm[gpAddr][7:0];
