@@ -356,7 +356,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				aluCtr 		<= 4'b0000;
 				compare		<= 1'b0;
 				jump		<= 1'b0;
-				regDst		<= 2'b01;
+				regDst		<= 2'b00;
 				aluSrcA		<= 2'b00;
 				aluSrcB		<= 2'b01;
 				memtoReg	<= 2'b01;
@@ -371,7 +371,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 				aluCtr 		<= 4'b0000;
 				compare		<= 1'b0;
 				jump		<= 1'b0;
-				regDst		<= 2'b01;
+				regDst		<= 2'b00;
 				aluSrcA		<= 2'b00;
 				aluSrcB		<= 2'b01;
 				memtoReg	<= 2'b01;

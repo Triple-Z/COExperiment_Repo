@@ -1,4 +1,3 @@
-
 `define BigEndianCPU 1
 
 module dm_4k (addr, din, byteExt, wEn, clk, dout);
@@ -13,7 +12,6 @@ module dm_4k (addr, din, byteExt, wEn, clk, dout);
 
 	wire 	[1:0]	byteSel;
 	wire	[9:0]	gpAddr;
-	wire 	[31:0]	byteOut;
 
 	reg 	[7:0]	byteIn;
 	reg 	[31:0] 	tmpReg;
@@ -21,26 +19,23 @@ module dm_4k (addr, din, byteExt, wEn, clk, dout);
 	assign byteSel 	= addr[1:0] ^ 2'b11;// Big endian.
 	assign gpAddr 	= addr[11:2];
 
-
 	always @ ( * ) begin
-		if (byteExt == 2'b01) begin// Load byte.
+		if (byteExt == 2'b01 || byteExt == 2'b00) begin// Load byte.
 			case (byteSel)
-				2'b00: byteIn = dm[gpAddr][7:0];
-				2'b01: byteIn = dm[gpAddr][15:8];
-				2'b10: byteIn = dm[gpAddr][23:16];
-				2'b11: byteIn = dm[gpAddr][31:24];
+				2'b00: byteIn <= dm[gpAddr][7:0];
+				2'b01: byteIn <= dm[gpAddr][15:8];
+				2'b10: byteIn <= dm[gpAddr][23:16];
+				2'b11: byteIn <= dm[gpAddr][31:24];
 			endcase
-			dout = byteOut;
+			case (byteExt)// Embedded extender.
+				2'b00: dout <= {{24{1'b0}}, byteIn};// Logical Cal;
+				2'b01: dout <= {{24{byteIn[7]}}, byteIn};// Arithmetic Cal;
+			endcase
 		end else begin
 			dout = dm[gpAddr][31:0];// Load word.
 		end
 	end
 
-	ext #(8) byteExt_ext(
-		.din(byteIn),
-		.extOp(byteExt),
-		.dout(byteOut)
-		);
 
 	always @ ( posedge clk ) begin// Write;
 		if (wEn == 2'b01) begin
@@ -51,10 +46,6 @@ module dm_4k (addr, din, byteExt, wEn, clk, dout);
 					2'b01: tmpReg[15:8] 	= din[7:0];
 					2'b10: tmpReg[23:16] 	= din[7:0];
 					2'b11: tmpReg[31:24] 	= din[7:0];
-					// 2'b00: dm[gpAddr][7:0] 		<= din[7:0];
-					// 2'b01: dm[gpAddr][15:8] 	<= din[7:0];
-					// 2'b10: dm[gpAddr][23:16] 	<= din[7:0];
-					// 2'b11: dm[gpAddr][31:24] 	<= din[7:0];
 				endcase
 				dm[gpAddr][31:0] = tmpReg[31:0];
 			end else begin// Store word.

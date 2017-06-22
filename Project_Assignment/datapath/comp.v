@@ -36,21 +36,21 @@ module comp(dinA, dinB, ins, compare, branch);
 					end else branch = 0;
 				end
 				BGTZ: begin
-					if (dinA > 0) begin
+					if ($signed(dinA) > 0) begin
 						branch = 1;
 					end else branch = 0;
 				end
 				BLEZ: begin
-					if (dinA <= 0) begin
+					if ($signed(dinA) <= 0) begin
 						branch = 1;
 					end else branch = 0;
 				end
 				BGEZ_BLTZ: begin
 					case (sel)
-						SEL0: if (dinA < 0) begin// BLTZ
+						SEL0: if ($signed(dinA) < 0) begin// BLTZ
 							branch = 1;
 						end else branch = 0;
-						SEL1: if (dinA >= 0) begin// BGEZ
+						SEL1: if ($signed(dinA) >= 0) begin// BGEZ
 							branch = 1;
 						end else branch = 0;
 					endcase
