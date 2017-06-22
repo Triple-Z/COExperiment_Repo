@@ -1,7 +1,8 @@
 module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 	input 	[31:0] 	busW;
 	input 	[4:0] 	rW, rA, rB;
-	input 			clk, wE;
+	input 			clk;
+	input 	[1:0]	wE;
 	output 	[31:0] 	busA, busB;
 
 	reg		[31:0] 	register[0:31];
@@ -28,7 +29,7 @@ module regFile (busW, clk, wE, rW, rA, rB, busA, busB);
 	assign busB = (rB != 0)? register[rB]: 0;
 
 	always @ ( posedge clk ) begin
-		if ((wE == 1) && (rW != 0)) begin
+		if ((wE == 2'b01) && (rW != 0)) begin
 			register[rW] = busW;
 		end
 	end

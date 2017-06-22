@@ -1,11 +1,11 @@
-`include "ext.v"
+
 `define BigEndianCPU 1
 
 module dm_4k (addr, din, byteExt, wEn, clk, dout);
 	input 		[11:0] 	addr;
 	input 		[31:0] 	din;
 	input 		[1:0]	byteExt;
-	input  				wEn;
+	input  		[1:0]	wEn;
 	input 				clk;
 	output  reg	[31:0] 	dout;
 

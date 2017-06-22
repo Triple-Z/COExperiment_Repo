@@ -1,6 +1,6 @@
 `include "datapath/alu.v"
 `include "datapath/comp.v"
-`include "datapath/Coprocessor0RF.v"
+`include "datapath/CoProcessor0RF.v"
 `include "datapath/dm.v"
 `include "datapath/ext.v"
 `include "datapath/im.v"
@@ -79,8 +79,8 @@ module mips (clk, rst);
 	);
 
 	mux #(32) aluSrcA_mux(
-		.a(routb),
-		.b(ins[10:6]),// Shift.
+		.a(routa),
+		.b({{27{1'b0}}, ins[10:6]}),// Shift.
 		.ctrl_s(aluSrcA),
 		.dout(aluSrcA_mux_out)
 	);
@@ -93,8 +93,8 @@ module mips (clk, rst);
 	);
 
 	mux #(5) regDst_mux(
-		.a(ins[20:16]),
-		.b(ins[15:11]),
+		.a(ins[20:16]),// rt.
+		.b(ins[15:11]),// rd.
 		.c(manInput),
 		.ctrl_s(regDst),
 		.dout(rWin)
@@ -119,7 +119,7 @@ module mips (clk, rst);
 	);
 
 	dm_4k dm(
-		.addr(alu_out),
+		.addr(alu_out[11:0]),
 		.din(routb),
 		.wEn(memWr),
 		.clk(clk),
@@ -145,7 +145,7 @@ module mips (clk, rst);
 		.aluCtr(aluCtr),
 		.regWr(regWr),
 		.memWr(memWr),
-		.immExt(immext),
+		.immExt(immExt),
 		.memtoReg(memtoReg),
 		.copWr(copWr),
 		.byteExt(byteExt),
@@ -160,7 +160,7 @@ module mips (clk, rst);
 		.branch(branch)
 	);
 
-	Coprocessor0RF CoP0(
+	CoProcessor0RF CoP0(
 		.clk(clk),
 		.din(aluSrcB_mux_out),
 		.wEn(copWr),

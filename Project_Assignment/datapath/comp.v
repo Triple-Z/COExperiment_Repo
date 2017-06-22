@@ -57,7 +57,7 @@ module comp(dinA, dinB, ins, compare, branch);
 				end
 				default: branch = 0;
 			endcase
-		end
+		end else branch = 0;
 	end
 
 endmodule // Compare;

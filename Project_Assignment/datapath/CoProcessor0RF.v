@@ -1,7 +1,7 @@
 module CoProcessor0RF(clk, din, wEn, regNum, sel, dout);
 	input			clk;
 	input	[31:0]	din;
-	input			wEn;
+	input	[1:0]	wEn;
 	input 	[4:0]	regNum;
 	input	[2:0]	sel;
 	output	[31:0]	dout;
