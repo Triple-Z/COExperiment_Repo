@@ -5,6 +5,7 @@ module alu (ALUop, a, b, result, clk);
 
 	output reg 	[31:0] 	result;
 
+	reg [63:0] 	tem64;
 	reg [31:0]	HI, LO;
 
 	initial begin
@@ -24,7 +25,10 @@ module alu (ALUop, a, b, result, clk);
 			4'b0111: result <= b >> a[4:0];// srl|srlv;
 			4'b1000: result <= $signed(b) >>> a[4:0];// sra|srav;
 			4'b1001: begin// mult;
-					{HI, LO} <= $signed(a) * $signed(b);
+					// {HI, LO} <= $signed(a) * $signed(b);
+					tem64 = $signed(a) * $signed(b);
+					HI = tem64[63:32];
+					LO = tem64[32:0];
 				end
 			4'b1010: result <= (a < b)? 1: 0;// sltu|sltiu;
 			4'b1011: result <= ($signed(a) < $signed(b))? 1: 0;// slt|slti;
