@@ -1,4 +1,4 @@
-module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt, manInput_raddr, manInput_shf);
+module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr, immExt, memtoReg, copWr, byteExt, manInput_raddr, manInput_shf, iaddrtoNPC);
 	input 	[31:0] 	ins;
 
 	output 	reg 	[3:0]	aluCtr;
@@ -15,11 +15,14 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 	output 	reg 	[1:0]	byteExt;
 	output 	reg 	[4:0] 	manInput_raddr;
 	output 	reg 	[31:0]	manInput_shf;
+	output  reg 	[1:0]	iaddrtoNPC;
 
 
 
 	wire [5:0] op;
 	wire [5:0] func;
+	wire [4:0] begz_bltz;
+	wire [4:0] mf_tc0_eret;
 
 	assign op			= ins[31:26];
 	assign func			= ins[5:0];
@@ -177,15 +180,17 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 					end
 					// Jump || link operations.
 					JR: begin
-						jump 	<= 1'b1;
-						regWr	<= 2'b00;
-						aluSrcA	<= 2'b00;
+						jump 		<= 1'b1;
+						regWr		<= 2'b00;
+						aluSrcA		<= 2'b00;
+						iaddrtoNPC 	<= 2'b00;
 					end
 					JALR: begin
 						jump 		<= 1'b1;
 						regWr		<= 2'b01;
 						aluSrcA		<= 2'b00;
 						memtoReg	<= 2'b11;
+						iaddrtoNPC 	<= 2'b00;
 					end
 					MULT: begin
 						jump 	<= 1'b0;
@@ -198,6 +203,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 						aluCtr	<= 4'b1101;
 						aluSrcA	<= 2'b00;
 						regWr	<= 2'b01;
+						regDst 	<= 2'b01;
 					end
 					MTHI: begin
 						jump 	<= 1'b0;
@@ -210,6 +216,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 						aluCtr	<= 4'b1100;
 						aluSrcA	<= 2'b00;
 						regWr	<= 2'b01;
+						regDst 	<= 2'b01;
 					end
 					MTLO: begin
 						jump 	<= 1'b0;
@@ -218,9 +225,10 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 						regWr	<= 2'b00;
 					end
 					SYSCALL:begin
-						jump 	<= 1'b0;
-						regWr	<= 2'b00;
-						copWr	<= 2'b01;
+						jump 		<= 1'b1;
+						regWr		<= 2'b00;
+						copWr		<= 2'b01;
+						iaddrtoNPC 	<= 2'b01;
 					end
 				endcase
 			end
@@ -504,11 +512,12 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 
 					ERET:begin// Exception return.
 						compare 	<= 1'b0;
-						jump 		<= 1'b0;
+						jump 		<= 1'b1;
 						memtoReg 	<= 2'b00;
 						regWr 		<= 2'b00;
 						memWr 		<= 2'b00;
 						copWr 		<= 2'b01;
+						iaddrtoNPC 	<= 2'b01;
 					end
 				endcase
 			end

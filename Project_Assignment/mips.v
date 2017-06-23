@@ -30,6 +30,8 @@ module mips (clk, rst);
 	wire 	[4:0]	rWin;
 	wire 	[31:0] 	cop_out;
 	wire 	[31:0] 	npc_out;
+	wire 	[31:0] 	expiaddr;
+	wire 	[31:0] 	jiaddr;
 
 	// Control signals.
 	wire 	[3:0]	aluCtr;
@@ -45,6 +47,7 @@ module mips (clk, rst);
 	wire 	[1:0]	memtoReg;
 	wire 	[1:0] 	copWr;
 	wire 	[1:0]	byteExt;
+	wire 	[1:0] 	iaddrtoNPC;
 	wire 	[4:0] 	manInput_raddr;
 	wire 	[31:0] 	manInput_shf;
 
@@ -61,7 +64,7 @@ module mips (clk, rst);
 		.branch(branch),
 		.jump(jump),
 		.ins(ins),
-		.jiaddr(aluSrcA_mux_out),
+		.jiaddr(jiaddr),
 		.imm16(ins[15:0]),
 		.imm26(ins[25:0]),
 		.riaddr(npc_out),
@@ -117,7 +120,8 @@ module mips (clk, rst);
 		.ALUop(aluCtr),
 		.a(aluSrcA_mux_out),
 		.b(aluSrcB_mux_out),
-		.result(alu_out)
+		.result(alu_out),
+		.clk(clk)
 	);
 
 	dm_4k dm(
@@ -153,7 +157,8 @@ module mips (clk, rst);
 		.copWr(copWr),
 		.byteExt(byteExt),
 		.manInput_raddr(manInput_raddr),
-		.manInput_shf(manInput_shf)
+		.manInput_shf(manInput_shf),
+		.iaddrtoNPC(iaddrtoNPC)
 	);
 
 	comp comp(
@@ -170,7 +175,17 @@ module mips (clk, rst);
 		.wEn(copWr),
 		.regNum(ins[15:11]),
 		.sel(ins[2:0]),
-		.dout(cop_out)
+		.dout(cop_out),
+		.npc_out(npc_out),
+		.expiaddr(expiaddr),
+		.ins(ins)
+	);
+
+	mux #(32) iaddrtoNPC_mux(
+		.a(aluSrcA_mux_out),
+		.b(expiaddr),
+		.ctrl_s(iaddrtoNPC),
+		.dout(jiaddr)
 	);
 
 endmodule // MIPS main program;
