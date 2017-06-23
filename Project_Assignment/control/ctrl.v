@@ -203,7 +203,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 						aluCtr	<= 4'b1101;
 						aluSrcA	<= 2'b00;
 						regWr	<= 2'b01;
-						regDst 	<= 2'b00;
+						regDst 	<= 2'b01;
 					end
 					MTHI: begin
 						jump 	<= 1'b0;
@@ -216,7 +216,7 @@ module ctrl (ins, compare, jump, regDst, aluSrcA, aluSrcB, aluCtr, regWr, memWr,
 						aluCtr	<= 4'b1100;
 						aluSrcA	<= 2'b00;
 						regWr	<= 2'b01;
-						regDst 	<= 2'b00;
+						regDst 	<= 2'b01;
 					end
 					MTLO: begin
 						jump 	<= 1'b0;

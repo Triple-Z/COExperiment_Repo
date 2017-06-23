@@ -24,21 +24,18 @@ module alu (ALUop, a, b, result, clk);
 			4'b0110: result <= b << a[4:0];// sll;
 			4'b0111: result <= b >> a[4:0];// srl|srlv;
 			4'b1000: result <= $signed(b) >>> a[4:0];// sra|srav;
-			4'b1001: begin// mult;
-					// {HI, LO} <= $signed(a) * $signed(b);
-					tem64 = $signed(a) * $signed(b);
-					HI = tem64[63:32];
-					LO = tem64[32:0];
-				end
+
 			4'b1010: result <= (a < b)? 1: 0;// sltu|sltiu;
 			4'b1011: result <= ($signed(a) < $signed(b))? 1: 0;// slt|slti;
+
+			4'b1100: result = LO[31:0];// mflo;
+			4'b1101: result = HI[31:0];// mfhi;
 		endcase
 	end
 
 	always @ ( posedge clk ) begin
 		case (ALUop)
-			4'b1100: result = LO[31:0];// mflo;
-			4'b1101: result = HI[31:0];// mfhi;
+			4'b1001: {HI, LO} = $signed(a) * $signed(b);
 			4'b1110: HI = a[31:0];//mthi;
 			4'b1111: LO = a[31:0];//mtlo;
 		endcase
