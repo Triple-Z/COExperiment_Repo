@@ -1,0 +1,8 @@
+verilog work "adder.v"
+verilog work "regfile.v"
+verilog work "inst_rom.v"
+verilog work "data_ram.v"
+verilog work "alu.v"
+verilog work "single_cycle_cpu.v"
+verilog work "lcd_module.v"
+verilog work "single_cycle_cpu_display.v"

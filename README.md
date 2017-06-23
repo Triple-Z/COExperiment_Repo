@@ -8,7 +8,9 @@
 
 ## Project Assignment
 
-[Jump to directory](Project_Assignment/)
+[Jump to source code directory](Project_Assignment/)
+
+[Jump to on board project directory](Project_Assignment_OnBoard/)
 
 ### Instruction Set
 

@@ -1,0 +1,253 @@
+Release 13.2 par O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+ZZZ::  Fri Jun 23 17:19:18 2017
+
+par -w -intstyle ise -ol high -mt off mips_display_map.ncd mips_display.ncd
+mips_display.pcf 
+
+
+Constraints file: mips_display.pcf.
+Loading device for application Rf_Device from file '6slx150.nph' in environment F:\ISE\ISE_DS\ISE\.
+   "mips_display" is an NCD, version 3.2, device xc6slx150, package fgg676, speed -3
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to 'F:\ISE\ISE_DS\license.lic'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to 'D:\ModelSim\win32\LICENSE.TXT'.
+INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - No license file was found.
+       Please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.19 2011-06-20".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   858 out of 184,304    1%
+    Number used as Flip Flops:                 782
+    Number used as Latches:                     76
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,386 out of  92,152    2%
+    Number used as logic:                    2,133 out of  92,152    2%
+      Number using O6 output only:           1,863
+      Number using O5 output only:               0
+      Number using O5 and O6:                  270
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:    253
+      Number with same-slice register load:      3
+      Number with same-slice carry load:       121
+      Number with other load:                  129
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   804 out of  23,038    3%
+  Number of LUT Flip Flop pairs used:        2,444
+    Number with an unused Flip Flop:         1,626 out of   2,444   66%
+    Number with an unused LUT:                  58 out of   2,444    2%
+    Number of fully used LUT-FF pairs:         760 out of   2,444   31%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of 184,304    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        29 out of     498    5%
+    Number of LOCed IOBs:                       29 out of      29  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     268    1%
+  Number of RAMB8BWERs:                          0 out of     536    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        4
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of      12    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     586    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     586    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     586    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            4 out of     180    2%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       6    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
+
+WARNING:Par:288 - The signal lcd_module/touch_module/int_io/O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 13146 unrouted;      REAL time: 8 secs 
+
+Phase  2  : 12326 unrouted;      REAL time: 11 secs 
+
+Phase  3  : 5587 unrouted;      REAL time: 14 secs 
+
+Phase  4  : 5587 unrouted; (Setup:0, Hold:167184, Component Switching Limit:0)     REAL time: 18 secs 
+
+Updating file: mips_display.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:157572, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:157572, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:157572, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:157572, Component Switching Limit:0)     REAL time: 22 secs 
+WARNING:Route:466 - Unusually high hold time violation detected among 71 connections. The top 20 such instances are printed below. The
+   router will continue and try to fix it
+	cpu/CoP0/Mmux_cop_data_1015:CMUX -> display_value<23>:D4 -2670
+	cpu/CoP0/coprf_31<1015>:DQ -> cpu/CoP0/Mmux_cop_data_1015:D5 -2670
+	cpu/CoP0/Mmux_cop_data_1014:CMUX -> display_value<23>:B4 -2604
+	cpu/CoP0/coprf_31<1015>:CQ -> cpu/CoP0/Mmux_cop_data_1014:D5 -2604
+	cpu/CoP0/Mmux_cop_data_1020:CMUX -> display_value<29>:B4 -2573
+	cpu/CoP0/coprf_31<1023>:AQ -> cpu/CoP0/Mmux_cop_data_1020:D5 -2573
+	cpu/CoP0/Mmux_cop_data_105:CMUX -> display_value<15>:B4 -2483
+	cpu/CoP0/coprf_31<1007>:CQ -> cpu/CoP0/Mmux_cop_data_105:D5 -2483
+	cop_data<5>:CMUX -> display_value<5>:D4 -2479
+	cpu/CoP0/coprf_31<999>:BQ -> cop_data<5>:D5 -2479
+	cpu/CoP0/Mmux_cop_data_1010:CMUX -> display_value<19>:D4 -2440
+	cpu/CoP0/coprf_31<1011>:DQ -> cpu/CoP0/Mmux_cop_data_1010:D5 -2440
+	cpu/CoP0/coprf_31<999>:DQ -> cpu/CoP0/Mmux_cop_data_1029:D5 -2397
+	cpu/CoP0/Mmux_cop_data_1029:CMUX -> display_value<7>:D4 -2397
+	cpu/pc/iaddr<11>:CQ -> cpu/pc/iaddr<11>:A5 -2380
+	display_value<11>:A -> display_value<11>:B3 -2380
+	cpu/pc/iaddr<11>:A -> display_value<11>:A1 -2380
+	cpu/CoP0/Mmux_cop_data_1017:CMUX -> display_value<25>:D4 -2305
+	cpu/CoP0/coprf_31<1019>:BQ -> cpu/CoP0/Mmux_cop_data_1017:D5 -2305
+	cpu/pc/iaddr<15>:CQ -> cpu/pc/iaddr<15>:A5 -2245
+
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 24 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 24 secs 
+Total REAL time to Router completion: 24 secs 
+Total CPU time to Router completion: 25 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|             cpu_clk | BUFGMUX_X2Y10| No   |  103 |  0.016     |  1.233      |
++---------------------+--------------+------+------+------------+-------------+
+|lcd_module/clk_2_BUF |              |      |      |            |             |
+|                   G |  BUFGMUX_X2Y2| No   |   51 |  0.092     |  1.178      |
++---------------------+--------------+------+------+------------+-------------+
+|      clk_IBUFG_BUFG | BUFGMUX_X2Y12| No   |  112 |  0.261     |  1.347      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/alu/ALUop[3]_GND |              |      |      |            |             |
+| _44_o_Mux_18_o_BUFG | BUFGMUX_X3Y16| No   |   17 |  0.013     |  1.231      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/npc/branch_jump_ |              |      |      |            |             |
+|        OR_20_o_BUFG | BUFGMUX_X2Y11| No   |    8 |  0.010     |  1.227      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/CoP0/Mmux_cop_da |              |      |      |            |             |
+|              ta_911 |         Local|      |  504 |  2.105     |  3.941      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/ctrl/op[5]_func[ |              |      |      |            |             |
+|     5]_Select_144_o |         Local|      |    1 |  0.000     |  0.806      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/ctrl/op[5]_func[ |              |      |      |            |             |
+|     5]_Select_129_o |         Local|      |    1 |  0.000     |  0.462      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/ctrl/op[5]_PWR_1 |              |      |      |            |             |
+|   49_o_Select_102_o |         Local|      |    4 |  0.386     |  1.031      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/ctrl/op[5]_func[ |              |      |      |            |             |
+|     5]_Select_134_o |         Local|      |    1 |  0.000     |  0.813      |
++---------------------+--------------+------+------+------------+-------------+
+|cpu/ctrl/op[5]_func[ |              |      |      |            |             |
+|     5]_Select_151_o |         Local|      |    1 |  0.000     |  0.469      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH | SETUP       |    77.040ns|    22.960ns|       0|           0
+   50%                                      | HOLD        |     0.411ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 26 secs 
+Total CPU time to PAR completion: 26 secs 
+
+Peak Memory Usage:  633 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 0
+
+Writing design to file mips_display.ncd
+
+
+
+PAR done!

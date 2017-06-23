@@ -1,0 +1,793 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Mapping Report File for Design 'mips_display'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx150-fgg676-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o mips_display_map.ncd mips_display.ngd
+mips_display.pcf 
+Target Device  : xc6slx150
+Target Package : fgg676
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Jun 23 17:18:38 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  136
+Slice Logic Utilization:
+  Number of Slice Registers:                   858 out of 184,304    1%
+    Number used as Flip Flops:                 782
+    Number used as Latches:                     76
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,386 out of  92,152    2%
+    Number used as logic:                    2,133 out of  92,152    2%
+      Number using O6 output only:           1,863
+      Number using O5 output only:               0
+      Number using O5 and O6:                  270
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  21,680    0%
+    Number used exclusively as route-thrus:    253
+      Number with same-slice register load:      3
+      Number with same-slice carry load:       121
+      Number with other load:                  129
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   804 out of  23,038    3%
+  Number of LUT Flip Flop pairs used:        2,444
+    Number with an unused Flip Flop:         1,626 out of   2,444   66%
+    Number with an unused LUT:                  58 out of   2,444    2%
+    Number of fully used LUT-FF pairs:         760 out of   2,444   31%
+    Number of unique control sets:              62
+    Number of slice register sites lost
+      to control set restrictions:             294 out of 184,304    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        29 out of     498    5%
+    Number of LOCed IOBs:                       29 out of      29  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     268    1%
+  Number of RAMB8BWERs:                          0 out of     536    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        4
+    Number used as BUFGMUX:                      1
+  Number of DCM/DCM_CLKGENs:                     0 out of      12    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     586    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     586    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     586    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     384    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            4 out of     180    2%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       4    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       6    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.50
+
+Peak Memory Usage:  624 MB
+Total REAL time to MAP completion:  38 secs 
+Total CPU time to MAP completion:   37 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - No license file was found.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:Pack:2573 - The F7 multiplexer symbol "cpu/CoP0/Mmux_dout_3_f7_0" and
+   its I0 input driver "XST_GND" were implemented suboptimally in the same slice
+   component. The function generator could not be placed directly driving the F7
+   multiplexer. The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_2".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_3".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_4".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_5".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_6".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_7".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_8".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_9".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_0".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_1".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_2".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_3".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_4".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_5".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_6".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_7".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_8".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_9".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_10".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_11".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_20".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_12".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_21".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_13".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_30".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_22".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_14".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_23".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_15".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_24".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_16".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_25".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_17".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_26".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_18".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_27".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_19".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_28".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7_29".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_10".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_11".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_20".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_12".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_21".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_13".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_30".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_22".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_14".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_23".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_15".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_24".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_16".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_25".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_17".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_26".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_18".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_27".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_19".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_28".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7_29".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_0".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_1".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_2".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_3".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_4".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_5".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_6".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_7".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_8".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_9".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_0".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_1".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_2".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_3".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_4".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_5".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_6".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_7".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_8".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_9".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_3_f7".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_dout_4_f7".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_10".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_11".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_20".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_12".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_21".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_13".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_30".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_22".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_14".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_23".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_15".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_24".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_16".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_25".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_17".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_26".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_18".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_27".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_19".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_28".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/rf/Mmux_test_data_2_f7_29".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_10".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_11".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_20".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_12".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_21".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_13".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_30".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_22".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_14".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_23".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_15".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_24".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_16".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_25".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_17".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_26".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_18".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_27".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_19".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_28".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2143 - The function generator "XST_GND" failed to merge with F7
+   multiplexer "cpu/CoP0/Mmux_cop_data_2_f7_29".  There are more than two MUXF7
+   wide function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2145 - The F7 mux "cpu/CoP0/Mmux_dout_3_f7_0" failed to merge with
+   F8 mux "cpu/CoP0/Mmux_dout_2_f8_0".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:2145 - The F7 mux "cpu/CoP0/Mmux_dout_3_f7_1" failed to merge with
+   F8 mux "cpu/CoP0/Mmux_dout_2_f8_1".  There are more than two MUXF7 wide
+   function muxes.
+     The design will exhibit suboptimal timing.
+WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
+   IOB component <clk> is placed at site <T1>. The corresponding BUFG component
+   <clk_IBUFG_BUFG> is placed at site <BUFGMUX_X2Y12>. There is only a select
+   set of IOBs that can use the fast path to the Clocker buffer, and they are
+   not being used. You may want to analyze why this problem exists and correct
+   it. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was
+   applied on COMP.PIN <clk.PAD> allowing your design to continue. This
+   constraint disables all clock placer rules related to the specified COMP.PIN.
+   The use of this override is highly discouraged as it may lead to very poor
+   timing results. It is recommended that this error condition be corrected in
+   the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl/op[5]_func[5]_Select_144_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl/op[5]_func[5]_Select_129_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl/op[5]_PWR_149_o_Select_102_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl/op[5]_func[5]_Select_134_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl/op[5]_func[5]_Select_151_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <lcd_module/touch_module/int_io/O> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'F:\ISE\ISE_DS\license.lic'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'D:\ModelSim\win32\LICENSE.TXT'.
+INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
+INFO:LIT:243 - Logical network N253 has no load.
+INFO:LIT:395 - The above info message is repeated 2 more times for the following
+   (max. 5 shown):
+   N254,
+   lcd_module/touch_module/int_io/O
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   4 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+VCC 		XST_VCC
+VCC 		lcd_module/XST_VCC
+GND 		lcd_module/lcd_rom_module/XST_GND
+VCC 		lcd_module/lcd_rom_module/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btn_clk                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ct_int                             | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_rstn                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_scl                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| ct_sda                             | IOB              | BIDIR     | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_bl_ctr                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_cs                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<0>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<1>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<2>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<3>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<4>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<5>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<6>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<7>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<8>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<9>                     | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<10>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<11>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<12>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<13>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<14>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_data_io<15>                    | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rd                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rs                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_rst                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| lcd_wr                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW |              |          |          |
+| resetn                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
