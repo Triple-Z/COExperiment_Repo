@@ -178,6 +178,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="mips_display.pcf"/>
       <outfile xil_pn:name="mips_display_map.map"/>
@@ -216,11 +218,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1498284171" xil_pn:in_ck="4265652314374139957" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-3094926412207565821" xil_pn:start_ts="1498284171">
+    <transform xil_pn:end_ts="1498284664" xil_pn:in_ck="4265652314374139957" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="-3094926412207565821" xil_pn:start_ts="1498284664">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1498284630" xil_pn:in_ck="-906246934730100027" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1498284622">
       <status xil_pn:value="SuccessfullyRun"/>
