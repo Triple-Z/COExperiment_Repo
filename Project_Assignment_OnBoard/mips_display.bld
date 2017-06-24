@@ -17,8 +17,8 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'N253' has no driver
-WARNING:NgdBuild:452 - logical net 'N254' has no driver
+WARNING:NgdBuild:452 - logical net 'N291' has no driver
+WARNING:NgdBuild:452 - logical net 'N292' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -31,7 +31,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   2
 
-Total memory usage is 161512 kilobytes
+Total memory usage is 161256 kilobytes
 
 Writing NGD file "mips_display.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

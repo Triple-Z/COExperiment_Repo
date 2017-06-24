@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: mips_display.prj
 
@@ -771,38 +771,6 @@ WARNING:Xst:1710 - FF/Latch <memWr_1> (without init value) has a constant value 
 WARNING:Xst:1710 - FF/Latch <copWr_1> (without init value) has a constant value of 0 in block <ctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <immExt_1> (without init value) has a constant value of 0 in block <ctrl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <iaddrtoNPC_1> (without init value) has a constant value of 0 in block <ctrl>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <CoP0/expiaddr_31> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_30> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_29> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_28> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_27> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_26> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_25> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_24> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_23> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_22> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_21> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_20> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_19> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_18> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_17> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_16> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_15> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_14> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_13> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_12> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_11> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_10> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_9> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_8> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_7> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_6> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_5> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_4> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_3> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_2> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_1> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/expiaddr_0> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <CoP0/coprf_31_351> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_350> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_349> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1349,7 +1317,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_864> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_863> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_862> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_861> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_860> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_903> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_902> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_901> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1372,6 +1339,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_885> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_884> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_883> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_882> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_838> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_837> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_836> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_835> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1393,7 +1361,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_820> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_819> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_818> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_817> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_816> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_860> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_859> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_858> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_857> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1415,7 +1383,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_842> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_841> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_840> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_839> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_838> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_969> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_968> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_967> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1504,6 +1471,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_929> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_928> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_927> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_926> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_642> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_641> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_640> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_607> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1525,7 +1493,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_592> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_591> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_590> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_589> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_588> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_664> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_663> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_662> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_661> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1547,7 +1515,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_646> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_645> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_644> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_643> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_642> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_533> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_532> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_531> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1570,13 +1537,13 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_515> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_514> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_513> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_512> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_588> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_587> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_586> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_585> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_584> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_583> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_582> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_581> (without init value) has a constant value of 1 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_580> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_579> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_578> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1592,6 +1559,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_537> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_536> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_535> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_534> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_794> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_793> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_792> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_791> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1613,7 +1581,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_776> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_775> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_774> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_773> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_772> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_816> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_815> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_814> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_813> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1635,7 +1603,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_798> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_797> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_796> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_795> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_794> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_750> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_749> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_748> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_747> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1657,7 +1625,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_668> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_667> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_666> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_665> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_664> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_772> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_771> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_770> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_769> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
@@ -1679,7 +1647,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_754> 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_753> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_752> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_751> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <CoP0/coprf_31_750> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <CoP0/coprf_31_581> (without init value) has a constant value of 1 in block <mips>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <regFile> ...
 WARNING:Xst:1710 - FF/Latch <register_31_1023> (without init value) has a constant value of 0 in block <regFile>. This FF/Latch will be trimmed during the optimization process.
@@ -3309,7 +3277,6 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_0> (without init value) has a co
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_1> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_2> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <cpu/ctrl/immExt_0> of sequential type is unconnected in block <mips_display>.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_818> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_819> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_820> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_821> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3330,7 +3297,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_835> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_836> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_837> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_838> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_764> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_839> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_765> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_766> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_767> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3352,7 +3319,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_814> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_815> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_816> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_817> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_861> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_818> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_862> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_863> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_864> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3374,7 +3341,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_879> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_880> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_881> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_882> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_839> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_883> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_840> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_841> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_842> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3396,6 +3363,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_857> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_858> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_859> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_860> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_861> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_537> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_538> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_539> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3417,6 +3385,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_588> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_589> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_590> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_591> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_592> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_515> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_516> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_517> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3439,7 +3408,6 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_533> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_534> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_535> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_536> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_742> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_743> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_744> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_745> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3461,7 +3429,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_760> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_761> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_762> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_763> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_592> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_764> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_593> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_594> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_595> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3483,6 +3451,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_738> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_739> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_740> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_741> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_742> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_550> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_672> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_673> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3570,7 +3539,6 @@ WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_710> (without init value) has a c
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_711> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_712> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/CoP0/coprf_31_713> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_905> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_906> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_907> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_908> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3592,7 +3560,6 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_923> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_924> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_925> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_926> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_883> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_884> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_885> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_886> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3614,6 +3581,7 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_901> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_902> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_903> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_904> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_905> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_949> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_950> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_951> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
@@ -3658,6 +3626,8 @@ WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_945> (without init value) has a 
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_946> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_947> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cpu/rf/register_31_948> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu/CoP0/expiaddr_5> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu/CoP0/expiaddr_6> (without init value) has a constant value of 0 in block <mips_display>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <display_name_4> in Unit <mips_display> is equivalent to the following FF/Latch, which will be removed : <display_name_24> 
 INFO:Xst:2261 - The FF/Latch <display_name_5> in Unit <mips_display> is equivalent to the following 2 FFs/Latches, which will be removed : <display_name_13> <display_name_33> 
 INFO:Xst:2261 - The FF/Latch <display_name_9> in Unit <mips_display> is equivalent to the following FF/Latch, which will be removed : <display_name_19> 
@@ -3666,6 +3636,7 @@ INFO:Xst:2261 - The FF/Latch <display_name_20> in Unit <mips_display> is equival
 INFO:Xst:2261 - The FF/Latch <display_name_21> in Unit <mips_display> is equivalent to the following FF/Latch, which will be removed : <display_name_29> 
 INFO:Xst:2261 - The FF/Latch <display_name_34> in Unit <mips_display> is equivalent to the following FF/Latch, which will be removed : <display_name_35> 
 INFO:Xst:2261 - The FF/Latch <cpu/CoP0/coprf_31_548> in Unit <mips_display> is equivalent to the following 2 FFs/Latches, which will be removed : <cpu/CoP0/coprf_31_547> <cpu/CoP0/coprf_31_546> 
+INFO:Xst:2261 - The FF/Latch <cpu/CoP0/expiaddr_4> in Unit <mips_display> is equivalent to the following 2 FFs/Latches, which will be removed : <cpu/CoP0/expiaddr_3> <cpu/CoP0/expiaddr_2> 
 INFO:Xst:3203 - The FF/Latch <display_name_5> in Unit <mips_display> is the opposite to the following 2 FFs/Latches, which will be removed : <display_name_6> <display_name_14> 
 INFO:Xst:3203 - The FF/Latch <display_name_21> in Unit <mips_display> is the opposite to the following 2 FFs/Latches, which will be removed : <display_name_22> <display_name_30> 
 INFO:Xst:3203 - The FF/Latch <display_name_37> in Unit <mips_display> is the opposite to the following FF/Latch, which will be removed : <display_name_38> 
@@ -3694,9 +3665,9 @@ INFO:Xst:2260 - The FF/Latch <lcd_draw_module/td_count_x_6> in Unit <lcd_module>
 INFO:Xst:2260 - The FF/Latch <lcd_draw_module/td_count_x_8> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_draw_module/td_count_x_8_1> 
 INFO:Xst:2260 - The FF/Latch <lcd_draw_module/td_count_y_4> in Unit <lcd_module> is equivalent to the following FF/Latch : <lcd_draw_module/td_count_y_4_1> 
 FlipFlop cpu/pc/iaddr_2 has been replicated 5 time(s)
-FlipFlop cpu/pc/iaddr_3 has been replicated 3 time(s)
-FlipFlop cpu/pc/iaddr_4 has been replicated 3 time(s)
-FlipFlop cpu/pc/iaddr_5 has been replicated 4 time(s)
+FlipFlop cpu/pc/iaddr_3 has been replicated 5 time(s)
+FlipFlop cpu/pc/iaddr_4 has been replicated 5 time(s)
+FlipFlop cpu/pc/iaddr_5 has been replicated 5 time(s)
 FlipFlop cpu/pc/iaddr_6 has been replicated 4 time(s)
 
 Final Macro Processing ...
@@ -3705,8 +3676,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 489
- Flip-Flops                                            : 489
+# Registers                                            : 522
+ Flip-Flops                                            : 522
 
 =========================================================================
 
@@ -3729,25 +3700,25 @@ Top Level Output File Name         : mips_display.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3212
+# BELS                             : 3194
 #      GND                         : 3
 #      INV                         : 61
 #      LUT1                        : 122
-#      LUT2                        : 77
-#      LUT3                        : 262
-#      LUT4                        : 387
-#      LUT5                        : 652
-#      LUT6                        : 934
+#      LUT2                        : 105
+#      LUT3                        : 255
+#      LUT4                        : 330
+#      LUT5                        : 662
+#      LUT6                        : 951
 #      MUXCY                       : 241
-#      MUXF7                       : 219
+#      MUXF7                       : 210
 #      MUXF8                       : 32
 #      VCC                         : 3
 #      XORCY                       : 219
-# FlipFlops/Latches                : 858
+# FlipFlops/Latches                : 891
 #      FD                          : 308
 #      FDE                         : 156
-#      FDR                         : 164
-#      FDRE                        : 142
+#      FDR                         : 169
+#      FDRE                        : 170
 #      FDS                         : 12
 #      LD                          : 76
 # RAMS                             : 2
@@ -3770,16 +3741,16 @@ Selected Device : 6slx150fgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             858  out of  184304     0%  
- Number of Slice LUTs:                 2495  out of  92152     2%  
-    Number used as Logic:              2495  out of  92152     2%  
+ Number of Slice Registers:             891  out of  184304     0%  
+ Number of Slice LUTs:                 2486  out of  92152     2%  
+    Number used as Logic:              2486  out of  92152     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2798
-   Number with an unused Flip Flop:    1940  out of   2798    69%  
-   Number with an unused LUT:           303  out of   2798    10%  
-   Number of fully used LUT-FF pairs:   555  out of   2798    19%  
-   Number of unique control sets:        64
+ Number of LUT Flip Flop pairs used:   2810
+   Number with an unused Flip Flop:    1919  out of   2810    68%  
+   Number with an unused LUT:           324  out of   2810    11%  
+   Number of fully used LUT-FF pairs:   567  out of   2810    20%  
+   Number of unique control sets:        66
 
 IO Utilization: 
  Number of IOs:                          29
@@ -3812,18 +3783,19 @@ Clock Information:
 -------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                   | Clock buffer(FF name)                                                                                                                              | Load  |
 -------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-clk                                                                            | IBUFG+BUFGMUX                                                                                                                                      | 665   |
-cpu/npc/branch_jump_OR_20_o(cpu/npc/branch_jump_OR_20_o1:O)                    | BUFG(*)(cpu/npc/niaddr_30)                                                                                                                         | 32    |
+clk                                                                            | IBUFG+BUFGMUX                                                                                                                                      | 698   |
+cpu/npc/branch_jump_OR_20_o(cpu/npc/branch_jump_OR_20_o:O)                     | BUFG(*)(cpu/npc/niaddr_30)                                                                                                                         | 32    |
 cpu/alu/ALUop[3]_GND_44_o_Mux_18_o(cpu/alu/ALUop[3]_GND_44_o_Mux_18_o1:O)      | BUFG(*)(cpu/alu/result_0)                                                                                                                          | 32    |
 cpu/ctrl/op[5]_func[5]_Select_151_o(cpu/ctrl/op[5]_func[5]_Select_151_o1:O)    | NONE(*)(cpu/ctrl/iaddrtoNPC_0)                                                                                                                     | 1     |
 cpu/ctrl/op[5]_func[5]_Select_134_o(cpu/ctrl/op[5]_func[5]_Select_134_o2:O)    | NONE(*)(cpu/ctrl/aluCtr_0)                                                                                                                         | 4     |
-cpu/ctrl/op[5]_PWR_149_o_Select_102_o(cpu/ctrl/op[5]_PWR_149_o_Select_102_o1:O)| NONE(*)(cpu/ctrl/jump)                                                                                                                             | 5     |
+cpu/ctrl/op[5]_PWR_159_o_Select_112_o(cpu/ctrl/op[5]_PWR_159_o_Select_112_o1:O)| NONE(*)(cpu/ctrl/jump)                                                                                                                             | 4     |
+cpu/ctrl/op[5]_PWR_149_o_Select_102_o(cpu/ctrl/op[5]_PWR_149_o_Select_102_o1:O)| NONE(*)(cpu/ctrl/regDst_0)                                                                                                                         | 1     |
 cpu/ctrl/op[5]_func[5]_Select_129_o(cpu/ctrl/op[5]_func[5]_Select_129_o1:O)    | NONE(*)(cpu/ctrl/aluSrcA_0)                                                                                                                        | 1     |
 cpu/ctrl/op[5]_func[5]_Select_144_o(cpu/ctrl/op[5]_func[5]_Select_144_o1:O)    | NONE(*)(cpu/ctrl/regWr_0)                                                                                                                          | 1     |
 lcd_module/clk_2                                                               | BUFG                                                                                                                                               | 119   |
 lcd_module/lcd_rom_module/N1                                                   | NONE(lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
 -------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-(*) These 7 clock signal(s) are generated by combinatorial logic,
+(*) These 8 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -3836,8 +3808,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 20.094ns (Maximum Frequency: 49.765MHz)
-   Minimum input arrival time before clock: 5.651ns
+   Minimum period: 20.021ns (Maximum Frequency: 49.949MHz)
+   Minimum input arrival time before clock: 5.684ns
    Maximum output required time after clock: 4.110ns
    Maximum combinational path delay: 4.257ns
 
@@ -3847,36 +3819,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 20.094ns (frequency: 49.765MHz)
-  Total number of paths / destination ports: 4866541057 / 838
+  Clock period: 20.021ns (frequency: 49.949MHz)
+  Total number of paths / destination ports: 4335430298 / 922
 -------------------------------------------------------------------------
-Delay:               20.094ns (Levels of Logic = 8)
-  Source:            cpu/pc/iaddr_2_1 (FF)
+Delay:               20.021ns (Levels of Logic = 8)
+  Source:            cpu/pc/iaddr_2_5 (FF)
   Destination:       cpu/alu/HI_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: cpu/pc/iaddr_2_1 to cpu/alu/HI_31
+  Data Path: cpu/pc/iaddr_2_5 to cpu/alu/HI_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             10   0.447   1.104  cpu/pc/iaddr_2_1 (cpu/pc/iaddr_2_1)
-     LUT5:I1->O           16   0.203   1.109  cpu/im/Mram_im181_2 (cpu/im/Mram_im181_1)
-     LUT4:I2->O            1   0.203   0.684  cpu/rf/Mmux_rA[4]_register[31][31]_wide_mux_1_OUT_1033 (cpu/rf/Mmux_rA[4]_register[31][31]_wide_mux_1_OUT_103)
-     LUT6:I4->O           14   0.203   0.957  cpu/aluSrcA_mux/Mmux_dout41 (cpu/aluSrcA_mux_out<12>)
-     DSP48A1:A12->P47     18   4.560   1.049  cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT (cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P47_to_Mmult_a[31]_b[31]_MuLt_82_OUT1)
+     FDR:C->Q              4   0.447   1.028  cpu/pc/iaddr_2_5 (cpu/pc/iaddr_2_5)
+     LUT5:I0->O           22   0.203   1.134  cpu/im/Mram_im221_1 (cpu/im/Mram_im221)
+     LUT6:I5->O            1   0.205   0.684  cpu/rf/Mmux_rA[4]_register[31][31]_wide_mux_1_OUT_914 (cpu/rf/Mmux_rA[4]_register[31][31]_wide_mux_1_OUT_914)
+     LUT6:I4->O           13   0.203   0.932  cpu/aluSrcA_mux/Mmux_dout51 (cpu/aluSrcA_mux_out<13>)
+     DSP48A1:A13->P47     18   4.560   1.049  cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT (cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P47_to_Mmult_a[31]_b[31]_MuLt_82_OUT1)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1 (cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_47)
      DSP48A1:PCIN47->P47   18   2.264   1.049  cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2 (cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P47_to_Mmult_a[31]_b[31]_MuLt_82_OUT3)
      DSP48A1:C30->P29      1   2.687   0.580  cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3 (cpu/alu/a[31]_b[31]_MuLt_82_OUT<63>)
      LUT6:I5->O            1   0.205   0.000  cpu/alu/ALUop[3]_a[31]_select_88_OUT<31>1 (cpu/alu/ALUop[3]_a[31]_select_88_OUT<31>)
      FD:D                      0.102          cpu/alu/HI_31
     ----------------------------------------
-    Total                     20.094ns (13.563ns logic, 6.531ns route)
-                                       (67.5% logic, 32.5% route)
+    Total                     20.021ns (13.565ns logic, 6.456ns route)
+                                       (67.8% logic, 32.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'lcd_module/clk_2'
-  Clock period: 7.719ns (frequency: 129.553MHz)
+  Clock period: 7.719ns (frequency: 129.557MHz)
   Total number of paths / destination ports: 7449 / 280
 -------------------------------------------------------------------------
 Delay:               7.719ns (Levels of Logic = 8)
@@ -3889,7 +3861,7 @@ Delay:               7.719ns (Levels of Logic = 8)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           212   0.447   2.161  lcd_draw_module/draw_block_number_1 (display_number<1>)
+     FDRE:C->Q           211   0.447   2.161  lcd_draw_module/draw_block_number_1 (display_number<1>)
      LUT6:I4->O           16   0.203   1.005  lcd_draw_module/out1 (lcd_draw_module/draw_block_number[5]_reduce_or_38_o)
      LUT6:I5->O            1   0.205   0.000  lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT83_SW7_G (N270)
      MUXF7:I1->O           2   0.140   0.721  lcd_draw_module/Mmux_draw_data[15]_GND_3_o_mux_196_OUT83_SW7 (N90)
@@ -3905,9 +3877,9 @@ Delay:               7.719ns (Levels of Logic = 8)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 301 / 301
+  Total number of paths / destination ports: 306 / 306
 -------------------------------------------------------------------------
-Offset:              5.651ns (Levels of Logic = 2)
+Offset:              5.684ns (Levels of Logic = 2)
   Source:            resetn (PAD)
   Destination:       btn_clk_r1 (FF)
   Destination Clock: clk rising
@@ -3917,11 +3889,11 @@ Offset:              5.651ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           166   1.222   2.022  resetn_IBUF (resetn_IBUF)
-     INV:I->O             84   0.206   1.771  resetn_inv1_INV_0 (cpu/pc/rst_inv)
+     INV:I->O             89   0.206   1.804  resetn_inv1_INV_0 (cpu/pc/rst_inv)
      FDR:R                     0.430          cpu/pc/iaddr_0
     ----------------------------------------
-    Total                      5.651ns (1.858ns logic, 3.793ns route)
-                                       (32.9% logic, 67.1% route)
+    Total                      5.684ns (1.858ns logic, 3.826ns route)
+                                       (32.7% logic, 67.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -3972,11 +3944,12 @@ Clock to Setup on destination clock clk
                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------+---------+---------+---------+---------+
-clk                                  |   20.094|         |         |         |
+clk                                  |   20.021|         |         |         |
 cpu/alu/ALUop[3]_GND_44_o_Mux_18_o   |         |    2.591|         |         |
-cpu/ctrl/op[5]_PWR_149_o_Select_102_o|         |    5.565|         |         |
-cpu/ctrl/op[5]_func[5]_Select_129_o  |         |   18.361|         |         |
-cpu/ctrl/op[5]_func[5]_Select_134_o  |         |    4.980|         |         |
+cpu/ctrl/op[5]_PWR_149_o_Select_102_o|         |    5.582|         |         |
+cpu/ctrl/op[5]_PWR_159_o_Select_112_o|         |    4.460|         |         |
+cpu/ctrl/op[5]_func[5]_Select_129_o  |         |   19.269|         |         |
+cpu/ctrl/op[5]_func[5]_Select_134_o  |         |    4.983|         |         |
 cpu/ctrl/op[5]_func[5]_Select_144_o  |         |    4.224|         |         |
 cpu/npc/branch_jump_OR_20_o          |         |    1.344|         |         |
 lcd_module/clk_2                     |    9.000|         |         |         |
@@ -3987,9 +3960,9 @@ Clock to Setup on destination clock cpu/alu/ALUop[3]_GND_44_o_Mux_18_o
                                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------------+---------+---------+---------+---------+
-clk                                |         |         |   11.529|         |
-cpu/ctrl/op[5]_func[5]_Select_129_o|         |         |    9.471|         |
-cpu/ctrl/op[5]_func[5]_Select_134_o|         |         |    5.064|         |
+clk                                |         |         |   11.810|         |
+cpu/ctrl/op[5]_func[5]_Select_129_o|         |         |   10.597|         |
+cpu/ctrl/op[5]_func[5]_Select_134_o|         |         |    5.067|         |
 -----------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/ctrl/op[5]_PWR_149_o_Select_102_o
@@ -3997,7 +3970,15 @@ Clock to Setup on destination clock cpu/ctrl/op[5]_PWR_149_o_Select_102_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    5.808|         |
+clk            |         |         |    2.211|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpu/ctrl/op[5]_PWR_159_o_Select_112_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.411|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_129_o
@@ -4005,7 +3986,7 @@ Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_129_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    4.675|         |
+clk            |         |         |    4.411|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_134_o
@@ -4013,7 +3994,7 @@ Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_134_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    5.588|         |
+clk            |         |         |    5.181|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_144_o
@@ -4021,7 +4002,7 @@ Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_144_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    5.440|         |
+clk            |         |         |    5.038|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_151_o
@@ -4029,7 +4010,7 @@ Clock to Setup on destination clock cpu/ctrl/op[5]_func[5]_Select_151_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    4.558|         |
+clk            |         |         |    4.523|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock cpu/npc/branch_jump_OR_20_o
@@ -4037,10 +4018,10 @@ Clock to Setup on destination clock cpu/npc/branch_jump_OR_20_o
                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------+---------+---------+---------+---------+
-clk                                  |         |         |    6.595|         |
-cpu/ctrl/op[5]_PWR_149_o_Select_102_o|         |         |    2.291|         |
-cpu/ctrl/op[5]_func[5]_Select_129_o  |         |         |    5.248|         |
-cpu/ctrl/op[5]_func[5]_Select_151_o  |         |         |    2.134|         |
+clk                                  |         |         |    6.504|         |
+cpu/ctrl/op[5]_PWR_159_o_Select_112_o|         |         |    2.388|         |
+cpu/ctrl/op[5]_func[5]_Select_129_o  |         |         |    5.552|         |
+cpu/ctrl/op[5]_func[5]_Select_151_o  |         |         |    2.277|         |
 -------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock lcd_module/clk_2
@@ -4056,13 +4037,13 @@ lcd_module/clk_2|    7.719|         |         |         |
 
 
 Total REAL time to Xst completion: 49.00 secs
-Total CPU time to Xst completion: 48.52 secs
+Total CPU time to Xst completion: 49.02 secs
  
 --> 
 
-Total memory usage is 326444 kilobytes
+Total memory usage is 327468 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 3054 (   0 filtered)
-Number of infos    :   35 (   0 filtered)
+Number of warnings : 3024 (   0 filtered)
+Number of infos    :   36 (   0 filtered)
 

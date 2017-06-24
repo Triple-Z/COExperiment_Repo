@@ -27,19 +27,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 ================================================================================
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH 50%;
 
- 5812383029 paths analyzed, 2431 endpoints analyzed, 0 failing endpoints
+ 5088561606 paths analyzed, 2581 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  22.960ns.
+ Minimum period is  24.240ns.
 --------------------------------------------------------------------------------
 
-Paths for end point cpu/alu/HI_10 (SLICE_X100Y85.D2), 191481432 paths
+Paths for end point cpu/alu/HI_23 (SLICE_X78Y109.D3), 167635542 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     77.040ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_10 (FF)
+Slack (setup path):     75.760ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_23 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.904ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.021ns (0.235 - 0.256)
+  Data Path Delay:      24.200ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -50,46 +50,48 @@ Slack (setup path):     77.040ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_10
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_23
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN0    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN0    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P8       Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P21      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y85.D2     net (fanout=1)        1.480   cpu/alu/a[31]_b[31]_MuLt_82_OUT<42>
-    SLICE_X100Y85.CLK    Tas                   0.289   cpu/alu/HI<10>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<10>1
-                                                       cpu/alu/HI_10
+    SLICE_X78Y109.D3     net (fanout=1)        1.718   cpu/alu/a[31]_b[31]_MuLt_82_OUT<55>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<23>1
+                                                       cpu/alu/HI_23
     -------------------------------------------------  ---------------------------
-    Total                                     22.904ns (15.208ns logic, 7.696ns route)
-                                                       (66.4% logic, 33.6% route)
+    Total                                     24.200ns (15.419ns logic, 8.781ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.040ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_10 (FF)
+Slack (setup path):     75.760ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_23 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.904ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.021ns (0.235 - 0.256)
+  Data Path Delay:      24.200ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -100,46 +102,48 @@ Slack (setup path):     77.040ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_10
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_23
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN9    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN9    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P8       Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P21      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y85.D2     net (fanout=1)        1.480   cpu/alu/a[31]_b[31]_MuLt_82_OUT<42>
-    SLICE_X100Y85.CLK    Tas                   0.289   cpu/alu/HI<10>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<10>1
-                                                       cpu/alu/HI_10
+    SLICE_X78Y109.D3     net (fanout=1)        1.718   cpu/alu/a[31]_b[31]_MuLt_82_OUT<55>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<23>1
+                                                       cpu/alu/HI_23
     -------------------------------------------------  ---------------------------
-    Total                                     22.904ns (15.208ns logic, 7.696ns route)
-                                                       (66.4% logic, 33.6% route)
+    Total                                     24.200ns (15.419ns logic, 8.781ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.040ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_10 (FF)
+Slack (setup path):     75.760ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_23 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.904ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.021ns (0.235 - 0.256)
+  Data Path Delay:      24.200ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -150,49 +154,51 @@ Slack (setup path):     77.040ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_10
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_23
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN1    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN1    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P8       Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P21      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y85.D2     net (fanout=1)        1.480   cpu/alu/a[31]_b[31]_MuLt_82_OUT<42>
-    SLICE_X100Y85.CLK    Tas                   0.289   cpu/alu/HI<10>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<10>1
-                                                       cpu/alu/HI_10
+    SLICE_X78Y109.D3     net (fanout=1)        1.718   cpu/alu/a[31]_b[31]_MuLt_82_OUT<55>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<23>1
+                                                       cpu/alu/HI_23
     -------------------------------------------------  ---------------------------
-    Total                                     22.904ns (15.208ns logic, 7.696ns route)
-                                                       (66.4% logic, 33.6% route)
+    Total                                     24.200ns (15.419ns logic, 8.781ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point cpu/alu/HI_18 (SLICE_X88Y93.D5), 191481432 paths
+Paths for end point cpu/alu/HI_24 (SLICE_X79Y108.A4), 167635542 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     77.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_18 (FF)
+Slack (setup path):     75.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_24 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.725ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.241 - 0.256)
+  Data Path Delay:      24.170ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.242 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -203,46 +209,48 @@ Slack (setup path):     77.225ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_18
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN0    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN0    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P16      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P22      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X88Y93.D5      net (fanout=1)        1.249   cpu/alu/a[31]_b[31]_MuLt_82_OUT<50>
-    SLICE_X88Y93.CLK     Tas                   0.341   cpu/alu/HI<18>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<18>1
-                                                       cpu/alu/HI_18
+    SLICE_X79Y108.A4     net (fanout=1)        1.707   cpu/alu/a[31]_b[31]_MuLt_82_OUT<56>
+    SLICE_X79Y108.CLK    Tas                   0.322   cpu/alu/HI<27>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<24>1
+                                                       cpu/alu/HI_24
     -------------------------------------------------  ---------------------------
-    Total                                     22.725ns (15.260ns logic, 7.465ns route)
-                                                       (67.2% logic, 32.8% route)
+    Total                                     24.170ns (15.400ns logic, 8.770ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_18 (FF)
+Slack (setup path):     75.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_24 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.725ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.241 - 0.256)
+  Data Path Delay:      24.170ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.242 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -253,46 +261,48 @@ Slack (setup path):     77.225ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_18
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN9    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN9    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P16      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P22      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X88Y93.D5      net (fanout=1)        1.249   cpu/alu/a[31]_b[31]_MuLt_82_OUT<50>
-    SLICE_X88Y93.CLK     Tas                   0.341   cpu/alu/HI<18>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<18>1
-                                                       cpu/alu/HI_18
+    SLICE_X79Y108.A4     net (fanout=1)        1.707   cpu/alu/a[31]_b[31]_MuLt_82_OUT<56>
+    SLICE_X79Y108.CLK    Tas                   0.322   cpu/alu/HI<27>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<24>1
+                                                       cpu/alu/HI_24
     -------------------------------------------------  ---------------------------
-    Total                                     22.725ns (15.260ns logic, 7.465ns route)
-                                                       (67.2% logic, 32.8% route)
+    Total                                     24.170ns (15.400ns logic, 8.770ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.225ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_18 (FF)
+Slack (setup path):     75.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_24 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.725ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.015ns (0.241 - 0.256)
+  Data Path Delay:      24.170ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.007ns (0.242 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -303,49 +313,51 @@ Slack (setup path):     77.225ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_18
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_24
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN1    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN1    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P16      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P22      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X88Y93.D5      net (fanout=1)        1.249   cpu/alu/a[31]_b[31]_MuLt_82_OUT<50>
-    SLICE_X88Y93.CLK     Tas                   0.341   cpu/alu/HI<18>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<18>1
-                                                       cpu/alu/HI_18
+    SLICE_X79Y108.A4     net (fanout=1)        1.707   cpu/alu/a[31]_b[31]_MuLt_82_OUT<56>
+    SLICE_X79Y108.CLK    Tas                   0.322   cpu/alu/HI<27>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<24>1
+                                                       cpu/alu/HI_24
     -------------------------------------------------  ---------------------------
-    Total                                     22.725ns (15.260ns logic, 7.465ns route)
-                                                       (67.2% logic, 32.8% route)
+    Total                                     24.170ns (15.400ns logic, 8.770ns route)
+                                                       (63.7% logic, 36.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point cpu/alu/HI_12 (SLICE_X100Y87.C3), 191481432 paths
+Paths for end point cpu/alu/HI_21 (SLICE_X78Y109.B5), 167635542 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     77.231ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_12 (FF)
+Slack (setup path):     75.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_21 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.708ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.026ns (0.230 - 0.256)
+  Data Path Delay:      24.059ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -356,46 +368,48 @@ Slack (setup path):     77.231ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_12
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT0   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN0    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN0    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_0
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P10      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P19      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y87.C3     net (fanout=1)        1.284   cpu/alu/a[31]_b[31]_MuLt_82_OUT<44>
-    SLICE_X100Y87.CLK    Tas                   0.289   cpu/alu/HI<12>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<12>1
-                                                       cpu/alu/HI_12
+    SLICE_X78Y109.B5     net (fanout=1)        1.577   cpu/alu/a[31]_b[31]_MuLt_82_OUT<53>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<21>1
+                                                       cpu/alu/HI_21
     -------------------------------------------------  ---------------------------
-    Total                                     22.708ns (15.208ns logic, 7.500ns route)
-                                                       (67.0% logic, 33.0% route)
+    Total                                     24.059ns (15.419ns logic, 8.640ns route)
+                                                       (64.1% logic, 35.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.231ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_12 (FF)
+Slack (setup path):     75.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_21 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.708ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.026ns (0.230 - 0.256)
+  Data Path Delay:      24.059ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -406,46 +420,48 @@ Slack (setup path):     77.231ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_12
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT9   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN9    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN9    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_9
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P10      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P19      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y87.C3     net (fanout=1)        1.284   cpu/alu/a[31]_b[31]_MuLt_82_OUT<44>
-    SLICE_X100Y87.CLK    Tas                   0.289   cpu/alu/HI<12>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<12>1
-                                                       cpu/alu/HI_12
+    SLICE_X78Y109.B5     net (fanout=1)        1.577   cpu/alu/a[31]_b[31]_MuLt_82_OUT<53>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<21>1
+                                                       cpu/alu/HI_21
     -------------------------------------------------  ---------------------------
-    Total                                     22.708ns (15.208ns logic, 7.500ns route)
-                                                       (67.0% logic, 33.0% route)
+    Total                                     24.059ns (15.419ns logic, 8.640ns route)
+                                                       (64.1% logic, 35.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     77.231ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               cpu/pc/iaddr_3 (FF)
-  Destination:          cpu/alu/HI_12 (FF)
+Slack (setup path):     75.901ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/pc/iaddr_5_2 (FF)
+  Destination:          cpu/alu/HI_21 (FF)
   Requirement:          100.000ns
-  Data Path Delay:      22.708ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.026ns (0.230 - 0.256)
+  Data Path Delay:      24.059ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.005ns (0.244 - 0.249)
   Source Clock:         cpu_clk rising at 0.000ns
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.035ns
@@ -456,49 +472,78 @@ Slack (setup path):     77.231ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_3 to cpu/alu/HI_12
+  Maximum Data Path at Slow Process Corner: cpu/pc/iaddr_5_2 to cpu/alu/HI_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X97Y93.DQ      Tcko                  0.391   cpu/pc/iaddr<3>
-                                                       cpu/pc/iaddr_3
-    SLICE_X107Y90.A2     net (fanout=17)       1.772   cpu/pc/iaddr<3>
-    SLICE_X107Y90.A      Tilo                  0.259   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_9101
-    SLICE_X100Y91.C5     net (fanout=2)        1.018   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_910
-    SLICE_X100Y91.CMUX   Tilo                  0.361   cpu/im/Mram_im191
-                                                       cpu/rf/Mmux_busB41_1_G
+    SLICE_X84Y102.BQ     Tcko                  0.447   cpu/pc/iaddr_5_4
+                                                       cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B6     net (fanout=6)        1.307   cpu/pc/iaddr_5_2
+    SLICE_X82Y104.B      Tilo                  0.205   cpu/im/Mram_im161
+                                                       cpu/im/Mram_im161_1
+    SLICE_X91Y102.B2     net (fanout=17)       1.223   cpu/im/Mram_im161
+    SLICE_X91Y102.B      Tilo                  0.259   Mmux_display_number[5]_rf_data[31]_mux_29_OUT64
+                                                       cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C4     net (fanout=2)        0.838   cpu/rf/Mmux_rB[4]_register[31][31]_wide_mux_4_OUT_911
+    SLICE_X83Y103.C      Tilo                  0.259   cpu/pc/iaddr_6_4
                                                        cpu/rf/Mmux_busB41_1
-    DSP48_X2Y20.B12      net (fanout=1)        1.184   cpu/rf/Mmux_busB41
-    DSP48_X2Y20.P31      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
+    DSP48_X2Y23.B12      net (fanout=1)        1.575   cpu/rf/Mmux_busB41
+    DSP48_X2Y23.P40      Tdspdo_B_P            6.268   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT
-    DSP48_X2Y21.C14      net (fanout=1)        1.103   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y21.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.C23      net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT_P40_to_Mmult_a[31]_b[31]_MuLt_82_OUT1
+    DSP48_X2Y24.PCOUT1   Tdspdo_C_PCOUT        2.689   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1
-    DSP48_X2Y22.PCIN1    net (fanout=1)        0.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
-    DSP48_X2Y22.P31      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
+    DSP48_X2Y25.PCIN1    net (fanout=1)        0.002   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT1_PCOUT_to_Mmult_a[31]_b[31]_MuLt_82_OUT2_PCIN_1
+    DSP48_X2Y25.P21      Tdspdo_PCIN_P         2.264   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2
-    DSP48_X2Y23.C14      net (fanout=1)        1.080   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P31_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
-    DSP48_X2Y23.P10      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.C4       net (fanout=1)        1.059   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT2_P21_to_Mmult_a[31]_b[31]_MuLt_82_OUT3
+    DSP48_X2Y26.P19      Tdspdo_C_P            2.687   cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
                                                        cpu/alu/Mmult_a[31]_b[31]_MuLt_82_OUT3
-    SLICE_X100Y87.C3     net (fanout=1)        1.284   cpu/alu/a[31]_b[31]_MuLt_82_OUT<44>
-    SLICE_X100Y87.CLK    Tas                   0.289   cpu/alu/HI<12>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<12>1
-                                                       cpu/alu/HI_12
+    SLICE_X78Y109.B5     net (fanout=1)        1.577   cpu/alu/a[31]_b[31]_MuLt_82_OUT<53>
+    SLICE_X78Y109.CLK    Tas                   0.341   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<21>1
+                                                       cpu/alu/HI_21
     -------------------------------------------------  ---------------------------
-    Total                                     22.708ns (15.208ns logic, 7.500ns route)
-                                                       (67.0% logic, 33.0% route)
+    Total                                     24.059ns (15.419ns logic, 8.640ns route)
+                                                       (64.1% logic, 35.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point cpu/rf/register_31_701 (SLICE_X82Y100.D6), 1 path
+Paths for end point lcd_module/touch_module/touch_clk (SLICE_X112Y151.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.400ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               lcd_module/touch_module/clk_count_5 (FF)
+  Destination:          lcd_module/touch_module/touch_clk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.402ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.068 - 0.066)
+  Source Clock:         clk_IBUFG_BUFG rising at 100.000ns
+  Destination Clock:    clk_IBUFG_BUFG rising at 100.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: lcd_module/touch_module/clk_count_5 to lcd_module/touch_module/touch_clk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X111Y150.DQ    Tcko                  0.198   lcd_module/touch_module/clk_count<5>
+                                                       lcd_module/touch_module/clk_count_5
+    SLICE_X112Y151.CE    net (fanout=7)        0.312   lcd_module/touch_module/clk_count<5>
+    SLICE_X112Y151.CLK   Tckce       (-Th)     0.108   ct_scl_OBUF
+                                                       lcd_module/touch_module/touch_clk
+    -------------------------------------------------  ---------------------------
+    Total                                      0.402ns (0.090ns logic, 0.312ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/rf/register_31_565 (SLICE_X74Y113.A6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cpu/rf/register_31_701 (FF)
-  Destination:          cpu/rf/register_31_701 (FF)
+  Source:               cpu/rf/register_31_565 (FF)
+  Destination:          cpu/rf/register_31_565 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.411ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -506,27 +551,27 @@ Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: cpu/rf/register_31_701 to cpu/rf/register_31_701
+  Minimum Data Path at Fast Process Corner: cpu/rf/register_31_565 to cpu/rf/register_31_565
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X82Y100.DQ     Tcko                  0.200   cpu/rf/register_31<701>
-                                                       cpu/rf/register_31_701
-    SLICE_X82Y100.D6     net (fanout=4)        0.021   cpu/rf/register_31<701>
-    SLICE_X82Y100.CLK    Tah         (-Th)    -0.190   cpu/rf/register_31<701>
-                                                       cpu/rf/Mmux_register[0][31]_GND_42_o_MUX_1254_o11
-                                                       cpu/rf/register_31_701
+    SLICE_X74Y113.AQ     Tcko                  0.200   cpu/rf/register_31<566>
+                                                       cpu/rf/register_31_565
+    SLICE_X74Y113.A6     net (fanout=4)        0.021   cpu/rf/register_31<565>
+    SLICE_X74Y113.CLK    Tah         (-Th)    -0.190   cpu/rf/register_31<566>
+                                                       cpu/rf/Mmux_register[0][31]_GND_42_o_MUX_1390_o11
+                                                       cpu/rf/register_31_565
     -------------------------------------------------  ---------------------------
     Total                                      0.411ns (0.390ns logic, 0.021ns route)
                                                        (94.9% logic, 5.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point cpu/rf/register_31_563 (SLICE_X92Y95.D6), 1 path
+Paths for end point cpu/alu/HI_23 (SLICE_X78Y109.D6), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cpu/rf/register_31_563 (FF)
-  Destination:          cpu/rf/register_31_563 (FF)
+  Source:               cpu/alu/HI_23 (FF)
+  Destination:          cpu/alu/HI_23 (FF)
   Requirement:          0.000ns
   Data Path Delay:      0.411ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
@@ -534,44 +579,16 @@ Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - 
   Destination Clock:    cpu_clk rising at 100.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: cpu/rf/register_31_563 to cpu/rf/register_31_563
+  Minimum Data Path at Fast Process Corner: cpu/alu/HI_23 to cpu/alu/HI_23
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X92Y95.DQ      Tcko                  0.200   cpu/rf/register_31<563>
-                                                       cpu/rf/register_31_563
-    SLICE_X92Y95.D6      net (fanout=4)        0.021   cpu/rf/register_31<563>
-    SLICE_X92Y95.CLK     Tah         (-Th)    -0.190   cpu/rf/register_31<563>
-                                                       cpu/rf/Mmux_register[0][31]_GND_42_o_MUX_1392_o11
-                                                       cpu/rf/register_31_563
-    -------------------------------------------------  ---------------------------
-    Total                                      0.411ns (0.390ns logic, 0.021ns route)
-                                                       (94.9% logic, 5.1% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point cpu/alu/HI_8 (SLICE_X98Y84.D6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.411ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               cpu/alu/HI_8 (FF)
-  Destination:          cpu/alu/HI_8 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.411ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         cpu_clk rising at 100.000ns
-  Destination Clock:    cpu_clk rising at 100.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: cpu/alu/HI_8 to cpu/alu/HI_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X98Y84.DQ      Tcko                  0.200   cpu/alu/HI<8>
-                                                       cpu/alu/HI_8
-    SLICE_X98Y84.D6      net (fanout=3)        0.021   cpu/alu/HI<8>
-    SLICE_X98Y84.CLK     Tah         (-Th)    -0.190   cpu/alu/HI<8>
-                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<8>1
-                                                       cpu/alu/HI_8
+    SLICE_X78Y109.DQ     Tcko                  0.200   cpu/alu/HI<23>
+                                                       cpu/alu/HI_23
+    SLICE_X78Y109.D6     net (fanout=3)        0.021   cpu/alu/HI<23>
+    SLICE_X78Y109.CLK    Tah         (-Th)    -0.190   cpu/alu/HI<23>
+                                                       cpu/alu/ALUop[3]_a[31]_select_88_OUT<23>1
+                                                       cpu/alu/HI_23
     -------------------------------------------------  ---------------------------
     Total                                      0.411ns (0.390ns logic, 0.021ns route)
                                                        (94.9% logic, 5.1% route)
@@ -585,7 +602,7 @@ Slack: 96.876ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
   Logical resource: lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
-  Location pin: RAMB16_X5Y76.CLKA
+  Location pin: RAMB16_X4Y78.CLKA
   Clock network: clk_IBUFG_BUFG
 --------------------------------------------------------------------------------
 Slack: 96.876ns (period - min period limit)
@@ -593,7 +610,7 @@ Slack: 96.876ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
   Logical resource: lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
-  Location pin: RAMB16_X5Y74.CLKA
+  Location pin: RAMB16_X4Y76.CLKA
   Clock network: clk_IBUFG_BUFG
 --------------------------------------------------------------------------------
 Slack: 98.270ns (period - min period limit)
@@ -618,7 +635,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   22.960|         |         |         |
+clk            |   24.240|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -627,16 +644,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 5812383029 paths, 0 nets, and 5585 connections
+Constraints cover 5088561606 paths, 0 nets, and 5695 connections
 
 Design statistics:
-   Minimum period:  22.960ns{1}   (Maximum frequency:  43.554MHz)
+   Minimum period:  24.240ns{1}   (Maximum frequency:  41.254MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri Jun 23 17:19:54 2017 
+Analysis completed Sat Jun 24 14:10:29 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

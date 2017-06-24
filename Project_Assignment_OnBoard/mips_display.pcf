@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Jun 23 17:19:16 2017
+// Written by: Map O.61xd on Sat Jun 24 14:09:49 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -73,8 +73,22 @@ TIMEGRP clk = BEL "btn_clk_r1" BEL "mem_addr_0" BEL "mem_addr_1" BEL
         "display_value_23" BEL "display_value_24" BEL "display_value_25" BEL
         "display_value_26" BEL "display_value_27" BEL "display_value_28" BEL
         "display_value_29" BEL "display_value_30" BEL "display_value_31" BEL
-        "cpu_clk_cg" BEL "cpu/CoP0/coprf_31_1023" BEL "cpu/CoP0/coprf_31_1022"
-        BEL "cpu/CoP0/coprf_31_1021" BEL "cpu/CoP0/coprf_31_1020" BEL
+        "cpu_clk_cg" BEL "cpu/CoP0/expiaddr_31" BEL "cpu/CoP0/expiaddr_30" BEL
+        "cpu/CoP0/expiaddr_29" BEL "cpu/CoP0/expiaddr_28" BEL
+        "cpu/CoP0/expiaddr_27" BEL "cpu/CoP0/expiaddr_26" BEL
+        "cpu/CoP0/expiaddr_25" BEL "cpu/CoP0/expiaddr_24" BEL
+        "cpu/CoP0/expiaddr_23" BEL "cpu/CoP0/expiaddr_22" BEL
+        "cpu/CoP0/expiaddr_21" BEL "cpu/CoP0/expiaddr_20" BEL
+        "cpu/CoP0/expiaddr_19" BEL "cpu/CoP0/expiaddr_18" BEL
+        "cpu/CoP0/expiaddr_17" BEL "cpu/CoP0/expiaddr_16" BEL
+        "cpu/CoP0/expiaddr_15" BEL "cpu/CoP0/expiaddr_14" BEL
+        "cpu/CoP0/expiaddr_13" BEL "cpu/CoP0/expiaddr_12" BEL
+        "cpu/CoP0/expiaddr_11" BEL "cpu/CoP0/expiaddr_10" BEL
+        "cpu/CoP0/expiaddr_9" BEL "cpu/CoP0/expiaddr_8" BEL
+        "cpu/CoP0/expiaddr_7" BEL "cpu/CoP0/expiaddr_4" BEL
+        "cpu/CoP0/expiaddr_1" BEL "cpu/CoP0/expiaddr_0" BEL
+        "cpu/CoP0/coprf_31_1023" BEL "cpu/CoP0/coprf_31_1022" BEL
+        "cpu/CoP0/coprf_31_1021" BEL "cpu/CoP0/coprf_31_1020" BEL
         "cpu/CoP0/coprf_31_1019" BEL "cpu/CoP0/coprf_31_1018" BEL
         "cpu/CoP0/coprf_31_1017" BEL "cpu/CoP0/coprf_31_1016" BEL
         "cpu/CoP0/coprf_31_1015" BEL "cpu/CoP0/coprf_31_1014" BEL
@@ -247,23 +261,25 @@ TIMEGRP clk = BEL "btn_clk_r1" BEL "mem_addr_0" BEL "mem_addr_1" BEL
         "cpu/alu/LO_9" BEL "cpu/alu/LO_8" BEL "cpu/alu/LO_7" BEL
         "cpu/alu/LO_6" BEL "cpu/alu/LO_5" BEL "cpu/alu/LO_4" BEL
         "cpu/alu/LO_3" BEL "cpu/alu/LO_2" BEL "cpu/alu/LO_1" BEL
-        "cpu/alu/LO_0" BEL "cpu/pc/iaddr_6_1" BEL "cpu/pc/iaddr_3_1" BEL
-        "cpu/pc/iaddr_4_1" BEL "cpu/pc/iaddr_5_1" BEL "cpu/pc/iaddr_2_1" BEL
-        "cpu/pc/iaddr_6_2" BEL "cpu/pc/iaddr_2_2" BEL "cpu/pc/iaddr_5_2" BEL
-        "cpu/pc/iaddr_2_3" BEL "cpu/pc/iaddr_5_3" BEL "cpu/pc/iaddr_6_3" BEL
-        "cpu/pc/iaddr_3_2" BEL "cpu/pc/iaddr_4_2" BEL "cpu/pc/iaddr_2_4" BEL
-        "cpu/pc/iaddr_6_4" BEL "cpu/pc/iaddr_3_3" BEL "cpu/pc/iaddr_5_4" BEL
-        "cpu/pc/iaddr_4_3" BEL "cpu/pc/iaddr_2_5" BEL "clk_IBUFG_BUFG" BEL
-        "lcd_module/cnt" BEL "lcd_module/clk_2" BEL "lcd_module/clk_2_n" BEL
-        "lcd_module/lcd_rs" BEL "lcd_module/lcd_data_0" BEL
-        "lcd_module/lcd_data_1" BEL "lcd_module/lcd_data_2" BEL
-        "lcd_module/lcd_data_3" BEL "lcd_module/lcd_data_4" BEL
-        "lcd_module/lcd_data_5" BEL "lcd_module/lcd_data_6" BEL
-        "lcd_module/lcd_data_7" BEL "lcd_module/lcd_data_8" BEL
-        "lcd_module/lcd_data_9" BEL "lcd_module/lcd_data_10" BEL
-        "lcd_module/lcd_data_11" BEL "lcd_module/lcd_data_12" BEL
-        "lcd_module/lcd_data_13" BEL "lcd_module/lcd_data_14" BEL
-        "lcd_module/lcd_data_15" BEL "lcd_module/touch_module/bit_count_2" BEL
+        "cpu/alu/LO_0" BEL "cpu/pc/iaddr_5_1" BEL "cpu/pc/iaddr_3_1" BEL
+        "cpu/pc/iaddr_2_1" BEL "cpu/pc/iaddr_4_1" BEL "cpu/pc/iaddr_4_2" BEL
+        "cpu/pc/iaddr_3_2" BEL "cpu/pc/iaddr_2_2" BEL "cpu/pc/iaddr_5_2" BEL
+        "cpu/pc/iaddr_4_3" BEL "cpu/pc/iaddr_3_3" BEL "cpu/pc/iaddr_2_3" BEL
+        "cpu/pc/iaddr_6_1" BEL "cpu/pc/iaddr_3_4" BEL "cpu/pc/iaddr_5_3" BEL
+        "cpu/pc/iaddr_6_2" BEL "cpu/pc/iaddr_2_4" BEL "cpu/pc/iaddr_5_4" BEL
+        "cpu/pc/iaddr_4_4" BEL "cpu/pc/iaddr_6_3" BEL "cpu/pc/iaddr_4_5" BEL
+        "cpu/pc/iaddr_2_5" BEL "cpu/pc/iaddr_3_5" BEL "cpu/pc/iaddr_5_5" BEL
+        "cpu/pc/iaddr_6_4" BEL "clk_IBUFG_BUFG" BEL "lcd_module/cnt" BEL
+        "lcd_module/clk_2" BEL "lcd_module/clk_2_n" BEL "lcd_module/lcd_rs"
+        BEL "lcd_module/lcd_data_0" BEL "lcd_module/lcd_data_1" BEL
+        "lcd_module/lcd_data_2" BEL "lcd_module/lcd_data_3" BEL
+        "lcd_module/lcd_data_4" BEL "lcd_module/lcd_data_5" BEL
+        "lcd_module/lcd_data_6" BEL "lcd_module/lcd_data_7" BEL
+        "lcd_module/lcd_data_8" BEL "lcd_module/lcd_data_9" BEL
+        "lcd_module/lcd_data_10" BEL "lcd_module/lcd_data_11" BEL
+        "lcd_module/lcd_data_12" BEL "lcd_module/lcd_data_13" BEL
+        "lcd_module/lcd_data_14" BEL "lcd_module/lcd_data_15" BEL
+        "lcd_module/touch_module/bit_count_2" BEL
         "lcd_module/touch_module/bit_count_1" BEL
         "lcd_module/touch_module/bit_count_0" BEL
         "lcd_module/touch_module/byte_count_3" BEL
