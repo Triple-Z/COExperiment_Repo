@@ -1,0 +1,539 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Thu Nov 17 23:14:30 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "clk" LOCATE = SITE "T1" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "btn_clk" LOCATE = SITE "W7" LEVEL 1;
+COMP "lcd_rst" LOCATE = SITE "B20" LEVEL 1;
+COMP "ct_rstn" LOCATE = SITE "F18" LEVEL 1;
+COMP "lcd_data_io<0>" LOCATE = SITE "A22" LEVEL 1;
+COMP "lcd_data_io<1>" LOCATE = SITE "B18" LEVEL 1;
+COMP "lcd_data_io<2>" LOCATE = SITE "A20" LEVEL 1;
+COMP "lcd_data_io<3>" LOCATE = SITE "E16" LEVEL 1;
+COMP "lcd_data_io<4>" LOCATE = SITE "A17" LEVEL 1;
+COMP "lcd_data_io<5>" LOCATE = SITE "C16" LEVEL 1;
+COMP "lcd_data_io<6>" LOCATE = SITE "D16" LEVEL 1;
+COMP "lcd_data_io<7>" LOCATE = SITE "C17" LEVEL 1;
+COMP "lcd_data_io<8>" LOCATE = SITE "F16" LEVEL 1;
+COMP "lcd_data_io<9>" LOCATE = SITE "F17" LEVEL 1;
+COMP "lcd_bl_ctr" LOCATE = SITE "E19" LEVEL 1;
+COMP "lcd_cs" LOCATE = SITE "A19" LEVEL 1;
+COMP "ct_int" LOCATE = SITE "D21" LEVEL 1;
+COMP "ct_sda" LOCATE = SITE "C20" LEVEL 1;
+COMP "lcd_rd" LOCATE = SITE "B22" LEVEL 1;
+COMP "ct_scl" LOCATE = SITE "C21" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "A18" LEVEL 1;
+COMP "lcd_wr" LOCATE = SITE "A21" LEVEL 1;
+COMP "resetn" LOCATE = SITE "AB7" LEVEL 1;
+COMP "lcd_data_io<10>" LOCATE = SITE "E17" LEVEL 1;
+COMP "lcd_data_io<11>" LOCATE = SITE "D18" LEVEL 1;
+COMP "lcd_data_io<12>" LOCATE = SITE "C18" LEVEL 1;
+COMP "lcd_data_io<13>" LOCATE = SITE "C19" LEVEL 1;
+COMP "lcd_data_io<14>" LOCATE = SITE "E18" LEVEL 1;
+COMP "lcd_data_io<15>" LOCATE = SITE "D19" LEVEL 1;
+PIN
+        lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+PIN
+        lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>
+        = BEL
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram"
+        PINNAME CLKA;
+TIMEGRP clk = BEL "display_valid" BEL "btn_clk_r1" BEL "mem_addr_0" BEL
+        "mem_addr_1" BEL "mem_addr_2" BEL "mem_addr_3" BEL "mem_addr_4" BEL
+        "mem_addr_5" BEL "mem_addr_6" BEL "mem_addr_7" BEL "mem_addr_8" BEL
+        "mem_addr_9" BEL "mem_addr_10" BEL "mem_addr_11" BEL "mem_addr_12" BEL
+        "mem_addr_13" BEL "mem_addr_14" BEL "mem_addr_15" BEL "mem_addr_16"
+        BEL "mem_addr_17" BEL "mem_addr_18" BEL "mem_addr_19" BEL
+        "mem_addr_20" BEL "mem_addr_21" BEL "mem_addr_22" BEL "mem_addr_23"
+        BEL "mem_addr_24" BEL "mem_addr_25" BEL "mem_addr_26" BEL
+        "mem_addr_27" BEL "mem_addr_28" BEL "mem_addr_29" BEL "mem_addr_30"
+        BEL "mem_addr_31" BEL "btn_clk_r2" BEL "display_name_0" BEL
+        "display_name_1" BEL "display_name_2" BEL "display_name_3" BEL
+        "display_name_4" BEL "display_name_5" BEL "display_name_6" BEL
+        "display_name_8" BEL "display_name_9" BEL "display_name_10" BEL
+        "display_name_12" BEL "display_name_16" BEL "display_name_17" BEL
+        "display_name_21" BEL "display_name_22" BEL "display_name_37" BEL
+        "display_name_38" BEL "display_value_0" BEL "display_value_1" BEL
+        "display_value_2" BEL "display_value_3" BEL "display_value_4" BEL
+        "display_value_5" BEL "display_value_6" BEL "display_value_7" BEL
+        "display_value_8" BEL "display_value_9" BEL "display_value_10" BEL
+        "display_value_11" BEL "display_value_12" BEL "display_value_13" BEL
+        "display_value_14" BEL "display_value_15" BEL "display_value_16" BEL
+        "display_value_17" BEL "display_value_18" BEL "display_value_19" BEL
+        "display_value_20" BEL "display_value_21" BEL "display_value_22" BEL
+        "display_value_23" BEL "display_value_24" BEL "display_value_25" BEL
+        "display_value_26" BEL "display_value_27" BEL "display_value_28" BEL
+        "display_value_29" BEL "display_value_30" BEL "display_value_31" BEL
+        "cpu_clk_cg" BEL "cpu/pc_31" BEL "cpu/pc_30" BEL "cpu/pc_29" BEL
+        "cpu/pc_28" BEL "cpu/pc_27" BEL "cpu/pc_26" BEL "cpu/pc_25" BEL
+        "cpu/pc_24" BEL "cpu/pc_23" BEL "cpu/pc_22" BEL "cpu/pc_21" BEL
+        "cpu/pc_20" BEL "cpu/pc_19" BEL "cpu/pc_18" BEL "cpu/pc_17" BEL
+        "cpu/pc_16" BEL "cpu/pc_15" BEL "cpu/pc_14" BEL "cpu/pc_13" BEL
+        "cpu/pc_12" BEL "cpu/pc_11" BEL "cpu/pc_10" BEL "cpu/pc_9" BEL
+        "cpu/pc_8" BEL "cpu/pc_7" BEL "cpu/pc_6" BEL "cpu/pc_5" BEL "cpu/pc_4"
+        BEL "cpu/pc_3" BEL "cpu/pc_2" BEL "cpu/rf_module/rf_0_415" BEL
+        "cpu/rf_module/rf_0_414" BEL "cpu/rf_module/rf_0_412" BEL
+        "cpu/rf_module/rf_0_411" BEL "cpu/rf_module/rf_0_410" BEL
+        "cpu/rf_module/rf_0_409" BEL "cpu/rf_module/rf_0_408" BEL
+        "cpu/rf_module/rf_0_407" BEL "cpu/rf_module/rf_0_406" BEL
+        "cpu/rf_module/rf_0_405" BEL "cpu/rf_module/rf_0_404" BEL
+        "cpu/rf_module/rf_0_403" BEL "cpu/rf_module/rf_0_402" BEL
+        "cpu/rf_module/rf_0_401" BEL "cpu/rf_module/rf_0_400" BEL
+        "cpu/rf_module/rf_0_399" BEL "cpu/rf_module/rf_0_398" BEL
+        "cpu/rf_module/rf_0_397" BEL "cpu/rf_module/rf_0_396" BEL
+        "cpu/rf_module/rf_0_395" BEL "cpu/rf_module/rf_0_394" BEL
+        "cpu/rf_module/rf_0_393" BEL "cpu/rf_module/rf_0_392" BEL
+        "cpu/rf_module/rf_0_391" BEL "cpu/rf_module/rf_0_390" BEL
+        "cpu/rf_module/rf_0_389" BEL "cpu/rf_module/rf_0_388" BEL
+        "cpu/rf_module/rf_0_387" BEL "cpu/rf_module/rf_0_386" BEL
+        "cpu/rf_module/rf_0_383" BEL "cpu/rf_module/rf_0_382" BEL
+        "cpu/rf_module/rf_0_381" BEL "cpu/rf_module/rf_0_380" BEL
+        "cpu/rf_module/rf_0_379" BEL "cpu/rf_module/rf_0_378" BEL
+        "cpu/rf_module/rf_0_377" BEL "cpu/rf_module/rf_0_376" BEL
+        "cpu/rf_module/rf_0_375" BEL "cpu/rf_module/rf_0_374" BEL
+        "cpu/rf_module/rf_0_373" BEL "cpu/rf_module/rf_0_372" BEL
+        "cpu/rf_module/rf_0_371" BEL "cpu/rf_module/rf_0_370" BEL
+        "cpu/rf_module/rf_0_369" BEL "cpu/rf_module/rf_0_368" BEL
+        "cpu/rf_module/rf_0_367" BEL "cpu/rf_module/rf_0_366" BEL
+        "cpu/rf_module/rf_0_365" BEL "cpu/rf_module/rf_0_364" BEL
+        "cpu/rf_module/rf_0_363" BEL "cpu/rf_module/rf_0_362" BEL
+        "cpu/rf_module/rf_0_361" BEL "cpu/rf_module/rf_0_360" BEL
+        "cpu/rf_module/rf_0_359" BEL "cpu/rf_module/rf_0_358" BEL
+        "cpu/rf_module/rf_0_357" BEL "cpu/rf_module/rf_0_356" BEL
+        "cpu/rf_module/rf_0_355" BEL "cpu/rf_module/rf_0_354" BEL
+        "cpu/rf_module/rf_0_353" BEL "cpu/rf_module/rf_0_352" BEL
+        "cpu/rf_module/rf_0_327" BEL "cpu/rf_module/rf_0_326" BEL
+        "cpu/rf_module/rf_0_325" BEL "cpu/rf_module/rf_0_324" BEL
+        "cpu/rf_module/rf_0_323" BEL "cpu/rf_module/rf_0_322" BEL
+        "cpu/rf_module/rf_0_321" BEL "cpu/rf_module/rf_0_320" BEL
+        "cpu/rf_module/rf_0_288" BEL "cpu/rf_module/rf_0_287" BEL
+        "cpu/rf_module/rf_0_286" BEL "cpu/rf_module/rf_0_285" BEL
+        "cpu/rf_module/rf_0_284" BEL "cpu/rf_module/rf_0_283" BEL
+        "cpu/rf_module/rf_0_282" BEL "cpu/rf_module/rf_0_281" BEL
+        "cpu/rf_module/rf_0_280" BEL "cpu/rf_module/rf_0_279" BEL
+        "cpu/rf_module/rf_0_278" BEL "cpu/rf_module/rf_0_277" BEL
+        "cpu/rf_module/rf_0_276" BEL "cpu/rf_module/rf_0_275" BEL
+        "cpu/rf_module/rf_0_274" BEL "cpu/rf_module/rf_0_273" BEL
+        "cpu/rf_module/rf_0_272" BEL "cpu/rf_module/rf_0_271" BEL
+        "cpu/rf_module/rf_0_270" BEL "cpu/rf_module/rf_0_269" BEL
+        "cpu/rf_module/rf_0_268" BEL "cpu/rf_module/rf_0_267" BEL
+        "cpu/rf_module/rf_0_266" BEL "cpu/rf_module/rf_0_265" BEL
+        "cpu/rf_module/rf_0_264" BEL "cpu/rf_module/rf_0_263" BEL
+        "cpu/rf_module/rf_0_262" BEL "cpu/rf_module/rf_0_261" BEL
+        "cpu/rf_module/rf_0_260" BEL "cpu/rf_module/rf_0_259" BEL
+        "cpu/rf_module/rf_0_258" BEL "cpu/rf_module/rf_0_257" BEL
+        "cpu/rf_module/rf_0_256" BEL "cpu/rf_module/rf_0_255" BEL
+        "cpu/rf_module/rf_0_254" BEL "cpu/rf_module/rf_0_253" BEL
+        "cpu/rf_module/rf_0_252" BEL "cpu/rf_module/rf_0_251" BEL
+        "cpu/rf_module/rf_0_250" BEL "cpu/rf_module/rf_0_249" BEL
+        "cpu/rf_module/rf_0_248" BEL "cpu/rf_module/rf_0_247" BEL
+        "cpu/rf_module/rf_0_246" BEL "cpu/rf_module/rf_0_245" BEL
+        "cpu/rf_module/rf_0_244" BEL "cpu/rf_module/rf_0_243" BEL
+        "cpu/rf_module/rf_0_242" BEL "cpu/rf_module/rf_0_241" BEL
+        "cpu/rf_module/rf_0_240" BEL "cpu/rf_module/rf_0_239" BEL
+        "cpu/rf_module/rf_0_238" BEL "cpu/rf_module/rf_0_237" BEL
+        "cpu/rf_module/rf_0_236" BEL "cpu/rf_module/rf_0_235" BEL
+        "cpu/rf_module/rf_0_234" BEL "cpu/rf_module/rf_0_233" BEL
+        "cpu/rf_module/rf_0_232" BEL "cpu/rf_module/rf_0_231" BEL
+        "cpu/rf_module/rf_0_230" BEL "cpu/rf_module/rf_0_229" BEL
+        "cpu/rf_module/rf_0_228" BEL "cpu/rf_module/rf_0_227" BEL
+        "cpu/rf_module/rf_0_226" BEL "cpu/rf_module/rf_0_225" BEL
+        "cpu/rf_module/rf_0_224" BEL "cpu/rf_module/rf_0_223" BEL
+        "cpu/rf_module/rf_0_222" BEL "cpu/rf_module/rf_0_221" BEL
+        "cpu/rf_module/rf_0_220" BEL "cpu/rf_module/rf_0_219" BEL
+        "cpu/rf_module/rf_0_218" BEL "cpu/rf_module/rf_0_217" BEL
+        "cpu/rf_module/rf_0_216" BEL "cpu/rf_module/rf_0_215" BEL
+        "cpu/rf_module/rf_0_214" BEL "cpu/rf_module/rf_0_213" BEL
+        "cpu/rf_module/rf_0_212" BEL "cpu/rf_module/rf_0_211" BEL
+        "cpu/rf_module/rf_0_210" BEL "cpu/rf_module/rf_0_209" BEL
+        "cpu/rf_module/rf_0_208" BEL "cpu/rf_module/rf_0_207" BEL
+        "cpu/rf_module/rf_0_206" BEL "cpu/rf_module/rf_0_205" BEL
+        "cpu/rf_module/rf_0_204" BEL "cpu/rf_module/rf_0_203" BEL
+        "cpu/rf_module/rf_0_202" BEL "cpu/rf_module/rf_0_201" BEL
+        "cpu/rf_module/rf_0_200" BEL "cpu/rf_module/rf_0_199" BEL
+        "cpu/rf_module/rf_0_198" BEL "cpu/rf_module/rf_0_197" BEL
+        "cpu/rf_module/rf_0_196" BEL "cpu/rf_module/rf_0_195" BEL
+        "cpu/rf_module/rf_0_194" BEL "cpu/rf_module/rf_0_193" BEL
+        "cpu/rf_module/rf_0_192" BEL "cpu/rf_module/rf_0_191" BEL
+        "cpu/rf_module/rf_0_190" BEL "cpu/rf_module/rf_0_189" BEL
+        "cpu/rf_module/rf_0_188" BEL "cpu/rf_module/rf_0_187" BEL
+        "cpu/rf_module/rf_0_186" BEL "cpu/rf_module/rf_0_185" BEL
+        "cpu/rf_module/rf_0_184" BEL "cpu/rf_module/rf_0_183" BEL
+        "cpu/rf_module/rf_0_182" BEL "cpu/rf_module/rf_0_181" BEL
+        "cpu/rf_module/rf_0_180" BEL "cpu/rf_module/rf_0_179" BEL
+        "cpu/rf_module/rf_0_178" BEL "cpu/rf_module/rf_0_177" BEL
+        "cpu/rf_module/rf_0_176" BEL "cpu/rf_module/rf_0_175" BEL
+        "cpu/rf_module/rf_0_174" BEL "cpu/rf_module/rf_0_173" BEL
+        "cpu/rf_module/rf_0_172" BEL "cpu/rf_module/rf_0_171" BEL
+        "cpu/rf_module/rf_0_170" BEL "cpu/rf_module/rf_0_169" BEL
+        "cpu/rf_module/rf_0_168" BEL "cpu/rf_module/rf_0_167" BEL
+        "cpu/rf_module/rf_0_166" BEL "cpu/rf_module/rf_0_165" BEL
+        "cpu/rf_module/rf_0_164" BEL "cpu/rf_module/rf_0_163" BEL
+        "cpu/rf_module/rf_0_162" BEL "cpu/rf_module/rf_0_161" BEL
+        "cpu/rf_module/rf_0_160" BEL "cpu/rf_module/rf_0_159" BEL
+        "cpu/rf_module/rf_0_158" BEL "cpu/rf_module/rf_0_157" BEL
+        "cpu/rf_module/rf_0_156" BEL "cpu/rf_module/rf_0_155" BEL
+        "cpu/rf_module/rf_0_154" BEL "cpu/rf_module/rf_0_153" BEL
+        "cpu/rf_module/rf_0_152" BEL "cpu/rf_module/rf_0_151" BEL
+        "cpu/rf_module/rf_0_150" BEL "cpu/rf_module/rf_0_149" BEL
+        "cpu/rf_module/rf_0_148" BEL "cpu/rf_module/rf_0_147" BEL
+        "cpu/rf_module/rf_0_146" BEL "cpu/rf_module/rf_0_145" BEL
+        "cpu/rf_module/rf_0_144" BEL "cpu/rf_module/rf_0_143" BEL
+        "cpu/rf_module/rf_0_142" BEL "cpu/rf_module/rf_0_141" BEL
+        "cpu/rf_module/rf_0_140" BEL "cpu/rf_module/rf_0_139" BEL
+        "cpu/rf_module/rf_0_138" BEL "cpu/rf_module/rf_0_137" BEL
+        "cpu/rf_module/rf_0_136" BEL "cpu/rf_module/rf_0_135" BEL
+        "cpu/rf_module/rf_0_134" BEL "cpu/rf_module/rf_0_133" BEL
+        "cpu/rf_module/rf_0_132" BEL "cpu/rf_module/rf_0_131" BEL
+        "cpu/rf_module/rf_0_130" BEL "cpu/rf_module/rf_0_127" BEL
+        "cpu/rf_module/rf_0_126" BEL "cpu/rf_module/rf_0_125" BEL
+        "cpu/rf_module/rf_0_124" BEL "cpu/rf_module/rf_0_123" BEL
+        "cpu/rf_module/rf_0_122" BEL "cpu/rf_module/rf_0_121" BEL
+        "cpu/rf_module/rf_0_120" BEL "cpu/rf_module/rf_0_119" BEL
+        "cpu/rf_module/rf_0_118" BEL "cpu/rf_module/rf_0_117" BEL
+        "cpu/rf_module/rf_0_116" BEL "cpu/rf_module/rf_0_115" BEL
+        "cpu/rf_module/rf_0_114" BEL "cpu/rf_module/rf_0_113" BEL
+        "cpu/rf_module/rf_0_112" BEL "cpu/rf_module/rf_0_111" BEL
+        "cpu/rf_module/rf_0_110" BEL "cpu/rf_module/rf_0_109" BEL
+        "cpu/rf_module/rf_0_108" BEL "cpu/rf_module/rf_0_107" BEL
+        "cpu/rf_module/rf_0_106" BEL "cpu/rf_module/rf_0_105" BEL
+        "cpu/rf_module/rf_0_104" BEL "cpu/rf_module/rf_0_103" BEL
+        "cpu/rf_module/rf_0_102" BEL "cpu/rf_module/rf_0_101" BEL
+        "cpu/rf_module/rf_0_100" BEL "cpu/rf_module/rf_0_99" BEL
+        "cpu/rf_module/rf_0_98" BEL "cpu/rf_module/rf_0_96" BEL
+        "cpu/rf_module/rf_0_95" BEL "cpu/rf_module/rf_0_94" BEL
+        "cpu/rf_module/rf_0_93" BEL "cpu/rf_module/rf_0_92" BEL
+        "cpu/rf_module/rf_0_91" BEL "cpu/rf_module/rf_0_90" BEL
+        "cpu/rf_module/rf_0_89" BEL "cpu/rf_module/rf_0_88" BEL
+        "cpu/rf_module/rf_0_87" BEL "cpu/rf_module/rf_0_86" BEL
+        "cpu/rf_module/rf_0_85" BEL "cpu/rf_module/rf_0_84" BEL
+        "cpu/rf_module/rf_0_83" BEL "cpu/rf_module/rf_0_82" BEL
+        "cpu/rf_module/rf_0_81" BEL "cpu/rf_module/rf_0_80" BEL
+        "cpu/rf_module/rf_0_79" BEL "cpu/rf_module/rf_0_78" BEL
+        "cpu/rf_module/rf_0_77" BEL "cpu/rf_module/rf_0_76" BEL
+        "cpu/rf_module/rf_0_75" BEL "cpu/rf_module/rf_0_74" BEL
+        "cpu/rf_module/rf_0_73" BEL "cpu/rf_module/rf_0_72" BEL
+        "cpu/rf_module/rf_0_71" BEL "cpu/rf_module/rf_0_70" BEL
+        "cpu/rf_module/rf_0_68" BEL "cpu/rf_module/rf_0_63" BEL
+        "cpu/rf_module/rf_0_62" BEL "cpu/rf_module/rf_0_61" BEL
+        "cpu/rf_module/rf_0_60" BEL "cpu/rf_module/rf_0_59" BEL
+        "cpu/rf_module/rf_0_58" BEL "cpu/rf_module/rf_0_57" BEL
+        "cpu/rf_module/rf_0_56" BEL "cpu/rf_module/rf_0_55" BEL
+        "cpu/rf_module/rf_0_54" BEL "cpu/rf_module/rf_0_53" BEL
+        "cpu/rf_module/rf_0_52" BEL "cpu/rf_module/rf_0_51" BEL
+        "cpu/rf_module/rf_0_50" BEL "cpu/rf_module/rf_0_49" BEL
+        "cpu/rf_module/rf_0_48" BEL "cpu/rf_module/rf_0_47" BEL
+        "cpu/rf_module/rf_0_46" BEL "cpu/rf_module/rf_0_45" BEL
+        "cpu/rf_module/rf_0_44" BEL "cpu/rf_module/rf_0_43" BEL
+        "cpu/rf_module/rf_0_42" BEL "cpu/rf_module/rf_0_41" BEL
+        "cpu/rf_module/rf_0_40" BEL "cpu/rf_module/rf_0_39" BEL
+        "cpu/rf_module/rf_0_38" BEL "cpu/rf_module/rf_0_37" BEL
+        "cpu/rf_module/rf_0_36" BEL "cpu/rf_module/rf_0_35" BEL
+        "cpu/rf_module/rf_0_34" BEL "cpu/rf_module/rf_0_32" BEL
+        "cpu/data_ram_module/DM<0>_0" BEL "cpu/data_ram_module/DM<0>_1" BEL
+        "cpu/data_ram_module/DM<0>_2" BEL "cpu/data_ram_module/DM<0>_3" BEL
+        "cpu/data_ram_module/DM<0>_4" BEL "cpu/data_ram_module/DM<0>_5" BEL
+        "cpu/data_ram_module/DM<0>_6" BEL "cpu/data_ram_module/DM<0>_7" BEL
+        "cpu/data_ram_module/DM<1>_0" BEL "cpu/data_ram_module/DM<1>_1" BEL
+        "cpu/data_ram_module/DM<1>_2" BEL "cpu/data_ram_module/DM<1>_3" BEL
+        "cpu/data_ram_module/DM<1>_4" BEL "cpu/data_ram_module/DM<1>_5" BEL
+        "cpu/data_ram_module/DM<1>_6" BEL "cpu/data_ram_module/DM<1>_7" BEL
+        "cpu/data_ram_module/DM<2>_0" BEL "cpu/data_ram_module/DM<2>_1" BEL
+        "cpu/data_ram_module/DM<2>_2" BEL "cpu/data_ram_module/DM<2>_3" BEL
+        "cpu/data_ram_module/DM<2>_4" BEL "cpu/data_ram_module/DM<2>_5" BEL
+        "cpu/data_ram_module/DM<2>_6" BEL "cpu/data_ram_module/DM<2>_7" BEL
+        "cpu/data_ram_module/DM<3>_0" BEL "cpu/data_ram_module/DM<3>_1" BEL
+        "cpu/data_ram_module/DM<3>_2" BEL "cpu/data_ram_module/DM<3>_3" BEL
+        "cpu/data_ram_module/DM<3>_4" BEL "cpu/data_ram_module/DM<3>_5" BEL
+        "cpu/data_ram_module/DM<3>_6" BEL "cpu/data_ram_module/DM<3>_7" BEL
+        "cpu/data_ram_module/DM<4>_0" BEL "cpu/data_ram_module/DM<4>_1" BEL
+        "cpu/data_ram_module/DM<4>_2" BEL "cpu/data_ram_module/DM<4>_3" BEL
+        "cpu/data_ram_module/DM<4>_4" BEL "cpu/data_ram_module/DM<4>_5" BEL
+        "cpu/data_ram_module/DM<4>_6" BEL "cpu/data_ram_module/DM<4>_7" BEL
+        "cpu/data_ram_module/DM<5>_0" BEL "cpu/data_ram_module/DM<5>_1" BEL
+        "cpu/data_ram_module/DM<5>_2" BEL "cpu/data_ram_module/DM<5>_3" BEL
+        "cpu/data_ram_module/DM<5>_4" BEL "cpu/data_ram_module/DM<5>_5" BEL
+        "cpu/data_ram_module/DM<5>_6" BEL "cpu/data_ram_module/DM<5>_7" BEL
+        "cpu/data_ram_module/DM<6>_0" BEL "cpu/data_ram_module/DM<6>_1" BEL
+        "cpu/data_ram_module/DM<6>_2" BEL "cpu/data_ram_module/DM<6>_3" BEL
+        "cpu/data_ram_module/DM<6>_4" BEL "cpu/data_ram_module/DM<6>_5" BEL
+        "cpu/data_ram_module/DM<6>_6" BEL "cpu/data_ram_module/DM<6>_7" BEL
+        "cpu/data_ram_module/DM<7>_0" BEL "cpu/data_ram_module/DM<7>_1" BEL
+        "cpu/data_ram_module/DM<7>_2" BEL "cpu/data_ram_module/DM<7>_3" BEL
+        "cpu/data_ram_module/DM<7>_4" BEL "cpu/data_ram_module/DM<7>_5" BEL
+        "cpu/data_ram_module/DM<7>_6" BEL "cpu/data_ram_module/DM<7>_7" BEL
+        "cpu/data_ram_module/DM<8>_0" BEL "cpu/data_ram_module/DM<8>_1" BEL
+        "cpu/data_ram_module/DM<8>_2" BEL "cpu/data_ram_module/DM<8>_3" BEL
+        "cpu/data_ram_module/DM<8>_4" BEL "cpu/data_ram_module/DM<8>_5" BEL
+        "cpu/data_ram_module/DM<8>_6" BEL "cpu/data_ram_module/DM<8>_7" BEL
+        "cpu/data_ram_module/DM<9>_0" BEL "cpu/data_ram_module/DM<9>_1" BEL
+        "cpu/data_ram_module/DM<9>_2" BEL "cpu/data_ram_module/DM<9>_3" BEL
+        "cpu/data_ram_module/DM<9>_4" BEL "cpu/data_ram_module/DM<9>_5" BEL
+        "cpu/data_ram_module/DM<9>_6" BEL "cpu/data_ram_module/DM<9>_7" BEL
+        "cpu/data_ram_module/DM<10>_0" BEL "cpu/data_ram_module/DM<10>_1" BEL
+        "cpu/data_ram_module/DM<10>_2" BEL "cpu/data_ram_module/DM<10>_3" BEL
+        "cpu/data_ram_module/DM<10>_4" BEL "cpu/data_ram_module/DM<10>_5" BEL
+        "cpu/data_ram_module/DM<10>_6" BEL "cpu/data_ram_module/DM<10>_7" BEL
+        "cpu/data_ram_module/DM<11>_0" BEL "cpu/data_ram_module/DM<11>_1" BEL
+        "cpu/data_ram_module/DM<11>_2" BEL "cpu/data_ram_module/DM<11>_3" BEL
+        "cpu/data_ram_module/DM<11>_4" BEL "cpu/data_ram_module/DM<11>_5" BEL
+        "cpu/data_ram_module/DM<11>_6" BEL "cpu/data_ram_module/DM<11>_7" BEL
+        "cpu/data_ram_module/DM<12>_0" BEL "cpu/data_ram_module/DM<12>_1" BEL
+        "cpu/data_ram_module/DM<12>_2" BEL "cpu/data_ram_module/DM<12>_3" BEL
+        "cpu/data_ram_module/DM<12>_4" BEL "cpu/data_ram_module/DM<12>_5" BEL
+        "cpu/data_ram_module/DM<12>_6" BEL "cpu/data_ram_module/DM<12>_7" BEL
+        "cpu/data_ram_module/DM<13>_0" BEL "cpu/data_ram_module/DM<13>_1" BEL
+        "cpu/data_ram_module/DM<13>_2" BEL "cpu/data_ram_module/DM<13>_3" BEL
+        "cpu/data_ram_module/DM<13>_4" BEL "cpu/data_ram_module/DM<13>_5" BEL
+        "cpu/data_ram_module/DM<13>_6" BEL "cpu/data_ram_module/DM<13>_7" BEL
+        "cpu/data_ram_module/DM<14>_0" BEL "cpu/data_ram_module/DM<14>_1" BEL
+        "cpu/data_ram_module/DM<14>_2" BEL "cpu/data_ram_module/DM<14>_3" BEL
+        "cpu/data_ram_module/DM<14>_4" BEL "cpu/data_ram_module/DM<14>_5" BEL
+        "cpu/data_ram_module/DM<14>_6" BEL "cpu/data_ram_module/DM<14>_7" BEL
+        "cpu/data_ram_module/DM<15>_0" BEL "cpu/data_ram_module/DM<15>_1" BEL
+        "cpu/data_ram_module/DM<15>_2" BEL "cpu/data_ram_module/DM<15>_3" BEL
+        "cpu/data_ram_module/DM<15>_4" BEL "cpu/data_ram_module/DM<15>_5" BEL
+        "cpu/data_ram_module/DM<15>_6" BEL "cpu/data_ram_module/DM<15>_7" BEL
+        "cpu/data_ram_module/DM<16>_0" BEL "cpu/data_ram_module/DM<16>_1" BEL
+        "cpu/data_ram_module/DM<16>_2" BEL "cpu/data_ram_module/DM<16>_3" BEL
+        "cpu/data_ram_module/DM<16>_4" BEL "cpu/data_ram_module/DM<16>_5" BEL
+        "cpu/data_ram_module/DM<16>_6" BEL "cpu/data_ram_module/DM<16>_7" BEL
+        "cpu/data_ram_module/DM<17>_0" BEL "cpu/data_ram_module/DM<17>_1" BEL
+        "cpu/data_ram_module/DM<17>_2" BEL "cpu/data_ram_module/DM<17>_3" BEL
+        "cpu/data_ram_module/DM<17>_4" BEL "cpu/data_ram_module/DM<17>_5" BEL
+        "cpu/data_ram_module/DM<17>_6" BEL "cpu/data_ram_module/DM<17>_7" BEL
+        "cpu/data_ram_module/DM<18>_0" BEL "cpu/data_ram_module/DM<18>_1" BEL
+        "cpu/data_ram_module/DM<18>_2" BEL "cpu/data_ram_module/DM<18>_3" BEL
+        "cpu/data_ram_module/DM<18>_4" BEL "cpu/data_ram_module/DM<18>_5" BEL
+        "cpu/data_ram_module/DM<18>_6" BEL "cpu/data_ram_module/DM<18>_7" BEL
+        "cpu/data_ram_module/DM<19>_0" BEL "cpu/data_ram_module/DM<19>_1" BEL
+        "cpu/data_ram_module/DM<19>_2" BEL "cpu/data_ram_module/DM<19>_3" BEL
+        "cpu/data_ram_module/DM<19>_4" BEL "cpu/data_ram_module/DM<19>_5" BEL
+        "cpu/data_ram_module/DM<19>_6" BEL "cpu/data_ram_module/DM<19>_7" BEL
+        "cpu/data_ram_module/DM<20>_0" BEL "cpu/data_ram_module/DM<20>_1" BEL
+        "cpu/data_ram_module/DM<20>_2" BEL "cpu/data_ram_module/DM<20>_3" BEL
+        "cpu/data_ram_module/DM<20>_4" BEL "cpu/data_ram_module/DM<20>_5" BEL
+        "cpu/data_ram_module/DM<20>_6" BEL "cpu/data_ram_module/DM<20>_7" BEL
+        "cpu/data_ram_module/DM<21>_0" BEL "cpu/data_ram_module/DM<21>_1" BEL
+        "cpu/data_ram_module/DM<21>_2" BEL "cpu/data_ram_module/DM<21>_3" BEL
+        "cpu/data_ram_module/DM<21>_4" BEL "cpu/data_ram_module/DM<21>_5" BEL
+        "cpu/data_ram_module/DM<21>_6" BEL "cpu/data_ram_module/DM<21>_7" BEL
+        "cpu/data_ram_module/DM<22>_0" BEL "cpu/data_ram_module/DM<22>_1" BEL
+        "cpu/data_ram_module/DM<22>_2" BEL "cpu/data_ram_module/DM<22>_3" BEL
+        "cpu/data_ram_module/DM<22>_4" BEL "cpu/data_ram_module/DM<22>_5" BEL
+        "cpu/data_ram_module/DM<22>_6" BEL "cpu/data_ram_module/DM<22>_7" BEL
+        "cpu/data_ram_module/DM<23>_0" BEL "cpu/data_ram_module/DM<23>_1" BEL
+        "cpu/data_ram_module/DM<23>_2" BEL "cpu/data_ram_module/DM<23>_3" BEL
+        "cpu/data_ram_module/DM<23>_4" BEL "cpu/data_ram_module/DM<23>_5" BEL
+        "cpu/data_ram_module/DM<23>_6" BEL "cpu/data_ram_module/DM<23>_7" BEL
+        "cpu/data_ram_module/DM<24>_0" BEL "cpu/data_ram_module/DM<24>_1" BEL
+        "cpu/data_ram_module/DM<24>_2" BEL "cpu/data_ram_module/DM<24>_3" BEL
+        "cpu/data_ram_module/DM<24>_4" BEL "cpu/data_ram_module/DM<24>_5" BEL
+        "cpu/data_ram_module/DM<24>_6" BEL "cpu/data_ram_module/DM<24>_7" BEL
+        "cpu/data_ram_module/DM<25>_0" BEL "cpu/data_ram_module/DM<25>_1" BEL
+        "cpu/data_ram_module/DM<25>_2" BEL "cpu/data_ram_module/DM<25>_3" BEL
+        "cpu/data_ram_module/DM<25>_4" BEL "cpu/data_ram_module/DM<25>_5" BEL
+        "cpu/data_ram_module/DM<25>_6" BEL "cpu/data_ram_module/DM<25>_7" BEL
+        "cpu/data_ram_module/DM<26>_0" BEL "cpu/data_ram_module/DM<26>_1" BEL
+        "cpu/data_ram_module/DM<26>_2" BEL "cpu/data_ram_module/DM<26>_3" BEL
+        "cpu/data_ram_module/DM<26>_4" BEL "cpu/data_ram_module/DM<26>_5" BEL
+        "cpu/data_ram_module/DM<26>_6" BEL "cpu/data_ram_module/DM<26>_7" BEL
+        "cpu/data_ram_module/DM<27>_0" BEL "cpu/data_ram_module/DM<27>_1" BEL
+        "cpu/data_ram_module/DM<27>_2" BEL "cpu/data_ram_module/DM<27>_3" BEL
+        "cpu/data_ram_module/DM<27>_4" BEL "cpu/data_ram_module/DM<27>_5" BEL
+        "cpu/data_ram_module/DM<27>_6" BEL "cpu/data_ram_module/DM<27>_7" BEL
+        "cpu/data_ram_module/DM<28>_0" BEL "cpu/data_ram_module/DM<28>_1" BEL
+        "cpu/data_ram_module/DM<28>_2" BEL "cpu/data_ram_module/DM<28>_3" BEL
+        "cpu/data_ram_module/DM<28>_4" BEL "cpu/data_ram_module/DM<28>_5" BEL
+        "cpu/data_ram_module/DM<28>_6" BEL "cpu/data_ram_module/DM<28>_7" BEL
+        "cpu/data_ram_module/DM<29>_0" BEL "cpu/data_ram_module/DM<29>_1" BEL
+        "cpu/data_ram_module/DM<29>_2" BEL "cpu/data_ram_module/DM<29>_3" BEL
+        "cpu/data_ram_module/DM<29>_4" BEL "cpu/data_ram_module/DM<29>_5" BEL
+        "cpu/data_ram_module/DM<29>_6" BEL "cpu/data_ram_module/DM<29>_7" BEL
+        "cpu/data_ram_module/DM<30>_0" BEL "cpu/data_ram_module/DM<30>_1" BEL
+        "cpu/data_ram_module/DM<30>_2" BEL "cpu/data_ram_module/DM<30>_3" BEL
+        "cpu/data_ram_module/DM<30>_4" BEL "cpu/data_ram_module/DM<30>_5" BEL
+        "cpu/data_ram_module/DM<30>_6" BEL "cpu/data_ram_module/DM<30>_7" BEL
+        "cpu/data_ram_module/DM<31>_0" BEL "cpu/data_ram_module/DM<31>_1" BEL
+        "cpu/data_ram_module/DM<31>_2" BEL "cpu/data_ram_module/DM<31>_3" BEL
+        "cpu/data_ram_module/DM<31>_4" BEL "cpu/data_ram_module/DM<31>_5" BEL
+        "cpu/data_ram_module/DM<31>_6" BEL "cpu/data_ram_module/DM<31>_7" BEL
+        "cpu/pc_5_1" BEL "cpu/pc_4_1" BEL "cpu/pc_2_1" BEL "cpu/pc_6_1" BEL
+        "cpu/pc_3_1" BEL "cpu/pc_4_2" BEL "cpu/pc_2_2" BEL "cpu/pc_5_2" BEL
+        "cpu/pc_3_2" BEL "cpu/pc_5_3" BEL "cpu/pc_4_3" BEL "cpu/pc_2_3" BEL
+        "cpu/pc_6_2" BEL "cpu/pc_3_3" BEL "cpu/pc_2_4" BEL "cpu/pc_2_5" BEL
+        "cpu/pc_5_4" BEL "cpu/pc_3_4" BEL "cpu/pc_6_3" BEL "cpu/pc_4_4" BEL
+        "clk_IBUFG_BUFG" BEL "lcd_module/cnt" BEL "lcd_module/clk_2" BEL
+        "lcd_module/clk_2_n" BEL "lcd_module/lcd_rs" BEL
+        "lcd_module/lcd_data_0" BEL "lcd_module/lcd_data_1" BEL
+        "lcd_module/lcd_data_2" BEL "lcd_module/lcd_data_3" BEL
+        "lcd_module/lcd_data_4" BEL "lcd_module/lcd_data_5" BEL
+        "lcd_module/lcd_data_6" BEL "lcd_module/lcd_data_7" BEL
+        "lcd_module/lcd_data_8" BEL "lcd_module/lcd_data_9" BEL
+        "lcd_module/lcd_data_10" BEL "lcd_module/lcd_data_11" BEL
+        "lcd_module/lcd_data_12" BEL "lcd_module/lcd_data_13" BEL
+        "lcd_module/lcd_data_14" BEL "lcd_module/lcd_data_15" BEL
+        "lcd_module/touch_module/bit_count_2" BEL
+        "lcd_module/touch_module/bit_count_1" BEL
+        "lcd_module/touch_module/bit_count_0" BEL
+        "lcd_module/touch_module/byte_count_3" BEL
+        "lcd_module/touch_module/byte_count_2" BEL
+        "lcd_module/touch_module/byte_count_1" BEL
+        "lcd_module/touch_module/byte_count_0" BEL
+        "lcd_module/touch_module/input_count_2" BEL
+        "lcd_module/touch_module/input_count_1" BEL
+        "lcd_module/touch_module/input_count_0" BEL
+        "lcd_module/touch_module/rst_count_21" BEL
+        "lcd_module/touch_module/rst_count_20" BEL
+        "lcd_module/touch_module/rst_count_19" BEL
+        "lcd_module/touch_module/rst_count_18" BEL
+        "lcd_module/touch_module/rst_count_17" BEL
+        "lcd_module/touch_module/rst_count_16" BEL
+        "lcd_module/touch_module/rst_count_15" BEL
+        "lcd_module/touch_module/rst_count_14" BEL
+        "lcd_module/touch_module/rst_count_13" BEL
+        "lcd_module/touch_module/rst_count_12" BEL
+        "lcd_module/touch_module/rst_count_11" BEL
+        "lcd_module/touch_module/rst_count_10" BEL
+        "lcd_module/touch_module/rst_count_9" BEL
+        "lcd_module/touch_module/rst_count_8" BEL
+        "lcd_module/touch_module/rst_count_7" BEL
+        "lcd_module/touch_module/rst_count_6" BEL
+        "lcd_module/touch_module/rst_count_5" BEL
+        "lcd_module/touch_module/rst_count_4" BEL
+        "lcd_module/touch_module/rst_count_3" BEL
+        "lcd_module/touch_module/rst_count_2" BEL
+        "lcd_module/touch_module/rst_count_1" BEL
+        "lcd_module/touch_module/rst_count_0" BEL
+        "lcd_module/touch_module/clk_count_5" BEL
+        "lcd_module/touch_module/clk_count_4" BEL
+        "lcd_module/touch_module/clk_count_3" BEL
+        "lcd_module/touch_module/clk_count_2" BEL
+        "lcd_module/touch_module/clk_count_1" BEL
+        "lcd_module/touch_module/clk_count_0" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd1" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd2" BEL
+        "lcd_module/touch_module/iic_state_FSM_FFd3" BEL
+        "lcd_module/touch_module/input_value_28" BEL
+        "lcd_module/touch_module/input_value_29" BEL
+        "lcd_module/touch_module/input_value_30" BEL
+        "lcd_module/touch_module/input_value_31" BEL
+        "lcd_module/touch_module/input_value_24" BEL
+        "lcd_module/touch_module/input_value_25" BEL
+        "lcd_module/touch_module/input_value_26" BEL
+        "lcd_module/touch_module/input_value_27" BEL
+        "lcd_module/touch_module/input_value_20" BEL
+        "lcd_module/touch_module/input_value_21" BEL
+        "lcd_module/touch_module/input_value_22" BEL
+        "lcd_module/touch_module/input_value_23" BEL
+        "lcd_module/touch_module/input_value_16" BEL
+        "lcd_module/touch_module/input_value_17" BEL
+        "lcd_module/touch_module/input_value_18" BEL
+        "lcd_module/touch_module/input_value_19" BEL
+        "lcd_module/touch_module/input_value_12" BEL
+        "lcd_module/touch_module/input_value_13" BEL
+        "lcd_module/touch_module/input_value_15" BEL
+        "lcd_module/touch_module/input_value_14" BEL
+        "lcd_module/touch_module/input_value_8" BEL
+        "lcd_module/touch_module/input_value_9" BEL
+        "lcd_module/touch_module/input_value_10" BEL
+        "lcd_module/touch_module/input_value_11" BEL
+        "lcd_module/touch_module/touch_array_7_47" BEL
+        "lcd_module/touch_module/touch_array_7_46" BEL
+        "lcd_module/touch_module/touch_array_7_44" BEL
+        "lcd_module/touch_module/touch_array_7_43" BEL
+        "lcd_module/touch_module/touch_array_7_42" BEL
+        "lcd_module/touch_module/touch_array_7_41" BEL
+        "lcd_module/touch_module/touch_array_7_40" BEL
+        "lcd_module/touch_module/touch_array_7_38" BEL
+        "lcd_module/touch_module/touch_array_7_37" BEL
+        "lcd_module/touch_module/touch_array_7_36" BEL
+        "lcd_module/touch_module/touch_array_7_35" BEL
+        "lcd_module/touch_module/touch_array_7_34" BEL
+        "lcd_module/touch_module/touch_array_7_32" BEL
+        "lcd_module/touch_module/touch_array_7_31" BEL
+        "lcd_module/touch_module/touch_array_7_30" BEL
+        "lcd_module/touch_module/touch_array_7_29" BEL
+        "lcd_module/touch_module/touch_array_7_28" BEL
+        "lcd_module/touch_module/touch_array_7_26" BEL
+        "lcd_module/touch_module/touch_array_7_25" BEL
+        "lcd_module/touch_module/touch_array_7_24" BEL
+        "lcd_module/touch_module/touch_array_7_23" BEL
+        "lcd_module/touch_module/touch_array_7_22" BEL
+        "lcd_module/touch_module/touch_array_7_20" BEL
+        "lcd_module/touch_module/touch_array_7_19" BEL
+        "lcd_module/touch_module/touch_array_7_18" BEL
+        "lcd_module/touch_module/touch_array_7_17" BEL
+        "lcd_module/touch_module/touch_array_7_16" BEL
+        "lcd_module/touch_module/touch_array_7_14" BEL
+        "lcd_module/touch_module/touch_array_7_13" BEL
+        "lcd_module/touch_module/touch_array_7_12" BEL
+        "lcd_module/touch_module/touch_array_7_11" BEL
+        "lcd_module/touch_module/touch_array_7_10" BEL
+        "lcd_module/touch_module/touch_array_7_8" BEL
+        "lcd_module/touch_module/touch_array_7_7" BEL
+        "lcd_module/touch_module/touch_array_7_6" BEL
+        "lcd_module/touch_module/touch_array_7_5" BEL
+        "lcd_module/touch_module/touch_array_7_4" BEL
+        "lcd_module/touch_module/touch_array_7_2" BEL
+        "lcd_module/touch_module/touch_array_7_1" BEL
+        "lcd_module/touch_module/touch_array_7_0" BEL
+        "lcd_module/touch_module/send_byte_0" BEL
+        "lcd_module/touch_module/send_byte_1" BEL
+        "lcd_module/touch_module/send_byte_2" BEL
+        "lcd_module/touch_module/send_byte_3" BEL
+        "lcd_module/touch_module/send_byte_4" BEL
+        "lcd_module/touch_module/send_byte_5" BEL
+        "lcd_module/touch_module/send_byte_6" BEL
+        "lcd_module/touch_module/send_byte_7" BEL
+        "lcd_module/touch_module/input_value_4" BEL
+        "lcd_module/touch_module/input_value_6" BEL
+        "lcd_module/touch_module/input_value_7" BEL
+        "lcd_module/touch_module/input_value_5" BEL
+        "lcd_module/touch_module/touch_y_0" BEL
+        "lcd_module/touch_module/touch_y_1" BEL
+        "lcd_module/touch_module/touch_y_2" BEL
+        "lcd_module/touch_module/touch_y_3" BEL
+        "lcd_module/touch_module/touch_y_4" BEL
+        "lcd_module/touch_module/touch_x_0" BEL
+        "lcd_module/touch_module/touch_x_1" BEL
+        "lcd_module/touch_module/touch_x_3" BEL
+        "lcd_module/touch_module/touch_x_2" BEL
+        "lcd_module/touch_module/read_byte_3_0_0" BEL
+        "lcd_module/touch_module/read_byte_3_0_1" BEL
+        "lcd_module/touch_module/read_byte_3_0_2" BEL
+        "lcd_module/touch_module/read_byte_3_0_3" BEL
+        "lcd_module/touch_module/read_byte_7_5_0" BEL
+        "lcd_module/touch_module/read_byte_7_5_1" BEL
+        "lcd_module/touch_module/read_byte_7_5_2" BEL
+        "lcd_module/touch_module/input_value_0" BEL
+        "lcd_module/touch_module/input_value_1" BEL
+        "lcd_module/touch_module/input_value_2" BEL
+        "lcd_module/touch_module/input_value_3" BEL
+        "lcd_module/touch_module/touch_clk" BEL
+        "lcd_module/touch_module/sda_o_en" BEL "lcd_module/touch_module/sda_o"
+        BEL "lcd_module/lcd_rst" BEL "lcd_module/init_begin" BEL
+        "lcd_module/draw_begin" BEL "lcd_module/lcd_wr" BEL
+        "lcd_module/touch_module/input_over" BEL
+        "lcd_module/touch_module/soft_rst_end" BEL
+        "lcd_module/touch_module/ct_rstn" BEL
+        "lcd_module/touch_module/input_mode" BEL
+        "lcd_module/touch_module/cancel_touch" BEL
+        "lcd_module/touch_module/read_touch" BEL
+        "lcd_module/touch_module/touch_begin" BEL
+        "lcd_module/touch_module/btn_released" BEL
+        "lcd_module/touch_module/int_o_en" BEL "lcd_module/touch_module/int_o"
+        PIN
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>"
+        PIN
+        "lcd_module/lcd_rom_module/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram_pins<28>";
+TS_clk = PERIOD TIMEGRP "clk" 100 ns HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\loongson\CPU_LAB_greenfpga\LS_CPU_LAB\6_single_cycle_cpu\single_cycle_cpu_display.ncd
+OUTFILE=E:\loongson\CPU_LAB_greenfpga\LS_CPU_LAB\6_single_cycle_cpu\single_cycle_cpu_display.bit
+FAMILY=Spartan6
+PART=xc6slx150-3fgg676
+WORKINGDIR=E:\loongson\CPU_LAB_greenfpga\LS_CPU_LAB\6_single_cycle_cpu
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

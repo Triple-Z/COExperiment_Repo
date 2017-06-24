@@ -1,0 +1,46 @@
+############################################################################
+# VCC AUX VOLTAGE 
+############################################################################
+CONFIG VCCAUX=3.3; # Valid values are 2.5 and 3.3
+
+#时钟信号连接 10Mhz
+NET "clk" LOC = T1 | IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 100 ns HIGH 50%;
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+#复位信号，低电平有效
+NET "resetn" LOC = AB7 | IOSTANDARD = "LVCMOS33";  #sw0
+
+#脉冲开关，用于输入作为单步执行的clk
+NET "btn_clk" LOC = W7 | IOSTANDARD = "LVCMOS33";  #btn 
+
+#led灯连接，用于输出
+
+#触摸屏引脚连接，不需要更
+NET "lcd_rst" LOC = B20 | IOSTANDARD = "LVTTL";
+NET "lcd_cs"  LOC = A19 | IOSTANDARD = "LVTTL";
+NET "lcd_rs"  LOC = A18 | IOSTANDARD = "LVTTL";
+NET "lcd_wr"  LOC = A21 | IOSTANDARD = "LVTTL";
+NET "lcd_rd"  LOC = B22 | IOSTANDARD = "LVTTL";
+NET "lcd_bl_ctr" LOC = E19 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[0]"   LOC = A22 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[1]"   LOC = B18 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[2]"   LOC = A20 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[3]"   LOC = E16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[4]"   LOC = A17 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[5]"   LOC = C16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[6]"   LOC = D16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[7]"   LOC = C17 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[8]"   LOC = F16 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[9]"   LOC = F17 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[10]"  LOC = E17 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[11]"  LOC = D18 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[12]"  LOC = C18 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[13]"  LOC = C19 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[14]"  LOC = E18 | IOSTANDARD = "LVTTL";
+NET "lcd_data_io[15]"  LOC = D19 | IOSTANDARD = "LVTTL";
+NET "ct_int" LOC = D21 | IOSTANDARD = "LVTTL";
+NET "ct_sda" LOC = C20 | IOSTANDARD = "LVTTL";
+NET "ct_scl" LOC = C21 | IOSTANDARD = "LVTTL";
+NET "ct_rstn"LOC = F18 | IOSTANDARD = "LVTTL";

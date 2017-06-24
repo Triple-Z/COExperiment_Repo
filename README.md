@@ -4,11 +4,13 @@
 
 [TOC]
 
-> Last Revised: `6/22/2017`
+> Last Revised: `6/23/2017`
 
 ## Project Assignment
 
-[Jump to directory](Project_Assignment/)
+[Jump to source code directory](Project_Assignment/)
+
+[Jump to on board project directory](Project_Assignment_OnBoard/)
 
 ### Instruction Set
 

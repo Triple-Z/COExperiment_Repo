@@ -1,0 +1,29 @@
+# test for sb/lb.
+addu $t0, $zero, $t5
+sw $t0, 4($s0)
+lw $t3, 4($s0)
+sb $t5, 1($s0)
+lb $t6, 1($s0)
+
+# test for branch.
+beq $t1, $t2, L
+addu $t2, $t2, $t2
+addu $t2, $t2, $t2
+L: addu $t2, $t2, $t2
+bne $t1, $t2,L1
+addu $t3, $t3, $t3
+L2: addu $t3, $t3, $t3
+L1: addu $t3, $t3, $t3
+bgtz $t1, L2
+
+# test for extra 9 ins.
+mult $t2, $t3
+mfhi $t1
+mflo $t2
+mthi $t4
+mtlo $t5
+mtc0 $t6, $12
+mfc0 $7, $12
+syscall
+
+# test for jump.

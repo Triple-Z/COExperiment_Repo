@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\Verilog\Project_Assignment_OnBoard\mips_display.ncd
+OUTFILE=F:\Verilog\Project_Assignment_OnBoard\mips_display.bit
+FAMILY=Spartan6
+PART=xc6slx150-3fgg676
+WORKINGDIR=F:\Verilog\Project_Assignment_OnBoard
+LICENSE=ISE
+USER_INFO=135256_15690819_173552794_661

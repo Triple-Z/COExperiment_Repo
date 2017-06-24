@@ -1,0 +1,13 @@
+Release 13.2 - par O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Sat Jun 24 14:10:20 2017
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   lcd_module/touch_module/int_io/O
+
+

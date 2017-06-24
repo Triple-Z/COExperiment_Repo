@@ -1,0 +1,11 @@
+Release 13.2 Drc O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Nov 17 23:16:22 2016
+
+drc -z single_cycle_cpu_display.ncd single_cycle_cpu_display.pcf
+
+WARNING:PhysDesignRules:367 - The signal <lcd_module/touch_module/int_io/O> is
+   incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
