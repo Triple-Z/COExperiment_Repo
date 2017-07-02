@@ -25,5 +25,6 @@ mtlo $t5
 mtc0 $t6, $12
 mfc0 $7, $12
 syscall
+eret
 
 # test for jump.
