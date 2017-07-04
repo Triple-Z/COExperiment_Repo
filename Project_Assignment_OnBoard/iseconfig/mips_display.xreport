@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-06-24T13:40:14</DateModified>
+  <DateModified>2017-07-02T03:20:10</DateModified>
   <ModuleName>mips_display</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>F:/Verilog/Project_Assignment_OnBoard/iseconfig/mips_display.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/Verilog/Project_Assignment_OnBoard</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>F:/Verilog/Project_Assignment_OnBoard\</ImplementationReportsDirectory>
   <DateInitialized>2017-06-24T13:40:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
